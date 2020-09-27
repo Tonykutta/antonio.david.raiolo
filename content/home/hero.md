@@ -8,7 +8,18 @@ weight = 10  # Order that this section will appear.
 title = "Academic"
 
 # Hero image (optional). Enter filename of an image in the `static/media/` folder.
-hero_media = "hero-academic.png"
+hero_media = "videos/ezgif.com-gif-maker.gif"
+
+ [[gallery_item]]
+   album = gallery
+   image = videos/ezgif.com-gif-maker.gif
+   caption = A caption
+ [[gallery_item]]
+   album = gallery
+   image = https://github.com/Tonykutta/antonio.david.raiolo/blob/master/static/media/videos/ezgif.com-gif-maker.gif
+   caption = Another caption
+
+
 
 [design.background]
   # Apply a background color, gradient, or image.
@@ -33,9 +44,6 @@ hero_media = "hero-academic.png"
   # Text color (true=light or false=dark).
   text_color_light = true
 
-+++
 
-<video width="320" height="240" controls>
-  <source src="/videos/vidodo.mp4" type="video/mp4">
-</video> 
- 
++++
+{{< gallery >}}
