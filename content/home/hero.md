@@ -33,5 +33,13 @@ hero_media = "videos/ezgif.com-gif-maker.gif"
   # Text color (true=light or false=dark).
   text_color_light = true
 
+ gallery_item:
+ - album: gallery
+   image: videos/ezgif.com-gif-maker.gif
+   caption: A caption
+ - album: gallery
+   image: https://github.com/Tonykutta/antonio.david.raiolo/blob/master/static/media/videos/ezgif.com-gif-maker.gif
+   caption: Another caption
+
 +++
 
