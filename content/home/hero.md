@@ -8,7 +8,7 @@ weight = 10  # Order that this section will appear.
 title = "Academic"
 
 # Hero image (optional). Enter filename of an image in the `static/media/` folder.
-hero_media = "hero-academic.png"
+hero_media = "videos/ezgif.com-gif-maker.gif"
 
 [design.background]
   # Apply a background color, gradient, or image.
@@ -35,4 +35,3 @@ hero_media = "hero-academic.png"
 
 +++
 
-<img src="https://github.com/Tonykutta/antonio.david.raiolo/blob/master/static/media/videos/ezgif.com-gif-maker.gif" width=250/>
