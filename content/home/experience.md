@@ -27,7 +27,7 @@ date_format = "Jan 2006"
   description = """Worked as intern at the corporate research branch CR/ARF2 Contact Dynamics and Tribology at Renningen, Stuttgart.<br/>
 		- Investigation on the oil release behavior of lubricating greases: Parameter studies on temperature, test method, grease type and test duration.<br/>
 		- Characterization of the dielectric properties of greases: Conduct and evaluate parameter studies on temperature, fat type, aging and shear rate.<br/>
-		- Operation and process optimization of a plastic injection molding machine."
+		- Operation and process optimization of a plastic injection molding machine.
   """
 
 [[experience]]
@@ -77,6 +77,10 @@ date_format = "Jan 2006"
   location = "Stuttgart"
   date_start = "2014-07-01"
   date_end = "2014-09-01"
-  description = """Establishing standard processes for cleaning semiconductor samples of paint residues (For optical lithography and electron beam lithography) by means of a newly installed Plasma etching system (Fa. Servants, Pico). Preparing test samples by optical lithography."""  
+  description = """Interniship in a nanostructuring lab.
+- Study the granularity of metal layers (gold, chromium) of a few nanometers thickness producedunder various vapor deposition conditions, by means of a Scanning Electron Microscope (ZeissMerlin).<br/>
+- Calibration of the deposition rate for different metal layers (Fa. Leybold, Univex).<br/>
+- Establishing standard processes for cleaning semiconductor samples of paint residues (For opticallithography and electron beam lithography) by means of a newly installed Plasma etching system(Fa. Servants, Pico).<br/>
+- Preparing test samples by optical lithography"""  
   
 +++
