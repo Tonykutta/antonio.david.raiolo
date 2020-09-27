@@ -10,6 +10,17 @@ title = "Academic"
 # Hero image (optional). Enter filename of an image in the `static/media/` folder.
 hero_media = "videos/ezgif.com-gif-maker.gif"
 
+ [[gallery_item]]
+   album = gallery
+   image = videos/ezgif.com-gif-maker.gif
+   caption = A caption
+ [[gallery_item]]
+   album = gallery
+   image = https://github.com/Tonykutta/antonio.david.raiolo/blob/master/static/media/videos/ezgif.com-gif-maker.gif
+   caption = Another caption
+
+
+
 [design.background]
   # Apply a background color, gradient, or image.
   #   Uncomment (by removing `#`) an option to apply it.
@@ -33,13 +44,6 @@ hero_media = "videos/ezgif.com-gif-maker.gif"
   # Text color (true=light or false=dark).
   text_color_light = true
 
- gallery_item:
- - album: gallery
-   image: videos/ezgif.com-gif-maker.gif
-   caption: A caption
- - album: gallery
-   image: https://github.com/Tonykutta/antonio.david.raiolo/blob/master/static/media/videos/ezgif.com-gif-maker.gif
-   caption: Another caption
 
 +++
-
+{{< gallery >}}
