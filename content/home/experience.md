@@ -31,7 +31,7 @@ date_format = "Jan 2006"
   """
 
 [[experience]]
-  title = "Student Research Assisstant"
+  title = "Student Research Assistant"
   company = "Institute for Chemical Process Engineering"
   company_url = "https://www.icvt.uni-stuttgart.de/en/"
   location = "Stuttgart"
@@ -41,7 +41,7 @@ date_format = "Jan 2006"
 
 
 [[experience]]
-  title = "Student Research Assisstant"
+  title = "Student Research Assistant"
   company = "Institute for Chemical Process Engineering"
   company_url = "https://www.icvt.uni-stuttgart.de/en/"
   location = "Stuttgart"
