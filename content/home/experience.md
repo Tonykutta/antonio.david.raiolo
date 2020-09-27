@@ -24,9 +24,9 @@ date_format = "Jan 2006"
   location = "Renningen, Stuttgart"
   date_start = "2019-07-15"
   date_end = "2019-10-30"
-  description = """Worked as intern at the corporate research branch CR/ARF2 Contact Dynamics and Tribology atRenningen, Stuttgart.
-		-Investigation on the oil release behavior of lubricating greases: Parameter studies on temperature,test method, grease type and test duration.
-		-Characterization of the dielectric properties of greases: Conduct and evaluate parameter studies ontemperature, fat type, aging and shear rate.
+  description = """Worked as intern at the corporate research branch CR/ARF2 Contact Dynamics and Tribology atRenningen, Stuttgart.<br/>
+		-Investigation on the oil release behavior of lubricating greases: Parameter studies on temperature,test method, grease type and test duration.<br/>
+		-Characterization of the dielectric properties of greases: Conduct and evaluate parameter studies ontemperature, fat type, aging and shear rate.<br/>
 		-Operation and process optimization of a plastic injection molding machine."
   """
 
