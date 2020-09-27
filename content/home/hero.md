@@ -2,22 +2,13 @@
 # Hero widget.
 widget = "hero"  # See https://sourcethemes.com/academic/docs/page-builder/
 headless = true  # This file represents a page section.
-active = true  # Activate this widget? true/false
+active = false  # Activate this widget? true/false
 weight = 10  # Order that this section will appear.
 
 title = "Academic"
 
 # Hero image (optional). Enter filename of an image in the `static/media/` folder.
 hero_media = "videos/ezgif.com-gif-maker.gif"
-
- [[gallery_item]]
-   album = gallery
-   image = videos/ezgif.com-gif-maker.gif
-   caption = A caption
- [[gallery_item]]
-   album = gallery
-   image = https://github.com/Tonykutta/antonio.david.raiolo/blob/master/static/media/videos/ezgif.com-gif-maker.gif
-   caption = Another caption
 
 
 
@@ -46,4 +37,4 @@ hero_media = "videos/ezgif.com-gif-maker.gif"
 
 
 +++
-{{< gallery >}}
+
