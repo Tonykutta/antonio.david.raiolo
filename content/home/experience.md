@@ -29,8 +29,8 @@ date_format = "Jan 2006"
 
 [[experience]]
   title = "Student Research Assisstant"
-  company = "Institut für Chemische und Elektrochemische Verfahrenstechnik"
-  company_url = "https://www.icvt.uni-stuttgart.de/"
+  company = "Institute for Chemical Process Engineering"
+  company_url = "https://www.icvt.uni-stuttgart.de/en/"
   location = "Stuttgart"
   date_start = "2018-11-01"
   date_end = "2019-04-01"
@@ -39,8 +39,8 @@ date_format = "Jan 2006"
 
 [[experience]]
   title = "Student Research Assisstant"
-  company = "Institut für Chemische und Elektrochemische Verfahrenstechnik"
-  company_url = "https://www.icvt.uni-stuttgart.de/"
+  company = "Institute for Chemical Process Engineering"
+  company_url = "https://www.icvt.uni-stuttgart.de/en/"
   location = "Stuttgart"
   date_start = "2018-01-01"
   date_end = "2018-06-30"
