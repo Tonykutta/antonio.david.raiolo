@@ -39,4 +39,11 @@ height = "250px"
   overlay_img = "2.png"  # Image path relative to your `static/media/` folder.
   overlay_filter = 0.5  # Darken the image. Value in range 0-1.
 
+
+[[item]]
+  overlay_color = "#666"  # An HTML color value.
+  overlay_img = "combbig.gif"  # Image path relative to your `static/media/` folder.
+  overlay_filter = 0.5  # Darken the image. Value in range 0-1.
+
+
 +++
