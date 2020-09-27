@@ -35,4 +35,4 @@ hero_media = "hero-academic.png"
 
 +++
 
-![hippo](https://github.com/Tonykutta/antonio.david.raiolo/blob/master/static/media/videos/ezgif.com-gif-maker.gif)
+<img src="https://github.com/Tonykutta/antonio.david.raiolo/blob/master/static/media/videos/ezgif.com-gif-maker.gif" width=250/>
