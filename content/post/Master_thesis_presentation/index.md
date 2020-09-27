@@ -32,10 +32,6 @@ Sintering of nanoparticles can be simulated using phase field methods. A compreh
 Furthermore, surface energy anisotropy leading to faceting of particles is being studied. The presentation also shows the sintering of non-spherical particles.  More simulations of non-spherical particles are currently in progress.
 
 
-<video width="320" height="240" controls>
-  <source src="vidodo.mp4" type="video/mp4">
-</video> 
-
 
 
  
