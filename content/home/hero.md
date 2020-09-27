@@ -35,7 +35,4 @@ hero_media = "hero-academic.png"
 
 +++
 
-<video width="320" height="240" controls>
-  <source src="/videos/vidodo.mp4" type="video/mp4">
-</video> 
- 
+![hippo](https://github.com/Tonykutta/antonio.david.raiolo/blob/master/static/media/videos/ezgif.com-gif-maker.gif)
