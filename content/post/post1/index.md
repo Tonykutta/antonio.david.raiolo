@@ -28,7 +28,7 @@ summary = "This presentation gives a sneak peak into the intermediate results of
   
 +++
 
-[This is my video](vidodo.mp4)
+![](vidodo.mp4)
 
 
 
