@@ -24,7 +24,7 @@ summary = "This presentation gives a sneak peak into the intermediate results of
   focal_point = "Center"
 
   # Show image only in page previews?
-  preview_only = false
+  preview_only = true
   
 +++
 
