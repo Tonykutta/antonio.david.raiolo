@@ -33,22 +33,6 @@ hero_media = "hero-academic.png"
   # Text color (true=light or false=dark).
   text_color_light = true
 
-# Call to action links (optional).
-#   Display link(s) by specifying a URL and label below. Icon is optional for `[cta]`.
-#   Remove a link/note by deleting a cta/note block.
-[cta]
-  url = "https://sourcethemes.com/academic/docs/install/"
-  label = "Get Started"
-  icon_pack = "fas"
-  icon = "download"
-  
-[cta_alt]
-  url = "https://sourcethemes.com/academic/"
-  label = "View Documentation"
-
-# Note. An optional note to show underneath the links.
-[cta_note]
-  label = '<a class="js-github-release" href="https://sourcethemes.com/academic/updates" data-repo="gcushen/hugo-academic">Latest release<!-- V --></a>'
 +++
 
 <video width="320" height="240" controls>
