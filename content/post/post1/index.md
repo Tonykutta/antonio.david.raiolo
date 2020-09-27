@@ -8,7 +8,7 @@ draft = false
 
 authors = ["Antonio"]
 
-tags = ["mater_thesis"]
+tags = ["master_thesis"]
 
 summary = "This presentation gives a sneak peak into the intermediate results of my thesis on phasefield simulation of crystal anisotropy and sintering."
 
@@ -25,9 +25,12 @@ summary = "This presentation gives a sneak peak into the intermediate results of
 
   # Show image only in page previews?
   preview_only = false
-
+  
 +++
 
-CEEMID & Consolidated Independent presented and discussed with stakeholders the  [Central & Eastern European Music Industry Report 2020](https://danielantal.eu/publication/ceereport_2020/) as a case-study on national and comparative evidence-based policymaking in the cultural and 
+[This is my video](vidodo.mp4)
+
+
+
 
  
