@@ -28,10 +28,10 @@ interests:
 education:
   courses:
   - course: MSc. Process Engineering
-    institution: Univerity of Stuttgart
+    institution: University of Stuttgart
     year: 2018-present
   - course: BSc. Process Engineering
-    institution: Univerity of Stuttgart
+    institution: University of Stuttgart
     year: 2015-2018
     
 # Social/Academic Networking
