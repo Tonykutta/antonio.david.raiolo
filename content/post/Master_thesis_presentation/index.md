@@ -36,6 +36,7 @@ Furthermore, surface energy anisotropy leading to faceting of particles is being
 </video> 
 
 
+<embed src="Master_thesis_proposal.pdf" width="800px" height="2100px" />
 
 
  
