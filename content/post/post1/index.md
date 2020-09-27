@@ -28,8 +28,9 @@ summary = "This presentation gives a sneak peak into the intermediate results of
   
 +++
 
-![](vidodo.mp4)
-
+<video width="320" height="240" controls>
+  <source src="vidodo.mp4" type="video/mp4">
+</video> 
 
 
 
