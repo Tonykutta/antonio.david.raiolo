@@ -478,4 +478,301 @@ $$r\_i= \\frac{1}{V\_i} \\int\_{V} \\eta\_i r  \\,dV
 \\label{AD\_10}$$
 The volume of a particle *i* can be obtained by the integration of
 *η*<sub>*i*</sub> over the domain
+Grain boundary energy anisotropy
+================================
+
+Based on a dislocation model Read and Schockley approximated the grain
+boundary energy of low angle tilt angles (*θ* ≤ 15<sup>∘</sup> ) as:
+$$\\gamma\_{gb}=\\gamma\_{gb0}(\\mid \\cos(\\phi) \\mid + \\mid \\sin(\\phi)\\mid)\\Theta(1-ln(\\frac{\\Theta}{\\Theta\_m}))$$
+with *γ*<sub>*g**b*0</sub> is a constant. *θ* is the misorientation
+angle between the to grains while *ϕ* is the inclination angle with
+respect to the symmetric tilt grain boundary.*θ*<sub>*m*</sub> is the
+maximum misorientation. As represented in
+<a href="#incli" data-reference-type="ref" data-reference="incli">1</a>
+the misorientation *Θ* can be calculated as the difference of the angles
+*α* and *β*, which are the inclination of each grain with respect to the
+global coordinate system. *Φ*<sub>*x*</sub> is the inclination of the
+grain boundary in the global system. The inclination with respect ro the
+symmetry axis can be calculated as $\\phi=\\Phi\_x-\\frac{\\theta}{2}$
+
+<figure>
+<img src="abb/incli.png" id="incli" alt="a" /><figcaption aria-hidden="true">a</figcaption>
+</figure>
+
+In order to implement a differentiable function of the grain boundary
+energy with respect to inclination the form used is :
+$$\\gamma\_{gb}=\\gamma\_{gb0}(1-\\delta\_{\\gamma}\\cos(4\\phi))\\Theta(1-ln(\\frac{\\Theta}{\\Theta\_m}))
+\\label{GBS}$$
+The grain boundary inclination is calculated from the grain boundary
+normal (in teh way proposed by ) considering the symmetric boundary:
+$$\\phi=\\arctan(\\frac{\\nabla\_x\\eta\_i-\\nabla\_x \\eta\_j}{\\nabla\_y \\eta\_i-\\nabla\_y \\eta\_j})-\\frac{\\Theta}{2}$$
+Fig.
+<a href="#easy" data-reference-type="ref" data-reference="easy">2</a>
+show the grain boundary energy according to eq.
+<a href="#GBS" data-reference-type="ref" data-reference="GBS">[GBS]</a>.
+Where *Θ* is the misorientation and *ϕ* the inclination with respect to
+the global coordinate system.
+
+<figure>
+<img src="abb/oo.png" id="easy" alt="\delta=0.2 \,\,\, \theta_m=15^{\circ}" /><figcaption aria-hidden="true"><span class="math inline"><em>δ</em> = 0.2   <em>θ</em><sub><em>m</em></sub> = 15<sup>∘</sup></span></figcaption>
+</figure>
+
+Butalov et al. proposed an algorithm enabling the calculation of grain
+boundary energy of 4 fcc metals (Cu, Ni, Al and Au) over the whole 5D
+space out of the orientation matrices of the grain assuming a grain
+boundary plane perpendicular to the \[1 0 0\] direction
+(Fig.<a href="#Bula" data-reference-type="ref" data-reference="Bula">3</a>
+).
+
+<figure>
+<img src="abb/Bula.png" id="Bula" alt="a" /><figcaption aria-hidden="true">a</figcaption>
+</figure>
+
+This algorithm is based an the interpolation method given 43 material
+specific fittings parameters. In the following the basic concept of this
+method presented. Detailed information are found in \[\]. In this method
+the 5D space is subdivided to a combination of lower dimensional
+subspaces. The grain misorientation is approximated by a set of
+rotations around the high symmetry \[1 0 0\], \[1 1 0\] and \[1 1 1\]
+axes and the geometrical distance between the exact misorientation and
+the approximation is determined. Each 3D set can be subdivided in 2 and
+1 dimensional subspaces. Pure twist boundaries and symmetric tilt
+boundary determine 1D subspaces since only one angle is needed to define
+them. Asymmetric tilt boundaries build a 2D subspace since two angle are
+needed, one defining the misorientation and one the asymmetry. A
+hierarchical interpolation approach is applied to calculate the grain
+boundary energy. First the energy of a pure twist or a symmetric tilt
+grain boundary with angle *Θ* can be calculated with the
+Read-Shockley-Wolf equation, which in Bulatov’s paper is defined as:
+$$\\gamma\_{RSW}=\\sin(\\frac{\\pi}{2} \\frac{\\Theta-\\Theta\_{min}}{\\Theta\_{max}-\\Theta\_{min}})(1-a\\ln\\sin(\\frac{\\Theta-\\Theta\_{min}}{\\Theta\_{max}-\\Theta\_{min}}))$$
+with *Θ*<sub>*m**a**x*</sub> and *Θ*<sub>*m**i**n*</sub> being the
+definition limits and *a* is a constant. The Read-Schocley-Wolf equation
+is a modification of the Read-Schockely equation, for high angle
+misorientations. In a second step asymmetric tilt grain boundaries are
+calculated as an interpolation of symmetric tilt grain boundaries. The
+grain boundary energy of a 3D set is then calculated as a combination of
+asymmetric tilt and pure twist grain boundaries as:
+$$\\epsilon\_{hkl}=\\epsilon\_{hkl}^{twist}(1-\\frac{2\\Phi}{\\pi})^{p\_{hkl}^1}+\\epsilon\_{hkl}^{tilt}(\\frac{2\\Phi}{\\pi})^{p\_{hkl}^2}$$
+for \[1 0 0\] and \[1 1 0\] directions. For \[1 1 1\]:
+$$\\epsilon\_{111}=\\epsilon\_{111}^{twist}(1-\\alpha\\frac{2\\Phi}{\\pi}+(\\alpha-1)(\\frac{2\\Phi}{\\pi})^2)+\\epsilon\_{111}^{tilt}(1-\\alpha\\frac{2\\Phi}{\\pi}+(\\alpha-1)(\\frac{2\\Phi}{\\pi})^2)$$
+with *p*<sub>*h**k**l*</sub><sup>1</sup> and
+*p*<sub>*h**k**l*</sub><sup>2</sup> and *α* being fitting parameters.
+The angle *Φ* varies between 0, for twist boundaries, and
+$\\frac{\\pi}{2}$, for tilt boundaries, and all for values in between
+mixed boundaries are characterized. Finally the grain boundary energy
+*ϵ* is calculated as a combination of weighted contributions of the
+energy obtained by an idealized rotation of the grains around the high
+symmetry \[1 0 0\], \[1 1 0\] and \[1 1 1\] axes.
+$$\\begin{gathered}
+  \\epsilon=\\frac{ 1+\\sum w\_{hkl}\\epsilon\_{hkl} }{ 1+\\sum w\_{hkl} } \\epsilon\_{RGB}
+  \\label{a}\\\\
+  \\intertext{with  weights defined as:}
+  w\_{hkl}=\\frac{w\_{hkl}^0}{sin(\\frac{ \\pi d\_3}{2d\_{hkl}^{max}})(1-\\frac{1}{2}log( sin(\\frac{ \\pi d\_3}{2d\_{hkl}^{max}}))-1}
+  \\end{gathered}$$
+*d*<sub>3</sub> is the distance between the exact rotation of the grain
+and the approximated rotation.
+*d*<sub>*h**k**l*</sub><sup>*m**a**x*</sup> is the is a cutoff distance,
+for to high distance values. *ϵ*<sub>*R**G**B*</sub> is a constant
+fitting value have a dimension. Dividing
+<a href="#a" data-reference-type="ref" data-reference="a">[a]</a> by
+*ϵ*<sub>*R**G**B*</sub> leads to a dimensionless function with values
+ranging from 0 to 1.
+
+The algorithm has been provided as a MATLAB code. In this work this code
+has been translated to C++ to be implemented in the simulations. The
+simulations in this work will use the dimensionless grain boundary
+energy of copper. An Euler Angle has to be assigned and a rotation
+matrices to be assigned to the matrices have to be computed. Due to the
+fact that this method presuppose an grain boundary plane normal to the
+\[1 0 0\] the grain rotation matrices have to be multiplied with the
+rotation matrix of the rotation of the actual grain boundary normal
+vector to the \[1 0 0\] direction . While the normal vector of the grain
+boundary is calculated as :
+$$\\vec{n}=\\frac{\\nabla \\eta\_i -\\nabla \\eta\_j}{\\mid \\nabla \\eta\_i -\\nabla \\eta\_j \\mid}$$
+Consequently Bulatov’s algorithm has to be applied to each quadrature
+point in the domain. Since this calculation resulted in being
+computationally expensive, this step has not been applied and the
+simulations have been carried out assuming an grain boundary energy for
+a plane always normal to the \[1 0 0\]. This neglegt can be justified by
+the fact that in this work this method will only be applied for 2D
+simulations of tilt grain boundaries around the z-Axis an analysis of
+the energy function shows a low dependency on grain boundary
+inclination. This Behavior can figure see in fig.
+<a href="#Ana" data-reference-type="ref" data-reference="Ana">4</a>,
+where grain the dimensionless energy of Cu dependent on misorientation
+and grain boundary inclination is depicted.
+
+<figure>
+<img src="abb/ENBULIN.png" id="Ana" alt="a" /><figcaption aria-hidden="true">a</figcaption>
+</figure>
+
+A study on the impact of a grain boundary inclination dependency will be
+carried out with eq. In the phase field model the grain boundary energy
+will be implemented by replacing *γ*<sub>*g**b*</sub> in
+<a href="#za" data-reference-type="ref" data-reference="za">[za]</a>,<a href="#zb" data-reference-type="ref" data-reference="zb">[zb]</a>,
+<a href="#zc" data-reference-type="ref" data-reference="zc">[zc]</a> and
+<a href="#zd" data-reference-type="ref" data-reference="zd">[zd]</a>. In
+case of simulation of sintering of more than two particles an continuous
+function of the grain boundary over the domain has to be applied. In
+this work the function proposed by and integrated by for simulation of
+anisotropic sintering is used:
+$$\\gamma\_{gb}=\\frac{\\sum\_i \\sum\_j \\gamma\_{gb,ij}\\eta^{2}\_i \\eta^{2}\_j }{\\sum\_i \\sum\_j\\eta^{2}\_i \\eta^{2}\_j }$$
+with *γ*<sub>*g**b*, *i**j*</sub> being the grain boundary energy
+between the grain pair *i* and *j*.
+
+Surface energy anisotropy
+=========================
+
+Simulation of faceting of crystals requires a description of the surface
+energy in dependency of the orientation of the crystals surface. The
+crystals facets will then be formed according to those orientations that
+are energetically favorable, so the direction with in which the energy
+has a minimum.
+
+Representation of complex crystals having various facets directions of
+different surface energy require an adaptable model. A convenient
+formulation has been provided by Salvalaglio et al .
+$$\\gamma\_{sf}(\\vec{n})=\\gamma\_0(1-\\sum\_{1}^{N}\\alpha\_i(\\vec{n}\\cdot \\vec{m\_i})^{w\_i}\\,\\theta(\\vec{n}\\cdot \\vec{m}))
+\\label{SL\_1}$$
+In this function *N* is the number of energetic minima.
+*m*<sub>*i*</sub> are the unit vectors for which the funtion has a
+minimum, *α*<sub>*i*</sub> and *w*<sub>*i*</sub> are coefficients
+defining how deep and how wide each minimum is and *γ*<sub>0</sub> is a
+constant factor. In order to be differentiable *w*<sub>*i*</sub> ≥ 2is
+required. *θ*(*n⃗* ⋅ *m⃗*) is the Heaviside step function, which
+excludes contributions in the surface energy for the case of a negative
+scalar product *n⃗* ⋅ *m⃗*
+$$\\theta(\\vec{n}\\cdot \\vec{m\_i})=
+\\begin{cases}
+0 & \\text{\\hspace{0.2 cm} for \\hspace{0.2 cm}} \\vec{n}\\cdot \\vec{m}\_i &lt; 0 \\\\
+1 & \\text{\\hspace{0.2 cm} for \\hspace{0.2 cm}} \\vec{n}\\cdot \\vec{m}\_i\\geq 0
+\\end{cases}
+\\label{SL\_2}$$
+
+The absolute value of the scalar product *v**e**c**n* ⋅ *m⃗* is always
+less than 1 one for $\\vec{n} \\neq \\vec{m\_i}$ and is 1 for
+$\\vec{n} = \\vec{m\_i}$, so for the last case the highest contribution
+in the energy minimization is given. The value of
+*γ*<sub>*s**f*</sub>(*n⃗*) continuously increases when the normal vector
+moves away from a favorable direction. The course of the function an the
+impact of the parameters *α*<sub>*i*</sub> and *w*<sub>*i*</sub> is
+demonstrated in the exemplary plot
+<a href="#s2d" data-reference-type="ref" data-reference="s2d">5</a> for
+the 2D dimensional case. In 2D a direction can also be represented by a
+single angle *Θ* between the normal vector and the abscissa
+$\\Theta = -\\arctan(\\frac{n\_x}{n\_y})$. In figure
+<a href="#s2d" data-reference-type="ref" data-reference="s2d">5</a> the
+\[1 1\] directions and the \[1 0\] directions (and all their symmetries)
+are considered. These direction have different *α* values which leads to
+different deep minima. For the dotted and dashed line all minima have
+the same *w*<sub>*i*</sub> values but in in the second case
+*w*<sub>*i*</sub> is increased. Increasing *w*<sub>*i*</sub> decrease
+the width of the single minima, which are more defined and decoupled
+from each other. The solid line further demonstrates this behavior, for
+different *w*<sub>*i*</sub> for different directions. For sufficiently
+high *w*<sub>*i*</sub> values the maximal grain boundary energy
+*γ*<sub>0</sub> is reached.
+
+<figure>
+<img src="abb/Salva/2D_4.png" id="s2d" alt="a" /><figcaption aria-hidden="true">a</figcaption>
+</figure>
+
+Fig <a href="#s3d" data-reference-type="ref" data-reference="s3d">6</a>
+is a 3D representation of the anisotropic surface energy over a sphere,
+for minima at the \[1 0 0\] and \[1 1 1\] directions (and all their
+symmetries) having different *α* values.
+
+<figure>
+<img src="abb/Salva/3D_1.png" id="s3d" alt="a" /><figcaption aria-hidden="true">a</figcaption>
+</figure>
+
+For the simulation of sintering of faceted particles in this work the
+total free energy
+<a href="#FE" data-reference-type="ref" data-reference="FE">[FE]</a> is
+modified.
+$$\\begin{gathered}
+F=\\int\_V f^{\*}\_0(c,\\eta\_i)+\\frac{k^{\*}\_{c}}{2} (\\nabla c)^2 + \\frac{k^{\*}\_{\\eta}}{2} \\sum\_i  (\\nabla \\eta\_i)^2 + \\frac{\\beta}{2}(\\Delta c)^2\\, dV 
+\\label{FS} \\\\
+\\intertext{\\hspace{0.2 cm} with}
+f\_0(c,\\eta\_i)= \\omega^{\*} c^2(1-c)^2+\\xi^{\*}\[c^2+6(1-c)\\sum\_{1}^{N}\\eta\_1-4(2-c)\\sum\_{1}^{N}\\eta\_{i}^3+3(\\sum\_{1}^{N}\\eta\_{i}^2)^2 \]
+\\label{landaustern}\\end{gathered}$$
+The term $\\frac{\\beta}{2}(\\Delta c)^2$, which function will be
+discussed in the end of this section, is added and the parameters
+*ω* *ξ* *k*<sub>*c*</sub> *k*<sub>*η*</sub>
+(<a href="#za" data-reference-type="ref" data-reference="za">[za]</a>,<a href="#zb" data-reference-type="ref" data-reference="zb">[zb]</a>,
+<a href="#zc" data-reference-type="ref" data-reference="zc">[zc]</a> and
+<a href="#zd" data-reference-type="ref" data-reference="zd">[zd]</a>) in
+front of the gradient terms and in the landau polynomial
+<a href="#landau" data-reference-type="ref" data-reference="landau">[landau]</a>
+are replaced by
+*ω*<sup>\*</sup>, *ξ*<sup>\*</sup> *k*<sub>*η*</sub><sup>\*</sup> *k*<sub>*c*</sub><sup>\*</sup>.
+as:
+$$\\begin{gathered}
+\\omega^{\*}=\\frac{12\\gamma\_{0}-7\\gamma\_{gb}}{\\delta},
+\\label{qa}\\\\
+\\xi^{\*}=\\xi=\\frac{\\gamma\_{gb}}{\\delta},
+\\label{qb}\\\\
+k\_c^{\*}=\\frac{3}{4}\\delta(2\\gamma\_{sf}(\\vec{n})-\\gamma\_{gb}) \\text{\\hspace{0.2 cm} and}
+\\label{qc}\\\\
+k\_{\\eta}^{\*}=k\_{\\eta}=\\frac{3}{4}\\delta(\\gamma\_{gb}).
+\\label{qd}\\end{gathered}$$
+
+The grain surface energy in *γ*<sub>*s**f*</sub> in
+<a href="#za" data-reference-type="ref" data-reference="za">[za]</a> *ω*
+is set to the constant *γ*<sub>0</sub> in
+<a href="#qa" data-reference-type="ref" data-reference="qa">[qa]</a> so
+that the variation of the surface energy does not affect the local
+energy function. Instead the orientation dependent term
+*γ*<sub>*s**f*</sub>(*n⃗*) is implemented in the gradient term of the
+concentration
+<a href="#qc" data-reference-type="ref" data-reference="qc">[qc]</a>.
+
+Applying a fully variational approach, the variation of the surface
+energy with the concentration gradient has to be considered. Variational
+calculus as reported in
+<a href="#Kinetics" data-reference-type="ref" data-reference="Kinetics">[Kinetics]</a>,
+without considering advectional transport, lead to a kinetic equation
+for the concentration as:
+$$\\frac{dc}{dt}=\\nabla  \\cdot (\\mathbf{D} \\nabla \\frac{\\delta F}{\\delta c})= \\nabla \\cdot \[ \\mathbf{D} \\nabla(\\frac{\\partial f^{\*}\_0(c,\\eta\_i)}{dc} - k\_c^{\*}\\nabla^2 c -\\nabla \\cdot \\frac{\\partial k\_c^{\*}}{\\partial \\nabla c} (\\nabla c)^2 -\\beta\\Delta(\\Delta c))\]
+\\label{anis}$$
+
+with the substitution
+$$\\vec{\\mathbf{g}}= k^{\*}\_c\\nabla^2 c +\\nabla \\cdot \\frac{\\partial k^{\*}\_c}{\\partial \\nabla c} (\\nabla c)^2
+\\label{sub}$$
+<a href="#anis" data-reference-type="ref" data-reference="anis">[anis]</a>
+can be rewritten as:
+$$\\frac{dc}{dt}=\\nabla \\cdot \[ \\mathbf{D} \\nabla \\frac{\\delta F}{\\delta c}\]= \\nabla \\cdot \[\\mathbf{D} \\nabla(\\frac{\\partial f^{\*}\_0(c,\\eta\_i)}{\\partial c}  -\\nabla \\vec{\\mathbf{g}} -\\beta\\Delta(\\Delta c))\]$$
+
+The term $\\frac{\\partial k^{\*}\_c}{\\partial \\nabla c}$ in
+<a href="#sub" data-reference-type="ref" data-reference="sub">[sub]</a>
+equals:
+$$\\frac{\\partial k^{\*}\_c}{\\partial \\nabla c}=\\frac{3}{4}\\delta(2\\frac { \\partial \\gamma\_s(\\vec{n})}{\\partial \\nabla c})$$
+
+The partial differentiation of the direction dependent surface energy
+with respect to the concentration gradient leads to:
+$$\\frac { \\partial \\gamma\_s(\\vec{n})}{\\partial \\nabla c}=\\frac{\\partial \\vec{n}}{\\partial \\nabla c } \\frac{ \\partial \\gamma\_{sf}(\\vec{n})}{\\partial \\vec{n}}=\\frac{1}{\\mid \\nabla c \\mid} (I- \\vec{n} \\otimes \\vec{n}) \\frac { \\partial \\gamma\_{sf}(\\vec{n})}{\\partial \\vec{n}}
+\\label{SL\_3}$$
+
+The differentiation of the surface energy with respect to the normal
+vector applied to
+<a href="#SL_1" data-reference-type="ref" data-reference="SL_1">[SL_1]</a>
+leads to vector, which components are:
+$$\\frac { \\partial \\gamma\_{sf}(\\vec{n})}{\\partial \\vec{n}\_j}=-\\gamma\_0 \\sum\_{i=1}^{N }w\_i \\alpha\_i m\_{ij}(\\vec{n} \\cdot \\vec{m}\_i)^{w\_i-1}\\Theta(\\vec{n} \\cdot \\vec{m}\_i)
+\\label{SL\_4}$$
+
+where *m*<sub>*i**j*</sub> is the *j*th component of *m⃗*<sub>*i*</sub>
+and *n*<sub>*j*</sub> id the *j*-th component of the normal vector.
+
+It be noted that the kinetic equation of the non-conservative parameters
+is not modified other than formally replacing the coefficients with the
+\*-coefficients. The advection term will not be considered in the case
+of surface anisotropy, die to computational costs.
+
+The term $\\frac{\\beta}{2}(\\Delta c)^2$ is a regularization term. If
+the energy surface of certain orientation is too high they might not
+appear in the final equilibrium shape. As a result of missing
+orientations the interface might not be smooth but have discontinuties .
+This might lead to a ill-posedness of the Cahn-Hiliard equation as
+proven in . The here used laplacian regularization with the reg.-
+parameter *β* is used to correct this problem.
 
