@@ -42,7 +42,7 @@ height = "350px"
 
 [[item]]
   overlay_color = "#666"  # An HTML color value.
-  overlay_img = "finallo.png"  # Image path relative to your `static/media/` folder.
+  overlay_img = "finallo.gif"  # Image path relative to your `static/media/` folder.
   overlay_filter = 0.5  # Darken the image. Value in range 0-1.
 
 
