@@ -31,6 +31,5 @@ summary = "Phase-field simulations of crystal anisotropy and sintering using a F
 
 <embed src="Master_thesis_proposal.pdf" width="700px" height="2100px" />
 
-
-<p><span class="math display">\[\frac{\partial c}{\partial t}= - \nabla \cdot (c \vec{v})
-\label{cons}\]</span></p>
+$$\\frac{\\partial c}{\\partial t}= - \\nabla \\cdot (c \\vec{v})
+\\label{cons}$$
