@@ -3,7 +3,7 @@
 widget = "slider"  # See https://sourcethemes.com/academic/docs/page-builder/
 headless = true  # This file represents a page section.
 active = true  # Activate this widget? true/false
-weight = 80  # Order that this section will appear.
+weight = 66  # Order that this section will appear.
 
 # Slide interval.
 # Use `false` to disable animation or enter a time in ms, e.g. `5000` (5s).
@@ -17,10 +17,7 @@ height = "350px"
 # Duplicate an `[[item]]` block to add more slides.
 
 
-[[item]]
-  overlay_color = "#666"  # An HTML color value.
-  overlay_img = "combbig.gif"  # Image path relative to your `static/media/` folder.
-  overlay_filter = 0  # Darken the image. Value in range 0-1.
+
 
 [[item]]
   #title = "Skills"
@@ -31,9 +28,7 @@ height = "350px"
 
   # Overlay a color or image (optional).
   #   Deactivate an option by commenting out the line, prefixing it with `#`.
-  overlay_color = "#666"  # An HTML color value.
-  overlay_img = "1.png"  # Image path relative to your `static/media/` folder.
-  overlay_filter = 0.5  # Darken the image. Value in range 0-1.
+
 
   # Call to action button (optional).
   #   Activate the button by specifying a URL and button label below.
@@ -47,7 +42,7 @@ height = "350px"
 
 [[item]]
   overlay_color = "#666"  # An HTML color value.
-  overlay_img = "2.png"  # Image path relative to your `static/media/` folder.
+  overlay_img = "finallo.png"  # Image path relative to your `static/media/` folder.
   overlay_filter = 0.5  # Darken the image. Value in range 0-1.
 
 
