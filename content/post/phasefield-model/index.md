@@ -29,7 +29,7 @@ continuity equation and might represent e.g., a concentration.
 Non-conserved variables can be use to differentiate structures in the
 domain e.g., representing the orientation of different grains.
 
-In <a href="#var" data-reference-type="ref" data-reference="var">1.1</a>
+In <a href="#var" data-reference-type="ref" data-reference="var">2.1</a>
 the variables for a sintering problem are exemplary depicted. The
 variables in this model will be normalized and dimensionless assuming
 values between 0 and 1.
@@ -40,31 +40,29 @@ values between 0 and 1.
 
 In the following article the mathematical description of the phase field
 model for sintering will be presented. First in section
-<a href="#free energy functional" data-reference-type="ref" data-reference="free energy functional">[free energy functional]</a>
+<a href="#free energy functional" data-reference-type="ref" data-reference="free energy functional">2.1</a>
 the derivation of the free energy functional according to for phase
 field problems is illustrated. Following that the governing equations,
 which will describe the variable arrangement in time and space, will be
 proposed (section
-<a href="#Kinetics" data-reference-type="ref" data-reference="Kinetics">[Kinetics]</a>).
+<a href="#Kinetics" data-reference-type="ref" data-reference="Kinetics">2.2</a>).
 From the general phase field approach the we will look into the
 application on sintering problems. Therefore following the analysis of
 Ahmed et al. it will be demonstrated how the energy functional
 parameters can be uniquely correlated to the material parameters:
 surface energy and grain boundary energy (section
-<a href="#inden" data-reference-type="ref" data-reference="inden">[inden]</a>).
+<a href="#inden" data-reference-type="ref" data-reference="inden">2.3</a>).
 Further the calculation of the diffusional and advectional flux in this
 model is presented (section
-<a href="#DIFF" data-reference-type="ref" data-reference="DIFF">[DIFF]</a>).
+<a href="#DIFF" data-reference-type="ref" data-reference="DIFF">2.4</a>).
 Finally the implementation of surface and grain boundary energy
 anisotropy for this model is introduced (sections
-<a href="#GEA" data-reference-type="ref" data-reference="GEA">[GEA]</a>
+<a href="#GEA" data-reference-type="ref" data-reference="GEA">2.5</a>
 and
-<a href="#SEA" data-reference-type="ref" data-reference="SEA">[SEA]</a>).
-
-
+<a href="#SEA" data-reference-type="ref" data-reference="SEA">2.6</a>).
 
 Free energy functional
-======================
+----------------------
 
 According to the analysis of Cahn and Hilliard , the free energy
 function of a binary solution depends on both the local composition *c*
@@ -127,7 +125,6 @@ With the above equation, the total free energy
 <a href="#FE_9" data-reference-type="ref" data-reference="FE_9">[FE_9]</a>
 can be rewritten as:
 $$F=\\int\_V f\_0(c)+ \\nabla (k\_1 \\nabla c )-\\frac{dk\_1}{dc}(\\nabla c)^2+ k\_2(\\nabla c)^2  +... dV$$
-
 Application of the divergence theorem
 ∫<sub>*V*</sub>∇*Φ**d**V* = ∮<sub>*S*</sub>*Φ* ⋅ *n⃗**d**S* to the above
 integral
@@ -148,19 +145,8 @@ the base model in this thesis:
 $$F=\\int\_V f\_0(c,\\eta\_i)+\\frac{k\_{c}}{2} (\\nabla c)^2 + \\sum\_i \\frac{k\_{\\eta,i}}{2} (\\nabla \\eta\_i)^2  dV 
 \\label{FE}$$
 
-$$f\_0(c,\\eta\_i)= \\omega c^2(1-c)^2+\\xi\[c^2+6(1-c)\\sum\_{1}^{N}\\eta\_1-4(2-c)\\sum\_{1}^{N}\\eta\_{i}^3+3(\\sum\_{1}^{N}\\eta\_{i}^2)^2 \]
-\\label{landau}$$
-
-<figure>
-<img src="abb/Landau1.png" alt="a" /><figcaption aria-hidden="true">a</figcaption>
-</figure>
-
-<figure>
-<img src="abb/Landau2.png" alt="a" /><figcaption aria-hidden="true">a</figcaption>
-</figure>
-
-Governing equations
-===================
+Governing squations
+-------------------
 
 The formulation of the kinetic equations are derived according to Wang
 et. al. The conservation law for the mass field *c* requires:
@@ -222,7 +208,6 @@ Inserting
 into
 <a href="#res" data-reference-type="ref" data-reference="res">[res]</a>
 $$\\frac{dc}{dt}=\\nabla\\cdot \[ \\mathbf{D}\\nabla (\\frac{\\partial f\_0(c,\\eta\_i)}{\\partial c}-k\_c (\\nabla c)^2)\] - \\nabla \\cdot c\\vec{v}\_{adv}$$
-
 The kinetic equation of the non-conserved variable *η*<sub>*i*</sub> is
 represented by convectional Allen-Cahn-Equation, where the change of the
 order parameter is considered directly proportional to the variational
@@ -237,13 +222,11 @@ Euler-Lagrange-law to the above equation (see
 with *E* = *F* and *s* = *η*<sub>*i*</sub> )
 $$\\frac{d \\eta\_i}{d t}=-L\_i(\\frac{\\partial f\_0}{\\partial \\eta\_i}-  k\_{\\eta} (\\nabla \\eta\_i)^2)  -\\nabla\\cdot \\eta\_i \\vec{v}\_{adv,i}$$
 
-
 Identification of model parameters
-==================================
+----------------------------------
 
 $$f\_0(c,\\eta\_i)= \\omega c^2(1-c)^2+\\xi\[c^2+6(1-c)\\sum\_{1}^{N}\\eta\_1-4(2-c)\\sum\_{1}^{N}\\eta\_{i}^3+3(\\sum\_{1}^{N}\\eta\_{i}^2)^2 \]
 \\label{landau}$$
-
 
 The parameters *ω*, *ξ*, *k*<sub>*η*</sub> and *k*<sub>*c*</sub> can be
 uniquely estimated from the grain boundary energy *γ*<sub>*g**b*</sub>,
@@ -257,7 +240,7 @@ energy in the domain to the bulk energy integrated over one coordinate:
 $$\\gamma\_{gb}=\\int\_{-\\infty}^{\\infty}\[f(c,\\eta\_i,\\eta\_j)+\\frac{k\_{\\eta}}{2}\\{ (\\frac{d \\eta\_i}{dx})^2 +(\\frac{d \\eta\_j}{dx})^2  \\}-f(c,\\eta\_i,\\eta\_j)\_{Bulk}-\\frac{k\_{\\eta}}{2}\\{ (\\frac{d \\eta\_i}{dx})^2 +(\\frac{d \\eta\_j}{dx})^2  \\}\_{Bulk}\]\\, dx$$
 A schematic representation of the shape of the non-conserved variables
 of the grain boundary is represented in picture
-<a href="#GB_INT" data-reference-type="ref" data-reference="GB_INT">1</a>
+<a href="#GB_INT" data-reference-type="ref" data-reference="GB_INT">2.2</a>
 
 <figure>
 <img src="abb/Ahm1.png" id="GB_INT" style="width:40.0%" alt="Schematic representation of the two non-conserved variables across the interface." /><figcaption aria-hidden="true">Schematic representation of the two non-conserved variables across the interface.</figcaption>
@@ -268,11 +251,10 @@ free energy functional is zero in the stable states. In this way grain
 boundary energy can be expressed as:
 $$\\gamma\_{gb}=\\int\_{-\\infty}^{\\infty}\[f(c=1,\\eta\_i,\\eta\_j)+\\frac{k\_{\\eta}}{2}\\{ (\\frac{d \\eta\_i}{dx})^2 +(\\frac{d \\eta\_j}{dx})^2  \\} \]\\,dx
 \\label{GB\_2}$$
-
 neglecting changes in the concentration field across the grain boundary.
 The boundary conditions of the the equilibrium shape of
 *η*<sub>*i*</sub> and *η*<sub>*j*</sub> are set as following (fig
-<a href="#GB_INT" data-reference-type="ref" data-reference="GB_INT">[GB_INT]</a>):
+<a href="#GB_INT" data-reference-type="ref" data-reference="GB_INT">2.2</a>):
 $$\\begin{gathered}
 \\eta\_i=1 \\text{\\hspace{0.2 cm} and  \\hspace{0.2 cm}}   \\eta\_j=0 \\text{\\hspace{0.2 cm} for  \\hspace{0.2 cm}} x \\rightarrow -\\infty 
 \\label{BC\_1}\\\\
@@ -344,7 +326,6 @@ $$\\begin{aligned}
 =\\frac{2}{\\sqrt{3}} \\sqrt{\\xi k\_{\\eta}}
 \\end{aligned}
 \\label{GB\_fin}$$
-
 The width of the diffuse interface can be approximated as:
 $$(\\frac{d \\eta\_j}{dx})\_{x=0}= tan(\\Phi)=\\frac{1}{\\delta}
 \\label{GB\_25}$$
@@ -371,7 +352,7 @@ provide a relationship between the model parameters *k*<sub>*η*</sub>,
 parameters *ω* and *k*<sub>*c*</sub> the profile of the conserved
 variable c and a non-conserved variable *η*<sub>*j*</sub> across a free
 surface is considered (see figure
-<a href="#SF_INT" data-reference-type="ref" data-reference="SF_INT">1</a>).
+<a href="#SF_INT" data-reference-type="ref" data-reference="SF_INT">2.3</a>).
 
 <figure>
 <img src="abb/Ahm2.png" id="SF_INT" style="width:40.0%" alt="Schematic representation of a conserved an a non-conserved variable across a free surface." /><figcaption aria-hidden="true">Schematic representation of a conserved an a non-conserved variable across a free surface.</figcaption>
@@ -404,10 +385,9 @@ k\_{\\eta}=\\frac{3}{4}\\delta(\\gamma\_{gb}).
 \\label{zd}\\end{gathered}$$
 
 Transport mechanism models 
-==========================
+--------------------------
 
-Diffusion
----------
+### Diffusion
 
 The mobility coefficient chosen for the many simulations of sintering
 process in this thesis is of functional tensorial form as widely used by
@@ -424,9 +404,9 @@ the unit tensor. The function *c*<sup>2</sup>(1 − *c*)<sup>2</sup>
 limits surface diffusion to the diffuse free surface region, while
 ∑<sub>*i*</sub>∑<sub>*j*</sub>*η*<sub>*i*</sub>*η*<sub>*j*</sub>
 guarantees that grain boundary diffusion is limited to the grain
-boundary region.*Φ*(*c*) is a function that is 1 in the solid region and 0 in the void,
-in order to guarantee that self- and vapour diffusion occur at the
-expected places. The projection tensor
+boundary region. *Φ*(*c*) is a function that is 1 in the solid region
+and 0 in the void, in order to guarantee that self- and vapour diffusion
+occur at the expected places. The projection tensor
 **T**<sub>**s****u****r****f**</sub> tensor is determined by:
 **T**<sub>**s****u****r****f**</sub> = **I** − *n⃗*<sub>*s**u**r**f*</sub> ⊗ *n⃗*<sub>*s**u**r**f*</sub>
 with ⊗ being the dyadic product and *n⃗*<sub>*s**u**r**f*</sub> is the
@@ -438,10 +418,7 @@ with *n⃗*<sub>*g**b*</sub> being the normal unit vector to the grain
 boundary, given as
 $$\\vec{n}\_{gb}=\\frac{\\nabla \\eta\_i - \\nabla \\eta\_i}{\\mid \\nabla \\eta\_i - \\nabla \\eta\_i \\mid}$$
 
-
-Advection
----------
-
+### Advection
 
 In the current simulation of the advection velocity formulation proposed
 by Wang et al. is adopted. Rigid body motion is generated by a local
@@ -457,14 +434,12 @@ variation in the concentration at the grain boundary with respect to the
 equilibrium concentration *c*<sub>0</sub>. The product
 *η*<sub>*j*</sub>*η*<sub>*j*</sub> is used to identify the grain
 boundary as:
-
 $$\\langle \\eta\_i \\eta\_j \\rangle=
 \\begin{cases}
 0 & \\text{\\hspace{0.2 cm} for \\hspace{0.2 cm}} \\eta\_i \\eta\_j&lt;c\_{gb} \\\\
 1 & \\text{\\hspace{0.2 cm} for \\hspace{0.2 cm}} \\eta\_i \\eta\_j\\geq c\_{gb}
 \\end{cases}
 \\label{AD\_4}$$
-
 with *c*<sub>*g**b*</sub> being a threshold. The gradient difference
 term ⟩\[∇*η*<sub>*i*</sub> − ∇*η*<sub>*j*</sub>\] assures the right
 direction of the acting force. Consequently if the concentration at the
@@ -473,24 +448,31 @@ attracted towards each other, in the opposite case they will be
 repulsed. In case *c* = *c*<sub>0</sub> no force fill act. The total
 force acting and torque acting on a particle can be obtained
 respectively computing
-
 *F*<sub>*i*</sub> = ∫<sub>*V*</sub>*d**F*<sub>*i*</sub>
-
 and
-
 *T*<sub>*i*</sub> = ∫<sub>*V*</sub>\[*r* − *r*<sub>*c*, *i*</sub>\] × *d**F*<sub>*i*</sub>
-
-where *r*<sub>*c*, *i*</sub> is the center of mass of the *i*th determined through
-
+where *r*<sub>*c*, *i*</sub> is the center of mass of the *i*th
+determined trough
 $$r\_i= \\frac{1}{V\_i} \\int\_{V} \\eta\_i r  \\,dV
 \\label{AD\_10}$$
-
 The volume of a particle *i* can be obtained by the integration of
 *η*<sub>*i*</sub> over the domain
-
+*V*<sub>*i*</sub> = ∫<sub>*V*</sub>*η*<sub>*i*</sub> *d**V*
+The translation and rotation velocity field can be calculated
+respectively as
+$$v\_{t,adv,i}= \\frac{m\_t}{V\_i} F\_i\\eta\_i
+\\label{AD\_6}$$
+and
+$$v\_{r,adv,i}=\\frac{m\_r}{V\_i} T\_i \\times \[r-r\_{c,i}\]\\eta\_i 
+\\label{AD\_5}$$
+where *m*<sub>*t*</sub> and *m*<sub>*r*</sub> are two constants
+identifying a translational and rotation mobility. Finally the advection
+velocity field on a single particle is given by the addition of the
+contributions of translation and rotation
+*v*<sub>*a**d**v*, *i*</sub> = *v*<sub>*r*, *a**d**v*, *i*</sub> + *v*<sub>*t*, *a**d**v*, *i*</sub>
 
 Grain boundary energy anisotropy
-================================
+--------------------------------
 
 Based on a dislocation model Read and Schockley approximated the grain
 boundary energy of low angle tilt angles (*θ* ≤ 15<sup>∘</sup> ) as:
@@ -499,7 +481,7 @@ with *γ*<sub>*g**b*0</sub> is a constant. *θ* is the misorientation
 angle between the to grains while *ϕ* is the inclination angle with
 respect to the symmetric tilt grain boundary.*θ*<sub>*m*</sub> is the
 maximum misorientation. As represented in
-<a href="#incli" data-reference-type="ref" data-reference="incli">1</a>
+<a href="#incli" data-reference-type="ref" data-reference="incli">2.4</a>
 the misorientation *Θ* can be calculated as the difference of the angles
 *α* and *β*, which are the inclination of each grain with respect to the
 global coordinate system. *Φ*<sub>*x*</sub> is the inclination of the
@@ -518,7 +500,7 @@ The grain boundary inclination is calculated from the grain boundary
 normal (in teh way proposed by ) considering the symmetric boundary:
 $$\\phi=\\arctan(\\frac{\\nabla\_x\\eta\_i-\\nabla\_x \\eta\_j}{\\nabla\_y \\eta\_i-\\nabla\_y \\eta\_j})-\\frac{\\Theta}{2}$$
 Fig.
-<a href="#easy" data-reference-type="ref" data-reference="easy">2</a>
+<a href="#easy" data-reference-type="ref" data-reference="easy">2.5</a>
 show the grain boundary energy according to eq.
 <a href="#GBS" data-reference-type="ref" data-reference="GBS">[GBS]</a>.
 Where *Θ* is the misorientation and *ϕ* the inclination with respect to
@@ -532,7 +514,7 @@ Butalov et al. proposed an algorithm enabling the calculation of grain
 boundary energy of 4 fcc metals (Cu, Ni, Al and Au) over the whole 5D
 space out of the orientation matrices of the grain assuming a grain
 boundary plane perpendicular to the \[1 0 0\] direction
-(Fig.<a href="#Bula" data-reference-type="ref" data-reference="Bula">3</a>
+(Fig.<a href="#Bula" data-reference-type="ref" data-reference="Bula">2.6</a>
 ).
 
 <figure>
@@ -575,11 +557,10 @@ mixed boundaries are characterized. Finally the grain boundary energy
 energy obtained by an idealized rotation of the grains around the high
 symmetry \[1 0 0\], \[1 1 0\] and \[1 1 1\] axes.
 $$\\begin{gathered}
-  \\epsilon=\\frac{ 1+\\sum w\_{hkl}\\epsilon\_{hkl} }{ 1+\\sum w\_{hkl} } \\epsilon\_{RGB}
-  \\label{a}\\\\
-  \\intertext{with  weights defined as:}
-  w\_{hkl}=\\frac{w\_{hkl}^0}{sin(\\frac{ \\pi d\_3}{2d\_{hkl}^{max}})(1-\\frac{1}{2}log( sin(\\frac{ \\pi d\_3}{2d\_{hkl}^{max}}))-1}
-  \\end{gathered}$$
+\\epsilon=\\frac{ 1+\\sum w\_{hkl}\\epsilon\_{hkl} }{ 1+\\sum w\_{hkl} } \\epsilon\_{RGB}
+\\label{a}\\\\
+\\intertext{with  weights defined as:}
+w\_{hkl}=\\frac{w\_{hkl}^0}{sin(\\frac{ \\pi d\_3}{2d\_{hkl}^{max}})(1-\\frac{1}{2}log( sin(\\frac{ \\pi d\_3}{2d\_{hkl}^{max}}))-1}\\end{gathered}$$
 *d*<sub>3</sub> is the distance between the exact rotation of the grain
 and the approximated rotation.
 *d*<sub>*h**k**l*</sub><sup>*m**a**x*</sup> is the is a cutoff distance,
@@ -609,7 +590,7 @@ the fact that in this work this method will only be applied for 2D
 simulations of tilt grain boundaries around the z-Axis an analysis of
 the energy function shows a low dependency on grain boundary
 inclination. This Behavior can figure see in fig.
-<a href="#Ana" data-reference-type="ref" data-reference="Ana">4</a>,
+<a href="#Ana" data-reference-type="ref" data-reference="Ana">2.7</a>,
 where grain the dimensionless energy of Cu dependent on misorientation
 and grain boundary inclination is depicted.
 
@@ -632,7 +613,7 @@ with *γ*<sub>*g**b*, *i**j*</sub> being the grain boundary energy
 between the grain pair *i* and *j*.
 
 Surface energy anisotropy
-=========================
+-------------------------
 
 Simulation of faceting of crystals requires a description of the surface
 energy in dependency of the orientation of the crystals surface. The
@@ -668,15 +649,15 @@ in the energy minimization is given. The value of
 moves away from a favorable direction. The course of the function an the
 impact of the parameters *α*<sub>*i*</sub> and *w*<sub>*i*</sub> is
 demonstrated in the exemplary plot
-<a href="#s2d" data-reference-type="ref" data-reference="s2d">5</a> for
-the 2D dimensional case. In 2D a direction can also be represented by a
-single angle *Θ* between the normal vector and the abscissa
+<a href="#s2d" data-reference-type="ref" data-reference="s2d">2.8</a>
+for the 2D dimensional case. In 2D a direction can also be represented
+by a single angle *Θ* between the normal vector and the abscissa
 $\\Theta = -\\arctan(\\frac{n\_x}{n\_y})$. In figure
-<a href="#s2d" data-reference-type="ref" data-reference="s2d">5</a> the
-\[1 1\] directions and the \[1 0\] directions (and all their symmetries)
-are considered. These direction have different *α* values which leads to
-different deep minima. For the dotted and dashed line all minima have
-the same *w*<sub>*i*</sub> values but in in the second case
+<a href="#s2d" data-reference-type="ref" data-reference="s2d">2.8</a>
+the \[1 1\] directions and the \[1 0\] directions (and all their
+symmetries) are considered. These direction have different *α* values
+which leads to different deep minima. For the dotted and dashed line all
+minima have the same *w*<sub>*i*</sub> values but in in the second case
 *w*<sub>*i*</sub> is increased. Increasing *w*<sub>*i*</sub> decrease
 the width of the single minima, which are more defined and decoupled
 from each other. The solid line further demonstrates this behavior, for
@@ -688,9 +669,10 @@ high *w*<sub>*i*</sub> values the maximal grain boundary energy
 <img src="abb/Salva/2D_4.png" id="s2d" alt="a" /><figcaption aria-hidden="true">a</figcaption>
 </figure>
 
-Fig <a href="#s3d" data-reference-type="ref" data-reference="s3d">6</a>
-is a 3D representation of the anisotropic surface energy over a sphere,
-for minima at the \[1 0 0\] and \[1 1 1\] directions (and all their
+Fig
+<a href="#s3d" data-reference-type="ref" data-reference="s3d">2.9</a> is
+a 3D representation of the anisotropic surface energy over a sphere, for
+minima at the \[1 0 0\] and \[1 1 1\] directions (and all their
 symmetries) having different *α* values.
 
 <figure>
@@ -741,7 +723,7 @@ concentration
 Applying a fully variational approach, the variation of the surface
 energy with the concentration gradient has to be considered. Variational
 calculus as reported in
-<a href="#Kinetics" data-reference-type="ref" data-reference="Kinetics">[Kinetics]</a>,
+<a href="#Kinetics" data-reference-type="ref" data-reference="Kinetics">2.2</a>,
 without considering advectional transport, lead to a kinetic equation
 for the concentration as:
 $$\\frac{dc}{dt}=\\nabla  \\cdot (\\mathbf{D} \\nabla \\frac{\\delta F}{\\delta c})= \\nabla \\cdot \[ \\mathbf{D} \\nabla(\\frac{\\partial f^{\*}\_0(c,\\eta\_i)}{dc} - k\_c^{\*}\\nabla^2 c -\\nabla \\cdot \\frac{\\partial k\_c^{\*}}{\\partial \\nabla c} (\\nabla c)^2 -\\beta\\Delta(\\Delta c))\]
