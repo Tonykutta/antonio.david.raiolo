@@ -31,5 +31,5 @@ summary = "Phase-field simulations of crystal anisotropy and sintering using a F
 
 <embed src="Master_thesis_proposal.pdf" width="700px" height="2100px" />
 
-
+<iframe src="Master_thesis_proposal.pdf&embedded=true" style="width:600px; height:500px;" frameborder="0"></iframe>
  
