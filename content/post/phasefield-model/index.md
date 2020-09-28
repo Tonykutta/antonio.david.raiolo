@@ -451,9 +451,7 @@ neck. Through an a rigid body motion of the particles towards each
 other, the concentration decay at the grain boundary can be compensated.
 In the approach proposed by Wang. et al. the force density is
 proportional to the concentration is determined by:
-
 *d**F*<sub>*i*</sub> = *k*∑<sub>*i* ≠ *j*</sub>(*c* − *c*<sub>0</sub>)⟨*η*<sub>*i*</sub>*η*<sub>*j*</sub>⟩\[∇*η*<sub>*i*</sub> − ∇*η*<sub>*j*</sub>\] *d**V*
-
 where *k* is the stiffness constant magnifying the force caused by a
 variation in the concentration at the grain boundary with respect to the
 equilibrium concentration *c*<sub>0</sub>. The product
