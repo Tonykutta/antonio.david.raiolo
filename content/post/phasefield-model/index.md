@@ -243,10 +243,10 @@ Using a symmetric free energy function eq. the energy functional eq. is symmetri
 $$\\begin{gathered}
 \\eta\_j=1-\\eta\_i
 \\label{GB\_17}\\\\
-\\intertext{and consequently:}
+\\mbox{and consequently:}
 \\frac{d\\eta\_i}{dx}= -\\frac{d\\eta\_j}{dx}
 \\label{GB\_18}\\\\
-\\intertext{which can be rewritten as:}
+\\mbox{which can be rewritten as:}
 \\frac{d \\eta\_i}{d\\eta\_j}=-1 
 \\label{GB\_19}\\end{gathered}$$
 
