@@ -465,7 +465,7 @@ Finally the grain boundary energy $\epsilon$ is calculated as a combination of w
   $$\\begin{gathered}
 \\epsilon=\\frac{ 1+\\sum w\_{hkl}\\epsilon\_{hkl} }{ 1+\\sum w\_{hkl} } \\epsilon\_{RGB}
 \\label{a}\\\\
-\\text{with  weights defined as:}
+\\text{with  weights defined as:}\\\\
 w\_{hkl}=\\frac{w\_{hkl}^0}{sin(\\frac{ \\pi d\_3}{2d\_{hkl}^{max}})(1-\\frac{1}{2}log( sin(\\frac{ \\pi d\_3}{2d\_{hkl}^{max}}))-1}\\end{gathered}$$
   $d_3$ is the distance between the exact rotation of the grain and the approximated rotation. $d_{hkl}^{max}$ is the is a cutoff distance, for to high distance values. $\epsilon_{RGB}$ is a constant fitting value have a dimension. Dividing \ref{a} by $\epsilon_{RGB}$ leads to a dimensionless function with values ranging from 0 to 1.
   
