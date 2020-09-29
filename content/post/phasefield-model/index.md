@@ -37,11 +37,11 @@ f(c,\nabla c,\nabla^2 c, ...)= f_0(c)+\sum_i L_i (\frac{\partial c}{\partial x_i
 
 with:
 \begin{gathered}
-L_i=[\frac{\partial f}{\partial(\frac{\partial c}{\partial x_i})} ]_0 
+L_i=[\frac{\partial f}{\partial(\frac{\partial c}{\partial x_i})} ]_0 \\\\
 \label{FE_2}\\\\
-k_{ij}^{(1)}=[\frac{\partial f}{\partial(\frac{\partial^2 c}{\partial x_i  \partial x_j})} ]_0 
+k_{ij}^{(1)}=[\frac{\partial f}{\partial(\frac{\partial^2 c}{\partial x_i  \partial x_j})} ]_0 \\\\
 \label{FE_3}\\\\
-k_{ij}^{(2)}=[\frac{\partial^2 f}{\partial(\frac{\partial c}{\partial x_i} \frac{\partial c}{\partial x_j})} ]_0
+k_{ij}^{(2)}=[\frac{\partial^2 f}{\partial(\frac{\partial c}{\partial x_i} \frac{\partial c}{\partial x_j})} ]_0 \\\\
 \label{FE_4}
 \end{gathered}
 
