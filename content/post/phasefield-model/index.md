@@ -76,7 +76,7 @@ with uniform composition are indicated by the subscript 0.
 The Taylor series (here of the second order) is:
 $$
 \\begin{aligned}
-f(c,\\nabla c,\\nabla^2 c, ...)= f\_0(c)+\\sum\_i L\_i (\\frac{\\partial c}{\\partial x\_i}) + \\sum\_{ij} k\_{ij}^{(1)}(\\frac{\\partial^2 c}{\\partial x\_i \\partial x\_j})\\
+f(c,\\nabla c,\\nabla^2 c, ...)= f\_0(c)+\\sum\_i L\_i (\\frac{\\partial c}{\\partial x\_i}) + \\sum\_{ij} k\_{ij}^{(1)}(\\frac{\\partial^2 c}{\\partial x\_i \\partial x\_j})\\\\
  +\\frac{1}{2}\\sum\_{ij}k\_{ij}^{(2)}\[(\\frac{\\partial c}{\\partial x\_i})(\\frac{\\partial c}{\\partial x\_j})\] + ...
 \\end{aligned}
 \\label{FE\_1}$$
