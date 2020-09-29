@@ -43,17 +43,17 @@ L\_i=\[\\frac{\\partial f}{\\partial(\\frac{\\partial c}{\\partial x\_i})} \]\_0
 k\_{ij}^{(1)}=\[\\frac{\\partial f}{\\partial(\\frac{\\partial^2 c}{\\partial x\_i  \\partial x\_j})} \]\_0 
 \\label{FE\_3}\\\\
 k\_{ij}^{(2)}=\[\\frac{\\partial^2 f}{\\partial(\\frac{\\partial c}{\\partial x\_i} \\frac{\\partial c}{\\partial x\_j})} \]\_0
-\\label{FE\_4}\\end{gathered}$$
+\\label{FE\_4}\\end{gathered}
 
 
-$
-\begin{gathered}
+
+\\begin{gathered}
 L_i=[\frac{\partial f}{\partial(\frac{\partial c}{\partial x_i})} ]_0 
 \label{FE_2}\\\\
 k_{ij}^{(1)}=[\frac{\partial f}{\partial(\frac{\partial^2 c}{\partial x_i  \partial x_j})} ]_0
 \label{FE_3}\\\\
 k_{ij}^{(2)}=[\frac{\partial^2 f}{\partial(\frac{\partial c}{\partial x_i} \frac{\partial c}{\partial x_j})} ]_0
-\label{FE_4}\end{gathered}$
+\label{FE_4}\\end{gathered}
 
 
 $L_i$ is a first rank tensor, while $k_{ij}^{(1)}$ and $k_{ij}^{(2)}$ are second rank symmetric tensor.
