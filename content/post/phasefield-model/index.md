@@ -26,10 +26,14 @@ According to the analysis of Cahn and Hilliard \cite{Cahn1959}, the free energy 
 
 The Taylor series  (here of the second order) is: 
 \begin{equation}
-f(c,\nabla c,\nabla^2 c, ...)= f_0(c)+\sum_i L_i (\frac{\partial c}{\partial x_i}) + \sum_{ij} k_{ij}^{(1)}(\frac{\partial^2 c}{\partial x_i \partial x_j}) +\frac{1}{2}\sum_{ij}k_{ij}^{(2)}[(\frac{\partial c}{\partial x_i})(\frac{\partial c}{\partial x_j})] + ...
+\beging{aligned}
+f(c,\nabla c,\nabla^2 c, ...)= f_0(c)+\sum_i L_i (\frac{\partial c}{\partial x_i}) + \sum_{ij} k_{ij}^{(1)}(\frac{\partial^2 c}{\partial x_i \partial x_j}) \\
++\frac{1}{2}\sum_{ij}k_{ij}^{(2)}[(\frac{\partial c}{\partial x_i})(\frac{\partial c}{\partial x_j})] + ...
 \label{FE_1}
+\end{aligned}
 \end{equation}
 with:
+$$
 \begin{gather}
 L_i=[\frac{\partial f}{\partial(\frac{\partial c}{\partial x_i})} ]_0 
 \label{FE_2}\\
@@ -38,7 +42,7 @@ k_{ij}^{(1)}=[\frac{\partial f}{\partial(\frac{\partial^2 c}{\partial x_i  \part
 k_{ij}^{(2)}=[\frac{\partial^2 f}{\partial(\frac{\partial c}{\partial x_i} \frac{\partial c}{\partial x_j})} ]_0
 \label{FE_4}
 \end{gather}
-
+$$
 $L_i$ is a first rank tensor, while $k_{ij}^{(1)}$ and $k_{ij}^{(2)}$ are second rank symmetric tensor.
 
 Assuming an isotropic system, any reflection ($x_i\rightarrow -x_i $) or rotation ($x_i\rightarrow -x_j $) should not affect the free energy. Consequently 
