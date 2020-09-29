@@ -63,6 +63,7 @@ k\_{ij}^{(1)} = 0 \mbox{  for  } i\\neq j
 k\_{ij}^{(2)} = k\_2 = \[\\frac{\\partial^2 f}{(\\partial \\mid \\nabla c \\mid)^2}\]\_0  \mbox{  for  } i=j\\\\
 k\_{ij}^{(2)} = 0 \\mbox{  for  } i\\neq j 
 \\end{aligned}
+\\label{FE\_7}\\end{gathered}$$
 
 
 With \ref{FE_5}, \ref{FE_6} and \ref{FE_7} the free energy functional \ref{FE_1} becomes: 
