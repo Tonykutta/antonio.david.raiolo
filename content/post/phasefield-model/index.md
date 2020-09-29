@@ -485,32 +485,6 @@ with $\gamma_{gb,ij}$ being the grain boundary energy between the grain pair $i$
   
   
   
-  
-  
-  
-  
-%This distance is approximated as $d_3 = 2sin(\delta/2)$, where $\delta$ is the smallest residual angle  
-  
-%\begin{equation}
-%d_3 = 2sin(\delta/2)
-%\end{equation}
-%\begin{equation}
-%d_2=2- \vec{m}_1 \cdot \vec{n}_1 - \vec{m}_2 \cdot \vec{n}_2 
-%\end{equation}
-
-
-
-
-
-
-
-
-%\begin{figure}[H]
-%	\centering
-%	\includegraphics[width=0.4\linewidth]{abb/EnergyTwoAngle.png}
-%	\caption{a}
-%\end{figure}
-
 
 
 
@@ -518,30 +492,7 @@ with $\gamma_{gb,ij}$ being the grain boundary energy between the grain pair $i$
 
 \section{Surface energy anisotropy}  \label{SEA}
 Simulation of faceting of crystals requires a description of the surface energy in dependency of the orientation of the crystals surface. The crystals facets will then be formed according to those orientations that are energetically favorable, so the direction with in which the energy has a minimum. 
-%
-%A simple widely used function is the fourfold symmetric model is:
-%
-%\begin{equation}
-%\gamma_{sf}(\vec{n})=1+\alpha(\sum_{1}^{d} n^4_i -3)
-%\label{tora}
-%\end{equation}
-%where $d$ is the number if dimension $n_i$ are the components of the surface unity normal vector and alpha is a constant describing the degree of anisotropy \cite{Torabi2009b}, \cite{Chen2018}. 
-%The surface normal vector can be determined as:
-%
-%\begin{equation}
-%	\vec{n}=\frac{\nabla c}{\mid \nabla c \mid}
-%\end{equation}
-%
-%
-%In the 2D case \ref{tora} can be also written as:
-%\begin{equation}
-%\gamma_{sf}(\theta)=1+\alpha\cos(4\theta)
-%\end{equation}
-%with $\theta$ being the angle between the normal vector and the abscissa. 
 
-
-
-%This function is minimal when $\vec{n}$ lies in the [1 1 1] direction for the 3D case and [1 1] direction for 2D (or $\theta$ being a multiple of $\frac{\pi}{4}$).
 Representation of complex crystals having various facets directions of different surface energy require an adaptable model.
 A convenient formulation has been provided by Salvalaglio et al \cite{Salvalaglio2015}.
 \begin{equation}
