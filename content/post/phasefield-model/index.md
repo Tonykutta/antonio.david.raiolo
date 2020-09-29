@@ -47,32 +47,24 @@ k\_{ij}^{(2)}=\[\\frac{\\partial^2 f}{\\partial(\\frac{\\partial c}{\\partial x\
 
 
 
-\begin{gathered}
-L_i=[\frac{\partial f}{\partial(\frac{\partial c}{\partial x_i})} ]_0 
-\label{FE_2}\\
-k_{ij}^{(1)}=[\frac{\partial f}{\partial(\frac{\partial^2 c}{\partial x_i  \partial x_j})} ]_0
-\label{FE_3}\\
-k_{ij}^{(2)}=[\frac{\partial^2 f}{\partial(\frac{\partial c}{\partial x_i} \frac{\partial c}{\partial x_j})} ]_0
-\label{FE_4}\end{gathered}
-
-
 $L_i$ is a first rank tensor, while $k_{ij}^{(1)}$ and $k_{ij}^{(2)}$ are second rank symmetric tensor.
 
 Assuming an isotropic system, any reflection ($x_i\rightarrow -x_i $) or rotation ($x_i\rightarrow -x_j $) should not affect the free energy. Consequently 
-\begin{gather}
-L_i=0
-\label{FE_5}\\
-\begin{aligned}
-k_{ij}^{(1)} = k_1 = [\frac{\partial f}{\partial \nabla^2 c}]_0  \text{\hspace{0.2cm} for \hspace{0.2cm}} i=j\\
-k_{ij}^{(1)} = 0 \text{\hspace{0.2cm} for \hspace{0.2cm}} i\neq j 
-\end{aligned}
-\label{FE_6}\\
-\begin{aligned}
-k_{ij}^{(2)} = k_2 = [\frac{\partial^2 f}{(\partial \mid \nabla c \mid)^2}]_0  \text{\hspace{0.2cm} for \hspace{0.2cm}} i=j\\
-k_{ij}^{(2)} = 0 \text{\hspace{0.2cm} for \hspace{0.2cm}} i\neq j 
-\end{aligned}
-\label{FE_7}
-\end{gather}
+
+$$\\begin{gathered}
+L\_i=0
+\\label{FE\_5}\\\\
+\\begin{aligned}
+k\_{ij}^{(1)} = k\_1 = \[\\frac{\\partial f}{\\partial \\nabla^2 c}\]\_0  \mbox{  for  } i=j\\\\
+k\_{ij}^{(1)} = 0 \mbox{  for  } i\\neq j 
+\\end{aligned}
+\\label{FE\_6}\\\\
+\\begin{aligned}
+k\_{ij}^{(2)} = k\_2 = \[\\frac{\\partial^2 f}{(\\partial \\mid \\nabla c \\mid)^2}\]\_0  \mbox{  for  } i=j\\\\
+k\_{ij}^{(2)} = 0 \\mbox{  for  } i\\neq j 
+\\end{aligned}
+
+
 With \ref{FE_5}, \ref{FE_6} and \ref{FE_7} the free energy functional \ref{FE_1} becomes: 
 \begin{equation}
 f(c,\nabla c,\nabla^2 c, ...)= f_0(c)+k_1\nabla^2 c+k_2(\nabla c)^2 + ...
