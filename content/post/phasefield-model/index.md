@@ -224,44 +224,44 @@ In this way grain boundary energy can be expressed as:
 \end{equation}
 neglecting changes in the concentration field across the grain boundary. 
 The boundary conditions of the the equilibrium shape of $ \eta_i$ and $\eta_j$ are set as following (fig \ref{GB_INT}): 
-\begin{gather}
-\eta_i=1 \text{\hspace{0.2 cm} and  \hspace{0.2 cm}}   \eta_j=0 \text{\hspace{0.2 cm} for  \hspace{0.2 cm}} x \rightarrow -\infty 
-\label{BC_1}\\
-\eta_i=0 \text{\hspace{0.2 cm} and  \hspace{0.2 cm}}   \eta_j=1 \text{\hspace{0.2 cm} for  \hspace{0.2 cm}} x \rightarrow  \infty 
-\label{BC_2}\\
-\frac{d\eta_i}{dx} = \frac{d\eta_j}{dx} \text{\hspace{0.2 cm} for  \hspace{0.2 cm}} x \rightarrow  \pm \infty 
-\label{BC_3}
-\end{gather}
+$$\\begin{gathered}
+\\eta\_i=1 \\text{\\hspace{0.2 cm} and  \\hspace{0.2 cm}}   \\eta\_j=0 \\text{\\hspace{0.2 cm} for  \\hspace{0.2 cm}} x \\rightarrow -\\infty 
+\\label{BC\_1}\\\\
+\\eta\_i=0 \\text{\\hspace{0.2 cm} and  \\hspace{0.2 cm}}   \\eta\_j=1 \\text{\\hspace{0.2 cm} for  \\hspace{0.2 cm}} x \\rightarrow  \\infty 
+\\label{BC\_2}\\\\
+\\frac{d\\eta\_i}{dx} = \\frac{d\\eta\_j}{dx} \\text{\\hspace{0.2 cm} for  \\hspace{0.2 cm}} x \\rightarrow  \\pm \\infty 
+\\label{BC\_3}\\end{gathered}$$
 In order to minimize function \ref{GB_2} Euler equation must be applied leading to:
-\begin{gather}
-\frac{\partial f(c=1,\eta_i,\eta_j)}{\partial \eta_i}-k_{\eta}(\frac{d^2 \eta_i}{dx^2})=0
-\label{GB_5}\\
-\frac{\partial f(c=1,\eta_i,\eta_j)}{\partial \eta_j}-k_{\eta}(\frac{d^2 \eta_j}{dx^2})=0
-\label{GB_6}
-\end{gather}
+$$\\begin{gathered}
+\\frac{\\partial f(c=1,\\eta\_i,\\eta\_j)}{\\partial \\eta\_i}-k\_{\\eta}(\\frac{d^2 \\eta\_i}{dx^2})=0
+\\label{GB\_5}\\\\
+\\frac{\\partial f(c=1,\\eta\_i,\\eta\_j)}{\\partial \\eta\_j}-k\_{\\eta}(\\frac{d^2 \\eta\_j}{dx^2})=0
+\\label{GB\_6}\\end{gathered}$$
 Eq. \ref{GB_5} and \ref{GB_6} can be combined to (see Appendix \ref{AppA}): 
 \begin{equation}
 f-\frac{k_{\eta}}{2}[(\frac{d \eta_i}{dx})^2+(\frac{d \eta_j}{dx})^2  ]=0 
 \label{GB_15}
 \end{equation}
 Using a symmetric free energy function eq. the energy functional eq. is symmetrical with respect to the non-conserved variable $\eta_i$ and $\eta_j$ so that:
-\begin{gather}
-\eta_j=1-\eta_i
-\label{GB_17}\\
-\intertext{and consequently:}
-\frac{d\eta_i}{dx}= -\frac{d\eta_j}{dx}
-\label{GB_18}\\
-\intertext{which can be rewritten as:}
-\frac{d \eta_i}{d\eta_j}=-1 
-\label{GB_19}
-\end{gather}
+
+$$\\begin{gathered}
+\\eta\_j=1-\\eta\_i
+\\label{GB\_17}\\\\
+\\intertext{and consequently:}
+\\frac{d\\eta\_i}{dx}= -\\frac{d\\eta\_j}{dx}
+\\label{GB\_18}\\\\
+\\intertext{which can be rewritten as:}
+\\frac{d \\eta\_i}{d\\eta\_j}=-1 
+\\label{GB\_19}\\end{gathered}$$
+
 Eq. \ref{GB_15}, with boundary conditions \ref{BC_1}-\ref{BC_3}, eq. \ref{GB_17} and eq. \ref{GB_19} can be rearranged to:
-\begin{gather}
-\frac{d \eta_i}{dx}=- \sqrt{\frac{f(c=1, \eta_i,\eta_j)}{k_{\eta} }}
-\label{GB_20}\\
-\frac{d \eta_j}{dx}= \sqrt{\frac{f(c=1, \eta_i,\eta_j)}{k_{\eta} }}
-\label{GB_21}
-\end{gather}
+$$\\begin{gathered}
+\\frac{d \\eta\_i}{dx}=- \\sqrt{\\frac{f(c=1, \\eta\_i,\\eta\_j)}{k\_{\\eta} }}
+\\label{GB\_20}\\\\
+\\frac{d \\eta\_j}{dx}= \\sqrt{\\frac{f(c=1, \\eta\_i,\\eta\_j)}{k\_{\\eta} }}
+\\label{GB\_21}\\end{gathered}$$
+
+
 Substitution of eq.\ref{GB_15} into \ref{GB_2}:
 \begin{equation}
 \gamma_{gb}= \int_{-\infty}^{\infty} 2 f(c=1, \eta_i,\eta_j)\, dx
@@ -317,16 +317,15 @@ and
 \end{equation}
 Recapitulating eq. \ref{GB_fin}, \ref{GB_27}, \ref{cond}, \ref{SF_fin} provide a unique relationship between between the model parameter an material parameter.
 These equations can finally be rearranged as:
-\begin{gather}
-\omega=\frac{12\gamma_{sf}-7\gamma_{gb}}{\delta},
-\label{za}\\
-\xi=\frac{\gamma_{gb}}{\delta},
-\label{zb}\\
-k_c=\frac{3}{4}\delta(2\gamma_s-\gamma_{gb}) \text{\hspace{0.2 cm} and}
-\label{zc}\\
-k_{\eta}=\frac{3}{4}\delta(\gamma_{gb}).
-\label{zd}
-\end{gather} 
+$$\\begin{gathered}
+\\omega=\\frac{12\\gamma\_{sf}-7\\gamma\_{gb}}{\\delta},
+\\label{za}\\\\
+\\xi=\\frac{\\gamma\_{gb}}{\\delta},
+\\label{zb}\\\\
+k\_c=\\frac{3}{4}\\delta(2\\gamma\_s-\\gamma\_{gb}) \\text{\\hspace{0.2 cm} and}
+\\label{zc}\\\\
+k\_{\\eta}=\\frac{3}{4}\\delta(\\gamma\_{gb}).
+\\label{zd}\\end{gathered}$$
 
 
 \section{Transport mechanism models } \label{DIFF}
