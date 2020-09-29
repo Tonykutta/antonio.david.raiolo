@@ -513,14 +513,12 @@ A convenient formulation has been provided by Salvalaglio et al \cite{Salvalagli
 \end{equation}
 In this function $N$ is the number of energetic minima. $m_i$ are the unit vectors for which the funtion has a minimum, $\alpha_i$ and $w_i$ are coefficients defining how deep and how wide each minimum is and $\gamma_0$ is a constant factor.  In order to be differentiable $w_i\geq2$is required.
 $\theta(\vec{n}\cdot \vec{m})$ is the Heaviside step function, which excludes contributions in the surface energy for the case of a negative scalar product $\vec{n}\cdot \vec{m}$
-\begin{equation}
-\theta(\vec{n}\cdot \vec{m_i})=
-\begin{cases}
-0 & \text{   for  } \vec{n}\cdot \vec{m}_i < 0 \\
-1 & \text{   for  } \vec{n}\cdot \vec{m}_i\geq 0
-\end{cases}
-\label{SL_2}
-\end{equation}
+$$\\theta(\\vec{n}\\cdot \\vec{m\_i})=
+\\begin{cases}
+0 & \\text{ for }\\vec{n}\\cdot \\vec{m}\_i &lt; 0 \\\\
+1 & \\text{ for } \\vec{n}\\cdot \\vec{m}\_i\\geq 0
+\\end{cases}
+\\label{SL\_2}$$
 
 The absolute value of the scalar product $vec{n}\cdot \vec{m}$ is always less than 1 one for $\vec{n} \neq \vec{m_i}$ and is 1 for  $\vec{n} = \vec{m_i}$, so for the last case the highest contribution in the energy minimization is given. The value of $ \gamma_{sf}(\vec{n})$ continuously increases when the normal vector moves away from a favorable direction.
 The course of the function an the impact of the parameters $\alpha_i$ and $w_i$ is demonstrated in the exemplary plot \ref{s2d} for the 2D dimensional case. In 2D a direction can also be represented by a single angle $\Theta$ between the normal vector and the abscissa $\Theta = -\arctan(\frac{n_x}{n_y})$.  In figure \ref{s2d} the [1 1] directions and the [1 0] directions (and all their symmetries) are considered. These direction have different $\alpha$ values which leads to different deep minima. For the dotted and dashed line all minima have the same $w_i$ values but in in the second case $w_i$ is increased. Increasing $w_i$ decrease the width of the single minima, which are more defined and decoupled from each other.
