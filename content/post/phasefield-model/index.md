@@ -26,7 +26,7 @@ According to the analysis of Cahn and Hilliard \cite{Cahn1959}, the free energy 
 
 The Taylor series  (here of the second order) is: 
 \begin{equation}
-\beging{aligned}
+\begin{aligned}
 f(c,\nabla c,\nabla^2 c, ...)= f_0(c)+\sum_i L_i (\frac{\partial c}{\partial x_i}) + \sum_{ij} k_{ij}^{(1)}(\frac{\partial^2 c}{\partial x_i \partial x_j}) \\
 +\frac{1}{2}\sum_{ij}k_{ij}^{(2)}[(\frac{\partial c}{\partial x_i})(\frac{\partial c}{\partial x_j})] + ...
 \label{FE_1}
