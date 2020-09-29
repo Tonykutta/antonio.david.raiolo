@@ -90,8 +90,8 @@ k\_{ij}^{(2)}=\[\\frac{\\partial^2 f}{\\partial(\\frac{\\partial c}{\\partial x\
 \\label{FE\_4}\\end{gathered}$$
 
 *L*<sub>*i*</sub> is a first rank tensor, while
-*k*<sub>*i**j*</sub><sup>(1)</sup> and
-*k*<sub>*i**j*</sub><sup>(2)</sup> are second rank symmetric tensor.
+*k*<sub>*ij*</sub><sup>(1)</sup> and
+*k*<sub>*ij*</sub><sup>(2)</sup> are second rank symmetric tensor.
 
 Assuming an isotropic system, any reflection
 (*x*<sub>*i*</sub> →  − *x*<sub>*i*</sub>) or rotation
