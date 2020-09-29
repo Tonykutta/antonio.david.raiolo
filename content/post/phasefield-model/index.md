@@ -462,12 +462,11 @@ for [1 0 0] and [1 1 0] directions. For [1 1 1]:
 \end{equation}
 with  $p_{hkl}^1$ and $p_{hkl}^2$ and $\alpha$ being fitting parameters. The angle $\Phi$ varies between  $0$, for  twist boundaries, and $\frac{\pi}{2}$, for tilt boundaries, and all for values in between mixed boundaries are characterized. 
 Finally the grain boundary energy $\epsilon$ is calculated as a combination of weighted contributions of the energy obtained by an idealized rotation of the grains around the high symmetry [1 0 0], [1 1 0] and [1 1 1] axes. 
-  \begin{gather}
-  \epsilon=\frac{ 1+\sum w_{hkl}\epsilon_{hkl} }{ 1+\sum w_{hkl} } \epsilon_{RGB}
-  \label{a}\\
-  \text{with  weights defined as:}
-  w_{hkl}=\frac{w_{hkl}^0}{sin(\frac{ \pi d_3}{2d_{hkl}^{max}})(1-\frac{1}{2}log( sin(\frac{ \pi d_3}{2d_{hkl}^{max}}))-1}
-  \end{gather}
+  $$\\begin{gathered}
+\\epsilon=\\frac{ 1+\\sum w\_{hkl}\\epsilon\_{hkl} }{ 1+\\sum w\_{hkl} } \\epsilon\_{RGB}
+\\label{a}\\\\
+\\text{with  weights defined as:}
+w\_{hkl}=\\frac{w\_{hkl}^0}{sin(\\frac{ \\pi d\_3}{2d\_{hkl}^{max}})(1-\\frac{1}{2}log( sin(\\frac{ \\pi d\_3}{2d\_{hkl}^{max}}))-1}\\end{gathered}$$
   $d_3$ is the distance between the exact rotation of the grain and the approximated rotation. $d_{hkl}^{max}$ is the is a cutoff distance, for to high distance values. $\epsilon_{RGB}$ is a constant fitting value have a dimension. Dividing \ref{a} by $\epsilon_{RGB}$ leads to a dimensionless function with values ranging from 0 to 1.
   
   The algorithm has been provided as a MATLAB code. In this work this code has been translated to C++ to be implemented in the simulations.
