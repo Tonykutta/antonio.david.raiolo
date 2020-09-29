@@ -592,26 +592,28 @@ Fig \ref{s3d} is a 3D representation of the anisotropic surface energy over a sp
 
 
 For the simulation of sintering of faceted particles in this work the total free energy \ref{FE} is modified.
-\begin{gather}
-F=\int_V f^{*}_0(c,\eta_i)+\frac{k^{*}_{c}}{2} (\nabla c)^2 + \frac{k^{*}_{\eta}}{2} \sum_i  (\nabla \eta_i)^2 + \frac{\beta}{2}(\Delta c)^2\, dV 
-\label{FS} \\
-\intertext{\hspace{0.2 cm} with}
-f_0(c,\eta_i)= \omega^{*} c^2(1-c)^2+\xi^{*}[c^2+6(1-c)\sum_{1}^{N}\eta_1-4(2-c)\sum_{1}^{N}\eta_{i}^3+3(\sum_{1}^{N}\eta_{i}^2)^2 ]
-\label{landaustern}
-\end{gather}
+
+$$\\begin{gathered}
+F=\\int\_V f^{\*}\_0(c,\\eta\_i)+\\frac{k^{\*}\_{c}}{2} (\\nabla c)^2 + \\frac{k^{\*}\_{\\eta}}{2} \\sum\_i  (\\nabla \\eta\_i)^2 + \\frac{\\beta}{2}(\\Delta c)^2\\, dV 
+\\label{FS} \\\\
+\\intertext{\\hspace{0.2 cm} with}
+f\_0(c,\\eta\_i)= \\omega^{\*} c^2(1-c)^2+\\xi^{\*}\[c^2+6(1-c)\\sum\_{1}^{N}\\eta\_1-4(2-c)\\sum\_{1}^{N}\\eta\_{i}^3+3(\\sum\_{1}^{N}\\eta\_{i}^2)^2 \]
+\\label{landaustern}\\end{gathered}$$
+
 The term $\frac{\beta}{2}(\Delta c)^2$, which function will be discussed in the end of this section, is added and the parameters $\omega\, \xi\,k_c \,k_{\eta}$ 
  (\ref{za},\ref{zb}, \ref{zc} and \ref{zd}) in front of the gradient terms and in the landau polynomial \ref{landau} are replaced by $\omega^{*},\xi^{*}\,k_{\eta}^{*}\,k_c^{*}$.  
 as:
-\begin{gather}
-\omega^{*}=\frac{12\gamma_{0}-7\gamma_{gb}}{\delta},
-\label{qa}\\
-\xi^{*}=\xi=\frac{\gamma_{gb}}{\delta},
-\label{qb}\\
-k_c^{*}=\frac{3}{4}\delta(2\gamma_{sf}(\vec{n})-\gamma_{gb}) \text{\hspace{0.2 cm} and}
-\label{qc}\\
-k_{\eta}^{*}=k_{\eta}=\frac{3}{4}\delta(\gamma_{gb}).
-\label{qd}
-\end{gather} 
+
+$$\\begin{gathered}
+\\omega^{\*}=\\frac{12\\gamma\_{0}-7\\gamma\_{gb}}{\\delta},
+\\label{qa}\\\\
+\\xi^{\*}=\\xi=\\frac{\\gamma\_{gb}}{\\delta},
+\\label{qb}\\\\
+k\_c^{\*}=\\frac{3}{4}\\delta(2\\gamma\_{sf}(\\vec{n})-\\gamma\_{gb}) \\text{\\hspace{0.2 cm} and}
+\\label{qc}\\\\
+k\_{\\eta}^{\*}=k\_{\\eta}=\\frac{3}{4}\\delta(\\gamma\_{gb}).
+\\label{qd}\\end{gathered}$$
+
 
 
 The grain surface energy in $\gamma_{sf}$ in \ref{za} $\omega$ is set to the constant $\gamma_0$ in \ref{qa} so that the variation of the surface energy does not affect the local energy function. Instead the orientation dependent term $\gamma_{sf}(\vec{n})$ is implemented in the gradient term of the concentration \ref{qc}. 
