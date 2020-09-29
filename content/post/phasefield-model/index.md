@@ -107,7 +107,7 @@ k\_{ij}^{(1)} = 0 \mbox{  for  } i\\neq j
 \\label{FE\_6}\\\\
 \\begin{aligned}
 k\_{ij}^{(2)} = k\_2 = \[\\frac{\\partial^2 f}{(\\partial \\mid \\nabla c \\mid)^2}\]\_0  \mbox{  for  } i=j\\\\
-k\_{ij}^{(2)} = 0 \\mbox\\hspace{0.2cm} for \\hspace{0.2cm}} i\\neq j 
+k\_{ij}^{(2)} = 0 \\mbox{\\hspace{0.2cm} for \\hspace{0.2cm}} i\\neq j 
 \\end{aligned}
 \\label{FE\_7}\\end{gathered}$$
 With
