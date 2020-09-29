@@ -221,11 +221,11 @@ In this way grain boundary energy can be expressed as:
 neglecting changes in the concentration field across the grain boundary. 
 The boundary conditions of the the equilibrium shape of $ \eta_i$ and $\eta_j$ are set as following (fig \ref{GB_INT}): 
 $$\\begin{gathered}
-\\eta\_i=1 \\text{\\hspace{0.2 cm} and  \\hspace{0.2 cm}}   \\eta\_j=0 \\text{\\hspace{0.2 cm} for  \\hspace{0.2 cm}} x \\rightarrow -\\infty 
+\\eta\_i=1 \\text{\\hspace{0.2 cm} and  \\hspace{0.2 cm}}   \\eta\_j=0 \\text{  for  } x \\rightarrow -\\infty 
 \\label{BC\_1}\\\\
-\\eta\_i=0 \\text{\\hspace{0.2 cm} and  \\hspace{0.2 cm}}   \\eta\_j=1 \\text{\\hspace{0.2 cm} for  \\hspace{0.2 cm}} x \\rightarrow  \\infty 
+\\eta\_i=0 \\text{\\hspace{0.2 cm} and  \\hspace{0.2 cm}}   \\eta\_j=1 \\text{  for  } x \\rightarrow  \\infty 
 \\label{BC\_2}\\\\
-\\frac{d\\eta\_i}{dx} = \\frac{d\\eta\_j}{dx} \\text{\\hspace{0.2 cm} for  \\hspace{0.2 cm}} x \\rightarrow  \\pm \\infty 
+\\frac{d\\eta\_i}{dx} = \\frac{d\\eta\_j}{dx} \\text{  for  } x \\rightarrow  \\pm \\infty 
 \\label{BC\_3}\\end{gathered}$$
 In order to minimize function \ref{GB_2} Euler equation must be applied leading to:
 $$\\begin{gathered}
@@ -318,7 +318,7 @@ $$\\begin{gathered}
 \\label{za}\\\\
 \\xi=\\frac{\\gamma\_{gb}}{\\delta},
 \\label{zb}\\\\
-k\_c=\\frac{3}{4}\\delta(2\\gamma\_s-\\gamma\_{gb}) \\text{\\hspace{0.2 cm} and}
+k\_c=\\frac{3}{4}\\delta(2\\gamma\_s-\\gamma\_{gb}) \\text{  and}
 \\label{zc}\\\\
 k\_{\\eta}=\\frac{3}{4}\\delta(\\gamma\_{gb}).
 \\label{zd}\\end{gathered}$$
@@ -361,8 +361,8 @@ where $k$ is the stiffness constant magnifying the force caused by a variation i
 \begin{equation}
 \langle \eta_i \eta_j \rangle=
 \begin{cases}
-0 & \text{\hspace{0.2 cm} for \hspace{0.2 cm}} \eta_i \eta_j<c_{gb} \\
-1 & \text{\hspace{0.2 cm} for \hspace{0.2 cm}} \eta_i \eta_j\geq c_{gb}
+0 & \text{for  $\eta_i \eta_j<c_{gb}$} \\
+1 & \text{for  $\eta_i \eta_j\geq c_{gb}$}
 \end{cases}
 \label{AD_4}
 \end{equation}
@@ -558,7 +558,7 @@ $$\\begin{gathered}
 \\label{qa}\\\\
 \\xi^{\*}=\\xi=\\frac{\\gamma\_{gb}}{\\delta},
 \\label{qb}\\\\
-k\_c^{\*}=\\frac{3}{4}\\delta(2\\gamma\_{sf}(\\vec{n})-\\gamma\_{gb}) \\text{\\hspace{0.2 cm} and}
+k\_c^{\*}=\\frac{3}{4}\\delta(2\\gamma\_{sf}(\\vec{n})-\\gamma\_{gb}) \\text{ and  }
 \\label{qc}\\\\
 k\_{\\eta}^{\*}=k\_{\\eta}=\\frac{3}{4}\\delta(\\gamma\_{gb}).
 \\label{qd}\\end{gathered}$$
