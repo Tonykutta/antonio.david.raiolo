@@ -221,9 +221,9 @@ In this way grain boundary energy can be expressed as:
 neglecting changes in the concentration field across the grain boundary. 
 The boundary conditions of the the equilibrium shape of $ \eta_i$ and $\eta_j$ are set as following (fig \ref{GB_INT}): 
 $$\\begin{gathered}
-\\eta\_i=1 \\text{\\hspace{0.2 cm} and  \\hspace{0.2 cm}}   \\eta\_j=0 \\text{  for  } x \\rightarrow -\\infty 
+\\eta\_i=1 \\text{  and  }   \\eta\_j=0 \\text{  for  } x \\rightarrow -\\infty 
 \\label{BC\_1}\\\\
-\\eta\_i=0 \\text{\\hspace{0.2 cm} and  \\hspace{0.2 cm}}   \\eta\_j=1 \\text{  for  } x \\rightarrow  \\infty 
+\\eta\_i=0 \\text{  and  }   \\eta\_j=1 \\text{  for  } x \\rightarrow  \\infty 
 \\label{BC\_2}\\\\
 \\frac{d\\eta\_i}{dx} = \\frac{d\\eta\_j}{dx} \\text{  for  } x \\rightarrow  \\pm \\infty 
 \\label{BC\_3}\\end{gathered}$$
@@ -545,7 +545,7 @@ For the simulation of sintering of faceted particles in this work the total free
 $$\\begin{gathered}
 F=\\int\_V f^{\*}\_0(c,\\eta\_i)+\\frac{k^{\*}\_{c}}{2} (\\nabla c)^2 + \\frac{k^{\*}\_{\\eta}}{2} \\sum\_i  (\\nabla \\eta\_i)^2 + \\frac{\\beta}{2}(\\Delta c)^2\\, dV 
 \\label{FS} \\\\
-\\intertext{\\hspace{0.2 cm} with}
+\\intertext{ with}
 f\_0(c,\\eta\_i)= \\omega^{\*} c^2(1-c)^2+\\xi^{\*}\[c^2+6(1-c)\\sum\_{1}^{N}\\eta\_1-4(2-c)\\sum\_{1}^{N}\\eta\_{i}^3+3(\\sum\_{1}^{N}\\eta\_{i}^2)^2 \]
 \\label{landaustern}\\end{gathered}$$
 
