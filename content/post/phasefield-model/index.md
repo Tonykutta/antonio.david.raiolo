@@ -25,24 +25,22 @@ Further the calculation of the diffusional and advectional flux in this model is
 According to the analysis of Cahn and Hilliard \cite{Cahn1959}, the free energy function of a binary solution depends on both the local composition $c$ and the adjacent composition. Consequently, the free energy can be expressed by the local contribution and the derivative of these contributions. This can be achieved by a Taylor expansion over the free energy of the solution with uniform composition $f_0(c)$. In the following derivation the subscriptions $i$ and $j$ express the replacement of the coordinates $x$, $y$ and $z$. Values for a solution with uniform composition are indicated by the subscript $0$.
 
 The Taylor series  (here of the second order) is: 
-\begin{equation}
-\begin{aligned}
+$$\begin{aligned}
 f(c,\nabla c,\nabla^2 c, ...)= f_0(c)+\sum_i L_i (\frac{\partial c}{\partial x_i}) + \sum_{ij} k_{ij}^{(1)}(\frac{\partial^2 c}{\partial x_i \partial x_j}) \\
 +\frac{1}{2}\sum_{ij}k_{ij}^{(2)}[(\frac{\partial c}{\partial x_i})(\frac{\partial c}{\partial x_j})] + ...
 \label{FE_1}
-\end{aligned}
-\end{equation}
+\end{aligned}$$
+
 with:
-$$
-\\begin{gathered}
+
+$$\\begin{gathered}
 L_i=[\frac{\partial f}{\partial(\frac{\partial c}{\partial x_i})} ]_0 
 \label{FE_2}\\
 k_{ij}^{(1)}=[\frac{\partial f}{\partial(\frac{\partial^2 c}{\partial x_i  \partial x_j})} ]_0 
 \label{FE_3}\\
 k_{ij}^{(2)}=[\frac{\partial^2 f}{\partial(\frac{\partial c}{\partial x_i} \frac{\partial c}{\partial x_j})} ]_0
 \label{FE_4}
-\\end{gathered}
-$$
+\\end{gathered}$$
 
 $L_i$ is a first rank tensor, while $k_{ij}^{(1)}$ and $k_{ij}^{(2)}$ are second rank symmetric tensor.
 
