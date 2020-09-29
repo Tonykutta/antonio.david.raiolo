@@ -72,7 +72,7 @@ energy of the solution with uniform composition *f*<sub>0</sub>(*c*). In
 the following derivation the subscriptions *i* and *j* express the
 replacement of the coordinates *x*, *y* and *z*. Values for a solution
 with uniform composition are indicated by the subscript 0.
-asd
+
 The Taylor series (here of the second order) is:
 $$
 \\begin{aligned}
@@ -101,8 +101,8 @@ $$\\begin{gathered}
 L\_i=0
 \\label{FE\_5}\\\\
 \\begin{aligned}
-k\_{ij}^{(1)} = k\_1 = \[\\frac{\\partial f}{\\partial \\nabla^2 c}\]\_0  \mbox{ for} i=j\\\\
-k\_{ij}^{(1)} = 0 \\text{\\hspace{0.2cm} for \\hspace{0.2cm}} i\\neq j 
+k\_{ij}^{(1)} = k\_1 = \[\\frac{\\partial f}{\\partial \\nabla^2 c}\]\_0  \mbox{ for } i=j\\\\
+k\_{ij}^{(1)} = 0 \mbox{ for } i\\neq j 
 \\end{aligned}
 \\label{FE\_6}\\\\
 \\begin{aligned}
