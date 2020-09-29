@@ -504,8 +504,8 @@ $\theta(\vec{n}\cdot \vec{m})$ is the Heaviside step function, which excludes co
 \begin{equation}
 \theta(\vec{n}\cdot \vec{m_i})=
 \begin{cases}
-0 & \text{\hspace{0.2 cm} for \hspace{0.2 cm}} \vec{n}\cdot \vec{m}_i < 0 \\
-1 & \text{\hspace{0.2 cm} for \hspace{0.2 cm}} \vec{n}\cdot \vec{m}_i\geq 0
+0 & \text{   for  } \vec{n}\cdot \vec{m}_i < 0 \\
+1 & \text{   for  } \vec{n}\cdot \vec{m}_i\geq 0
 \end{cases}
 \label{SL_2}
 \end{equation}
