@@ -180,20 +180,7 @@ Appication of the Euler-Lagrange-law to  the above equation (see \ref{EULL} with
 f_0(c,\eta_i)= \omega c^2(1-c)^2+\xi[c^2+6(1-c)\sum_{1}^{N}\eta_1-4(2-c)\sum_{1}^{N}\eta_{i}^3+3(\sum_{1}^{N}\eta_{i}^2)^2 ]
 \label{landau}
 \end{equation}
-\newpage
-\begin{figure}[h]
-	\centering
-	\begin{subfigure}[t]{0.6\linewidth}
-		\centering
-		\includegraphics[width=\linewidth]{abb/Landau1.png}
-		\caption{a}
-	\end{subfigure}
-	\begin{subfigure}[t]{0.6\linewidth}
-		\centering
-		\includegraphics[width=\linewidth]{abb/Landau2.png}
-		\caption{a}
-	\end{subfigure}
-\end{figure}
+
 
 <figure>
 <img src="abb/Landau1.png" id="ss" style="width:40.0%" alt="S" /><figcaption aria-hidden="true">Schematic representation of the two non-conserved variables across the interface.</figcaption>
