@@ -89,8 +89,8 @@ k\_{ij}^{(1)}=\[\\frac{\\partial f}{\\partial(\\frac{\\partial^2 c}{\\partial x\
 k\_{ij}^{(2)}=\[\\frac{\\partial^2 f}{\\partial(\\frac{\\partial c}{\\partial x\_i} \\frac{\\partial c}{\\partial x\_j})} \]\_0
 \\label{FE\_4}\\end{gathered}$$
 
-$$L_i$$ is a first rank tensor, while
-*k*<sub>*ij*</sub><sup>(1)</sup> and
+$L_i$ is a first rank tensor, while
+*k_ij*</sub><sup>(1)</sup> and
 *k*<sub>*ij*</sub><sup>(2)</sup> are second rank symmetric tensor.
 
 Assuming an isotropic system, any reflection
