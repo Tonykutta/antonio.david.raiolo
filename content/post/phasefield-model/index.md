@@ -62,13 +62,13 @@ $$\\begin{gathered}
 L\_i=0
 \\label{FE\_5}\\\\
 \\begin{aligned}
-k\_{ij}^{(1)} = k\_1 = \[\\frac{\\partial f}{\\partial \\nabla^2 c}\]\_0  \mbox{  for  } i=j\\\\
-k\_{ij}^{(1)} = 0 \mbox{  for  } i\\neq j 
+k\_{ij}^{(1)} = k\_1 = \[\\frac{\\partial f}{\\partial \\nabla^2 c}\]\_0  \text{  for  } i=j\\\\
+k\_{ij}^{(1)} = 0 \text{  for  } i\\neq j 
 \\end{aligned}
 \\label{FE\_6}\\\\
 \\begin{aligned}
-k\_{ij}^{(2)} = k\_2 = \[\\frac{\\partial^2 f}{(\\partial \\mid \\nabla c \\mid)^2}\]\_0  \mbox{  for  } i=j\\\\
-k\_{ij}^{(2)} = 0 \\mbox{  for  } i\\neq j 
+k\_{ij}^{(2)} = k\_2 = \[\\frac{\\partial^2 f}{(\\partial \\mid \\nabla c \\mid)^2}\]\_0  \text{  for  } i=j\\\\
+k\_{ij}^{(2)} = 0 \\text{  for  } i\\neq j 
 \\end{aligned}
 \\label{FE\_7}\\end{gathered}$$
 
@@ -111,6 +111,7 @@ The here presented approach only considers a composition field $c$. In order to 
 F=\int_V f_0(c,\eta_i)+\frac{k_{c}}{2} (\nabla c)^2 + \sum_i \frac{k_{\eta,i}}{2} (\nabla \eta_i)^2  dV 
 \label{FE}
 \end{equation}
+
 Governing squations \label{Kinetics}
 -------------------
 
@@ -243,10 +244,10 @@ Using a symmetric free energy function eq. the energy functional eq. is symmetri
 $$\\begin{gathered}
 \\eta\_j=1-\\eta\_i
 \\label{GB\_17}\\\\
-\\mbox{and consequently:}
+\\text{and consequently:}
 \\frac{d\\eta\_i}{dx}= -\\frac{d\\eta\_j}{dx}
 \\label{GB\_18}\\\\
-\\mbox{which can be rewritten as:}
+\\text{which can be rewritten as:}
 \\frac{d \\eta\_i}{d\\eta\_j}=-1 
 \\label{GB\_19}\\end{gathered}$$
 
@@ -464,7 +465,7 @@ Finally the grain boundary energy $\epsilon$ is calculated as a combination of w
   \begin{gather}
   \epsilon=\frac{ 1+\sum w_{hkl}\epsilon_{hkl} }{ 1+\sum w_{hkl} } \epsilon_{RGB}
   \label{a}\\
-  \mbox{with  weights defined as:}
+  \text{with  weights defined as:}
   w_{hkl}=\frac{w_{hkl}^0}{sin(\frac{ \pi d_3}{2d_{hkl}^{max}})(1-\frac{1}{2}log( sin(\frac{ \pi d_3}{2d_{hkl}^{max}}))-1}
   \end{gather}
   $d_3$ is the distance between the exact rotation of the grain and the approximated rotation. $d_{hkl}^{max}$ is the is a cutoff distance, for to high distance values. $\epsilon_{RGB}$ is a constant fitting value have a dimension. Dividing \ref{a} by $\epsilon_{RGB}$ leads to a dimensionless function with values ranging from 0 to 1.
@@ -545,7 +546,7 @@ For the simulation of sintering of faceted particles in this work the total free
 $$\\begin{gathered}
 F=\\int\_V f^{\*}\_0(c,\\eta\_i)+\\frac{k^{\*}\_{c}}{2} (\\nabla c)^2 + \\frac{k^{\*}\_{\\eta}}{2} \\sum\_i  (\\nabla \\eta\_i)^2 + \\frac{\\beta}{2}(\\Delta c)^2\\, dV 
 \\label{FS} \\\\
-\\mbox{ with}
+\\text{ with}
 f\_0(c,\\eta\_i)= \\omega^{\*} c^2(1-c)^2+\\xi^{\*}\[c^2+6(1-c)\\sum\_{1}^{N}\\eta\_1-4(2-c)\\sum\_{1}^{N}\\eta\_{i}^3+3(\\sum\_{1}^{N}\\eta\_{i}^2)^2 \]
 \\label{landaustern}\\end{gathered}$$
 
