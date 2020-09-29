@@ -222,11 +222,11 @@ In this way grain boundary energy can be expressed as:
 neglecting changes in the concentration field across the grain boundary. 
 The boundary conditions of the the equilibrium shape of $ \eta_i$ and $\eta_j$ are set as following (fig \ref{GB_INT}): 
 $$\\begin{gathered}
-\\eta\_i=1 \\text{  and  }   \\eta\_j=0 \\text{  for  } x \\rightarrow -\\infty 
+\\eta\_i=1 \\text{  and  }   \\eta\_j=0 \\text{$~$  for $~$  } x \\rightarrow -\\infty 
 \\label{BC\_1}\\\\
-\\eta\_i=0 \\text{  and  }   \\eta\_j=1 \\text{  for  } x \\rightarrow  \\infty 
+\\eta\_i=0 \\text{  and  }   \\eta\_j=1 \\text{$~$  for $~$ } x \\rightarrow  \\infty 
 \\label{BC\_2}\\\\
-\\frac{d\\eta\_i}{dx} = \\frac{d\\eta\_j}{dx} \\text{  for  } x \\rightarrow  \\pm \\infty 
+\\frac{d\\eta\_i}{dx} = \\frac{d\\eta\_j}{dx} \\text{$~$  for $~$ } x \\rightarrow  \\pm \\infty 
 \\label{BC\_3}\\end{gathered}$$
 In order to minimize function \ref{GB_2} Euler equation must be applied leading to:
 $$\\begin{gathered}
