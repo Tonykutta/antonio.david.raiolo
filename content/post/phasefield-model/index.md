@@ -464,7 +464,7 @@ Finally the grain boundary energy $\epsilon$ is calculated as a combination of w
   \begin{gather}
   \epsilon=\frac{ 1+\sum w_{hkl}\epsilon_{hkl} }{ 1+\sum w_{hkl} } \epsilon_{RGB}
   \label{a}\\
-  \intertext{with  weights defined as:}
+  \mbox{with  weights defined as:}
   w_{hkl}=\frac{w_{hkl}^0}{sin(\frac{ \pi d_3}{2d_{hkl}^{max}})(1-\frac{1}{2}log( sin(\frac{ \pi d_3}{2d_{hkl}^{max}}))-1}
   \end{gather}
   $d_3$ is the distance between the exact rotation of the grain and the approximated rotation. $d_{hkl}^{max}$ is the is a cutoff distance, for to high distance values. $\epsilon_{RGB}$ is a constant fitting value have a dimension. Dividing \ref{a} by $\epsilon_{RGB}$ leads to a dimensionless function with values ranging from 0 to 1.
@@ -545,7 +545,7 @@ For the simulation of sintering of faceted particles in this work the total free
 $$\\begin{gathered}
 F=\\int\_V f^{\*}\_0(c,\\eta\_i)+\\frac{k^{\*}\_{c}}{2} (\\nabla c)^2 + \\frac{k^{\*}\_{\\eta}}{2} \\sum\_i  (\\nabla \\eta\_i)^2 + \\frac{\\beta}{2}(\\Delta c)^2\\, dV 
 \\label{FS} \\\\
-\\intertext{ with}
+\\mbox{ with}
 f\_0(c,\\eta\_i)= \\omega^{\*} c^2(1-c)^2+\\xi^{\*}\[c^2+6(1-c)\\sum\_{1}^{N}\\eta\_1-4(2-c)\\sum\_{1}^{N}\\eta\_{i}^3+3(\\sum\_{1}^{N}\\eta\_{i}^2)^2 \]
 \\label{landaustern}\\end{gathered}$$
 
