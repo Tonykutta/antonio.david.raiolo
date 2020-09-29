@@ -29,7 +29,7 @@ continuity equation and might represent e.g., a concentration.
 Non-conserved variables can be use to differentiate structures in the
 domain e.g., representing the orientation of different grains.
 
-In <a href="#var" data-reference-type="ref" data-reference="var">2.1</a>
+In fig. <a href="#var" data-reference-type="ref" data-reference="var">2.1</a>
 the variables for a sintering problem are exemplary depicted. The
 variables in this model will be normalized and dimensionless assuming
 values between 0 and 1.
@@ -44,8 +44,7 @@ model for sintering will be presented. First in section
 the derivation of the free energy functional according to for phase
 field problems is illustrated. Following that the governing equations,
 which will describe the variable arrangement in time and space, will be
-proposed (section
-<a href="#Kinetics" data-reference-type="ref" data-reference="Kinetics">2.2</a>).
+proposed (section <a href="#Kinetics" data-reference-type="ref" data-reference="Kinetics">2.2</a>).
 From the general phase field approach the we will look into the
 application on sintering problems. Therefore following the analysis of
 Ahmed et al. it will be demonstrated how the energy functional
@@ -75,7 +74,11 @@ replacement of the coordinates *x*, *y* and *z*. Values for a solution
 with uniform composition are indicated by the subscript 0.
 
 The Taylor series (here of the second order) is:
-$$f(c,\\nabla c,\\nabla^2 c, ...)= f\_0(c)+\\sum\_i L\_i (\\frac{\\partial c}{\\partial x\_i}) + \\sum\_{ij} k\_{ij}^{(1)}(\\frac{\\partial^2 c}{\\partial x\_i \\partial x\_j}) +\\frac{1}{2}\\sum\_{ij}k\_{ij}^{(2)}\[(\\frac{\\partial c}{\\partial x\_i})(\\frac{\\partial c}{\\partial x\_j})\] + ...
+$$
+\\begin{aligned}
+f(c,\\nabla c,\\nabla^2 c, ...)= f\_0(c)+\\sum\_i L\_i (\\frac{\\partial c}{\\partial x\_i}) + \\sum\_{ij} k\_{ij}^{(1)}(\\frac{\\partial^2 c}{\\partial x\_i \\partial x\_j})\\
+ +\\frac{1}{2}\\sum\_{ij}k\_{ij}^{(2)}\[(\\frac{\\partial c}{\\partial x\_i})(\\frac{\\partial c}{\\partial x\_j})\] + ...
+\\end{aligned}
 \\label{FE\_1}$$
 with:
 $$\\begin{gathered}
