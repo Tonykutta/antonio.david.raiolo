@@ -248,10 +248,14 @@ Using a symmetric free energy function eq. the energy functional eq. is symmetri
 $$\\begin{gathered}
 \\eta\_j=1-\\eta\_i
 \\label{GB\_17}\\\\
+\\\\
 \\text{and consequently:}\\\\
+\\\\
 \\frac{d\\eta\_i}{dx}= -\\frac{d\\eta\_j}{dx}
 \\label{GB\_18}\\\\
+\\\\
 \\text{which can be rewritten as:}\\\\
+\\\\
 \\frac{d \\eta\_i}{d\\eta\_j}=-1 
 \\label{GB\_19}\\end{gathered}$$
 
@@ -340,7 +344,7 @@ The mobility coefficient chosen for the  many simulations of sintering process i
 \end{align}
 \label{MOB}
 \end{equation}
-With $\Phi(c)=c^3(10-15c+6c^2)$.\\
+With $\Phi(c)=c^3(10-15c+6c^2)$.\\\\
 $D_{surf}$, $D_{gb}$, $D_{vol}$ and $D_{vap}$ are the mobility coefficients of surface, grain boundary, volume and vapour diffusion respectively. $\mathbf{T_{surf}}$, $\mathbf{T_{gb}}$ are surface projection tensors defining the direction of surface and grain boundary diffusion respectively. $\mathbf{I}$ is the unit tensor.
 The function $c^2(1-c)^2 $ limits surface diffusion to the diffuse free surface region, while $\sum_i \sum_j \eta_i \eta_j $  guarantees that grain boundary diffusion is limited to the grain boundary region. $\Phi(c)$ is a function that is $1$ in the solid region and $0$ in the void, in order to guarantee that self- and vapour diffusion occur at the expected places. 
 The projection tensor $\mathbf{T_{surf}}$ tensor is determined by: 
