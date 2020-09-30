@@ -585,17 +585,21 @@ The grain surface energy in $\gamma_{sf}$ in \ref{za} $\omega$ is set to the con
 
 Applying a fully variational approach, the variation of the surface energy with the concentration gradient 
 has to be considered. Variational calculus as reported in  \ref{Kinetics}, without considering advectional transport, lead to a kinetic equation for the concentration as:  
+
 \begin{equation}
 \frac{dc}{dt}=\nabla  \cdot (\mathbf{D} \nabla \frac{\delta F}{\delta c})= \nabla \cdot [ \mathbf{D} \nabla(\frac{\partial f^{*}_0(c,\eta_i)}{dc} - k_c^{*}\nabla^2 c -\nabla \cdot \frac{\partial k_c^{*}}{\partial \nabla c} (\nabla c)^2 -\beta\Delta(\Delta c))]
 \label{anis}
 \end{equation}
 
 with the substitution 
+
 \begin{equation}
 \vec{\mathbf{g}}= k^{*}_c\nabla^2 c +\nabla \cdot \frac{\partial k^{*}_c}{\partial \nabla c} (\nabla c)^2
 \label{sub}
 \end{equation}
+
 \ref{anis} can be rewritten as:
+
 \begin{equation}
 \frac{dc}{dt}=\nabla \cdot [ \mathbf{D} \nabla \frac{\delta F}{\delta c}]= \nabla \cdot [\mathbf{D} \nabla(\frac{\partial f^{*}_0(c,\eta_i)}{\partial c}  -\nabla \vec{\mathbf{g}} -\beta\Delta(\Delta c))]
 \end{equation}
