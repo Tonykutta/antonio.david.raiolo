@@ -248,10 +248,10 @@ Using a symmetric free energy function eq. the energy functional eq. is symmetri
 $$\\begin{gathered}
 \\eta\_j=1-\\eta\_i
 \\label{GB\_17}\\\\
-\\text{and consequently:}
+\\text{and consequently:}\\\\
 \\frac{d\\eta\_i}{dx}= -\\frac{d\\eta\_j}{dx}
 \\label{GB\_18}\\\\
-\\text{which can be rewritten as:}
+\\text{which can be rewritten as:}\\\\
 \\frac{d \\eta\_i}{d\\eta\_j}=-1 
 \\label{GB\_19}\\end{gathered}$$
 
@@ -276,8 +276,8 @@ f(c=1,\eta_i,\eta_j=1-\eta_i)=12\xi\eta_i^2(1-\eta_i)^2
 With eq. \ref{GB_23} and eq. \ref{GB_20} into eq. \ref{GB_22}:
 \begin{equation}
 \begin{aligned}
-\gamma_{gb}=2\int_{0}^{1} f(c=1,\eta_i,\eta_j=1-\eta_i) \sqrt{\frac{k_{\eta}}{f(c=1,\eta_i,\eta_j=1-\eta_i)}}d\eta_i\\
-=2 \sqrt{12k_{\eta}\xi} \int_{0}^{1} \eta_i(1-\eta_i)d\eta_i\\
+\gamma_{gb}=2\int_{0}^{1} f(c=1,\eta_i,\eta_j=1-\eta_i) \sqrt{\frac{k_{\eta}}{f(c=1,\eta_i,\eta_j=1-\eta_i)}}d\eta_i\\\\
+=2 \sqrt{12k_{\eta}\xi} \int_{0}^{1} \eta_i(1-\eta_i)d\eta_i\\\\
 =\frac{2}{\sqrt{3}} \sqrt{\xi k_{\eta}}
 \end{aligned}
 \label{GB_fin}
