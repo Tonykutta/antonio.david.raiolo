@@ -205,7 +205,11 @@ In the following the derivation of this relationship will be presented according
 This derivation is based om the equilibrium solution and the grain boundary width is assumed to be equal to the diffuse interface width.  
 The energy excess corresponding to the grain boundary energy can be interpreted as the different of the energy in the domain to the bulk energy integrated over one coordinate:
 \begin{equation}
-\gamma_{gb}=\int_{-\infty}^{\infty}[f(c,\eta_i,\eta_j)+\frac{k_{\eta}}{2}\{ (\frac{d \eta_i}{dx})^2 +(\frac{d \eta_j}{dx})^2  \}-f(c,\eta_i,\eta_j)_{Bulk}-\frac{k_{\eta}}{2}\{ (\frac{d \eta_i}{dx})^2 +(\frac{d \eta_j}{dx})^2  \}_{Bulk}]\, dx
+\begin{alingn}
+\gamma_{gb}=\int_{-\infty}^{\infty}[f(c,\eta_i,\eta_j)+\frac{k_{\eta}}{2}\{ (\frac{d \eta_i}{dx})^2 \\
++(\frac{d \eta_j}{dx})^2  \}-f(c,\eta_i,\eta_j)_{Bulk}-\frac{k_{\eta}}{2}\{ (\frac{d \eta_i}{dx})^2 \\
++(\frac{d \eta_j}{dx})^2  \}_{Bulk}]\, dx
+\end{align}
 \end{equation}
 A schematic representation of the shape of the non-conserved variables of the grain boundary is represented in picture \ref{GB_INT}
 
