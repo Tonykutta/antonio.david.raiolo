@@ -560,8 +560,12 @@ For the simulation of sintering of faceted particles in this work the total free
 $$\\begin{gathered}
 F=\\int\_V f^{\*}\_0(c,\\eta\_i)+\\frac{k^{\*}\_{c}}{2} (\\nabla c)^2 + \\frac{k^{\*}\_{\\eta}}{2} \\sum\_i  (\\nabla \\eta\_i)^2 + \\frac{\\beta}{2}(\\Delta c)^2\\, dV 
 \\label{FS} \\\\
-\\text{ with}
-f\_0(c,\\eta\_i)= \\omega^{\*} c^2(1-c)^2+\\xi^{\*}\[c^2+6(1-c)\\sum\_{1}^{N}\\eta\_1-4(2-c)\\sum\_{1}^{N}\\eta\_{i}^3+3(\\sum\_{1}^{N}\\eta\_{i}^2)^2 \]
+\\\\
+\\text{ with}\\\\
+\\\\
+f\_0(c,\\eta\_i)= \\omega^{\*} c^2(1-c)^2 \\\\
++\\xi^{\*}\[c^2+6(1-c)\\sum\_{1}^{N}\\eta\_1-4(2-c)\\sum\_{1}^{N}\\eta\_{i}^3\\\\
++3(\\sum\_{1}^{N}\\eta\_{i}^2)^2 \]
 \\label{landaustern}\\end{gathered}$$
 
 The term $\frac{\beta}{2}(\Delta c)^2$, which function will be discussed in the end of this section, is added and the parameters $\omega\, \xi\,k_c \,k_{\eta}$ 
