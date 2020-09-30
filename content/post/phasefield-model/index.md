@@ -469,7 +469,11 @@ The grain boundary energy of a 3D set is then calculated as a combination of asy
 \end{equation}
 for [1 0 0] and [1 1 0] directions. For [1 1 1]:
 \begin{equation}
-\epsilon_{111}=\epsilon_{111}^{twist}(1-\alpha\frac{2\Phi}{\pi}+(\alpha-1)(\frac{2\Phi}{\pi})^2)+\epsilon_{111}^{tilt}(1-\alpha\frac{2\Phi}{\pi}+(\alpha-1)(\frac{2\Phi}{\pi})^2)
+\begin{aligned}
+\epsilon_{111}=\epsilon_{111}^{twist}(1-\alpha\frac{2\Phi}{\pi}+(\alpha-1)(\frac{2\Phi}{\pi})^2)+\\
+\epsilon_{111}^{tilt}(1-\alpha\frac{2\Phi}{\pi}\\
++(\alpha-1)(\frac{2\Phi}{\pi})^2)
+\end{aligned}
 \end{equation}
 with  $p_{hkl}^1$ and $p_{hkl}^2$ and $\alpha$ being fitting parameters. The angle $\Phi$ varies between  $0$, for  twist boundaries, and $\frac{\pi}{2}$, for tilt boundaries, and all for values in between mixed boundaries are characterized. 
 Finally the grain boundary energy $\epsilon$ is calculated as a combination of weighted contributions of the energy obtained by an idealized rotation of the grains around the high symmetry [1 0 0], [1 1 0] and [1 1 1] axes. 
