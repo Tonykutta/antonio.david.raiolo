@@ -205,11 +205,11 @@ In the following the derivation of this relationship will be presented according
 This derivation is based om the equilibrium solution and the grain boundary width is assumed to be equal to the diffuse interface width.  
 The energy excess corresponding to the grain boundary energy can be interpreted as the different of the energy in the domain to the bulk energy integrated over one coordinate:
 \begin{equation}
-\begin{alingn}
+\begin{alingned}
 \gamma_{gb}=\int_{-\infty}^{\infty}[f(c,\eta_i,\eta_j)+\frac{k_{\eta}}{2}\{ (\frac{d \eta_i}{dx})^2 \\
 +(\frac{d \eta_j}{dx})^2  \}-f(c,\eta_i,\eta_j)_{Bulk}-\frac{k_{\eta}}{2}\{ (\frac{d \eta_i}{dx})^2 \\
 +(\frac{d \eta_j}{dx})^2  \}_{Bulk}]\, dx
-\end{align}
+\end{aligned}
 \end{equation}
 A schematic representation of the shape of the non-conserved variables of the grain boundary is represented in picture \ref{GB_INT}
 
@@ -338,10 +338,10 @@ Transport mechanism models  \label{DIFF}
 ### Diffusion
 The mobility coefficient chosen for the  many simulations of sintering process in this thesis is of functional tensorial form as widely used by many publications like \cite{Ahmed2013}, \cite{Biswas2016}, \cite{Biswas2018}.
 \begin{equation}
-\begin{align}
+\begin{aligned}
 \mathbf{D}= D_{surf} c^2(1-c)^2\mathbf{T_{surf}}+D_{gb}\sum_i \sum_j \eta_i \eta_j \mathbf{T_{gb}} \\\\
 +(D_{vol}\Phi(c)+ D_{vap}(1-\Phi(c)))  \mathbf{I}
-\end{align}
+\end{aligned}
 \label{MOB}
 \end{equation}
 With $\Phi(c)=c^3(10-15c+6c^2)$.\\\\
