@@ -587,27 +587,27 @@ Applying a fully variational approach, the variation of the surface energy with 
 has to be considered. Variational calculus as reported in  \ref{Kinetics}, without considering advectional transport, lead to a kinetic equation for the concentration as:  
 
 \begin{equation}
-\frac{dc}{dt}=\nabla  \cdot (\mathbf{D} \nabla \frac{\delta F}{\delta c})= \nabla \cdot [ \mathbf{D} \nabla(\frac{\partial f^{*}_0(c,\eta_i)}{dc} - k_c^{*}\nabla^2 c -\nabla \cdot \frac{\partial k_c^{*}}{\partial \nabla c} (\nabla c)^2 -\beta\Delta(\Delta c))]
+\frac{dc}{dt}=\nabla  \cdot (\mathbf{D} \nabla \frac{\delta F}{\delta c})= \nabla \cdot [ \mathbf{D} \nabla(\frac{\partial f^{\*}_0(c,\eta_i)}{dc} - k_c^{\*}\nabla^2 c -\nabla \cdot \frac{\partial k_c^{\*}}{\partial \nabla c} (\nabla c)^2 -\beta\Delta(\Delta c))]
 \label{anis}
 \end{equation}
 
 with the substitution 
 
 \begin{equation}
-\vec{\mathbf{g}}= k^{*}_c\nabla^2 c +\nabla \cdot \frac{\partial k^{*}_c}{\partial \nabla c} (\nabla c)^2
+\vec{\mathbf{g}}= k^{\*}_c\nabla^2 c +\nabla \cdot \frac{\partial k^{\*}_c}{\partial \nabla c} (\nabla c)^2
 \label{sub}
 \end{equation}
 
 \ref{anis} can be rewritten as:
 
 \begin{equation}
-\frac{dc}{dt}=\nabla \cdot [ \mathbf{D} \nabla \frac{\delta F}{\delta c}]= \nabla \cdot [\mathbf{D} \nabla(\frac{\partial f^{*}_0(c,\eta_i)}{\partial c}  -\nabla \vec{\mathbf{g}} -\beta\Delta(\Delta c))]
+\frac{dc}{dt}=\nabla \cdot [ \mathbf{D} \nabla \frac{\delta F}{\delta c}]= \nabla \cdot [\mathbf{D} \nabla(\frac{\partial f^{\*}_0(c,\eta_i)}{\partial c}  -\nabla \vec{\mathbf{g}} -\beta\Delta(\Delta c))]
 \end{equation}
 
 
-The term $\frac{\partial k^{*}_c}{\partial \nabla c}$ in \ref{sub} equals:
+The term $\frac{\partial k^{\*}_c}{\partial \nabla c}$ in \ref{sub} equals:
 \begin{equation}
-\frac{\partial k^{*}_c}{\partial \nabla c}=\frac{3}{4}\delta(2\frac { \partial \gamma_s(\vec{n})}{\partial \nabla c})
+\frac{\partial k^{\*}_c}{\partial \nabla c}=\frac{3}{4}\delta(2\frac { \partial \gamma_s(\vec{n})}{\partial \nabla c})
 \end{equation}
 
 The partial differentiation of the direction dependent surface energy with respect to the concentration gradient leads to:
