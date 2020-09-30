@@ -334,7 +334,10 @@ Transport mechanism models  \label{DIFF}
 ### Diffusion
 The mobility coefficient chosen for the  many simulations of sintering process in this thesis is of functional tensorial form as widely used by many publications like \cite{Ahmed2013}, \cite{Biswas2016}, \cite{Biswas2018}.
 \begin{equation}
-\mathbf{D}= D_{surf} c^2(1-c)^2\mathbf{T_{surf}}+D_{gb}\sum_i \sum_j \eta_i \eta_j \mathbf{T_{gb}} +(D_{vol}\Phi(c)+ D_{vap}(1-\Phi(c)))  \mathbf{I}
+\begin{align}
+\mathbf{D}= D_{surf} c^2(1-c)^2\mathbf{T_{surf}}+D_{gb}\sum_i \sum_j \eta_i \eta_j \mathbf{T_{gb}} \\\\
++(D_{vol}\Phi(c)+ D_{vap}(1-\Phi(c)))  \mathbf{I}
+\end{align}
 \label{MOB}
 \end{equation}
 With $\Phi(c)=c^3(10-15c+6c^2)$.\\
