@@ -15,10 +15,10 @@ Decades after which Cahn \& Hilliard postulated the same concept. The basic idea
 
 Phase field problems are described by a set of conserved and non-conserved variables. Conserved variables have to satisfy the continuity equation and might represent e.g., a concentration. Non-conserved variables can be use to differentiate  structures in the domain e.g., representing the orientation of different grains. 
 
-In \ref{var} the variables for a sintering problem are exemplary depicted. The variables in this model will be normalized and dimensionless assuming values between 0 and 1. 
+In [Figure 1](#figure-var) the variables for a sintering problem are exemplary depicted. The variables in this model will be normalized and dimensionless assuming values between 0 and 1. 
 
 <figure>
-<img src="abb/geosin.png" id="var" alt="a" /><figcaption aria-hidden="true">a</figcaption>
+<img src="abb/geosin.png" id="var" alt="a" /><figcaption aria-hidden="true">Figure 1: Schematic view of the veriable in a sintered system</figcaption>
 </figure>
 
 In the following article the mathematical description of the phase field model for sintering will be presented. First in section \ref{free energy functional} the derivation of the free energy functional according to [^5] for phase field problems is illustrated. Following that the governing equations, which will describe the variable arrangement in time and space, will be proposed (section \ref{Kinetics}).
