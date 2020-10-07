@@ -192,10 +192,11 @@ Identification of model parameters
 f_0(c,\eta_i)= \omega c^2(1-c)^2+\xi[c^2+6(1-c)\sum_{1}^{N}\eta_1\\\\
 -4(2-c)\sum_{1}^{N}\eta_{i}^3+3(\sum_{1}^{N}\eta_{i}^2)^2 ]
 \begin{aligned}
-\tag{landau}
+  (\#eq:landau)
 \end{equation}
 
 
+\@ref(eq:binom)
 <figure>
 <img src="abb/Landau1.png" id="ss" style="width:40.0%" alt="S" /><figcaption aria-hidden="true">Figure 2: Schematic representation of the two non-conserved variables across the interface.</figcaption>
 </figure>
