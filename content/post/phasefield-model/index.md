@@ -188,16 +188,16 @@ Appication of the Euler-Lagrange-law to  the above equation (see \ref{EULL} with
 -----------------------------------
 \begin{equation}
 f_0(c,\eta_i)= \omega c^2(1-c)^2+\xi[c^2+6(1-c)\sum_{1}^{N}\eta_1-4(2-c)\sum_{1}^{N}\eta_{i}^3+3(\sum_{1}^{N}\eta_{i}^2)^2 ]
-\label{landau}
+\tag{landau}
 \end{equation}
 
 
 <figure>
-<img src="abb/Landau1.png" id="ss" style="width:40.0%" alt="S" /><figcaption aria-hidden="true">Schematic representation of the two non-conserved variables across the interface.</figcaption>
+<img src="abb/Landau1.png" id="ss" style="width:40.0%" alt="S" /><figcaption aria-hidden="true">Figure 2: Schematic representation of the two non-conserved variables across the interface.</figcaption>
 </figure>
 
 <figure>
-<img src="abb/Landau2.png" id="ss" style="width:40.0%" alt="S" /><figcaption aria-hidden="true">Schematic representation of the two non-conserved variables across the interface.</figcaption>
+<img src="abb/Landau2.png" id="ss" style="width:40.0%" alt="S" /><figcaption aria-hidden="true">Figure 3: Schematic representation of the two non-conserved variables across the interface.</figcaption>
 </figure>
 
 The parameters $\omega$, $\xi$, $ k_{\eta}$ and $k_c$ can be uniquely estimated from the grain boundary energy $\gamma_{gb}$, the surface energy $\gamma_{sf}$ and the grain boundary width $\delta$.
@@ -211,10 +211,10 @@ The energy excess corresponding to the grain boundary energy can be interpreted 
 +(\frac{d \eta_j}{dx})^2  }_{Bulk}]\, dx
 \end{aligned}
 \end{equation}
-A schematic representation of the shape of the non-conserved variables of the grain boundary is represented in picture \ref{GB_INT}
+A schematic representation of the shape of the non-conserved variables of the grain boundary is represented in [Figure 4](#GB_INT). 
 
 <figure>
-<img src="abb/Ahm1.png" id="GB_INT" style="width:40.0%" alt="Schematic representation of the two non-conserved variables across the interface." /><figcaption aria-hidden="true">Schematic representation of the two non-conserved variables across the interface.</figcaption>
+<img src="abb/Ahm1.png" id="GB_INT" style="width:40.0%" alt="Figure 4: Schematic representation of the two non-conserved variables across the interface." /><figcaption aria-hidden="true">Schematic representation of the two non-conserved variables across the interface.</figcaption>
 </figure>
 
 Since in the bulk phase gradient disappear and the free energy is the free energy functional is zero in the stable states.
@@ -302,10 +302,10 @@ Eq. \ref{GB_25} and \ref{GB_26} lead to:
 \label{GB_27}
 \end{equation}
 eq. \ref{GB_fin} and \ref{GB_27} provide a relationship between the model parameters $k_{\eta}$, $\xi$ and $\gamma_{gb}$,$\delta$.
-In order to determine the additional parameters $ \omega$ and $k_c$ the profile of the conserved variable c and a non-conserved variable $\eta_j$ across a free surface is considered (see figure \ref{SF_INT}).
+In order to determine the additional parameters $ \omega$ and $k_c$ the profile of the conserved variable c and a non-conserved variable $\eta_j$ across a free surface is considered (see [Figure 5](#SF_INT)).
 
 <figure>
-<img src="abb/Ahm2.png" id="SF_INT" style="width:40.0%" alt="Schematic representation of a conserved an a non-conserved variable across a free surface." /><figcaption aria-hidden="true">Schematic representation of a conserved an a non-conserved variable across a free surface.</figcaption>
+<img src="abb/Ahm2.png" id="SF_INT" style="width:40.0%" alt="Figure 5: Schematic representation of a conserved an a non-conserved variable across a free surface." /><figcaption aria-hidden="true">Schematic representation of a conserved an a non-conserved variable across a free surface.</figcaption>
 </figure>
 
 Application of s similar approach as just presented for the grain boundary energy will lead to the relationships:
@@ -422,10 +422,10 @@ Grain boundary energy anisotropy
  \begin{equation}
  	 \gamma_{gb}=\gamma_{gb0}(\mid \cos(\phi) \mid + \mid \sin(\phi)\mid)\Theta(1-ln(\frac{\Theta}{\Theta_m}))
  \end{equation}
- with $\gamma_{gb0}$ is a constant. $\theta$ is the misorientation angle between the to grains while $\phi$ is the inclination angle with respect to the symmetric tilt grain boundary.$\theta_m$ is the maximum misorientation. As represented in \ref{incli} the misorientation $\Theta$ can be calculated as the difference of the angles $\alpha$ and $\beta$, which are the inclination of each grain with respect to the global coordinate system. $\Phi_x$ is the inclination of the grain boundary in the global system. The inclination with respect ro the symmetry axis can be calculated as $\phi=\Phi_x-\frac{\theta}{2}$
+ with $\gamma_{gb0}$ is a constant. $\theta$ is the misorientation angle between the to grains while $\phi$ is the inclination angle with respect to the symmetric tilt grain boundary.$\theta_m$ is the maximum misorientation. As represented in [Figure 6](#incli) the misorientation $\Theta$ can be calculated as the difference of the angles $\alpha$ and $\beta$, which are the inclination of each grain with respect to the global coordinate system. $\Phi_x$ is the inclination of the grain boundary in the global system. The inclination with respect ro the symmetry axis can be calculated as $\phi=\Phi_x-\frac{\theta}{2}$
 
 <figure>
-<img src="abb/incli.png" id="incli" alt="a" /><figcaption aria-hidden="true">a</figcaption>
+<img src="abb/incli.png" id="incli" alt="a" /><figcaption aria-hidden="true">Figure 6: Schematic representation of a tilt grain boundary</figcaption>
 </figure>
 
  In order to implement a differentiable function of the grain boundary energy with respect to inclination the form used is [^12] [^13] :
@@ -437,16 +437,16 @@ The grain boundary inclination is calculated from the grain boundary normal (in 
 \begin{equation}
 \phi=\arctan(\frac{\nabla_x\eta_i-\nabla_x \eta_j}{\nabla_y \eta_i-\nabla_y \eta_j})-\frac{\Theta}{2}
 \end{equation}
-Fig. \ref{easy} show the grain boundary energy according to eq. \ref{GBS}. Where $\Theta$ is the misorientation and $\phi$ the inclination with respect to the global coordinate system.
+[Figure 7](#easy) show the grain boundary energy according to eq. \ref{GBS}. Where $\Theta$ is the misorientation and $\phi$ the inclination with respect to the global coordinate system.
 
 <figure>
-<img src="abb/oo.png" id="easy" alt="\delta=0.2 \,\,\, \theta_m=15^{\circ}" /><figcaption aria-hidden="true"><span class="math inline"><em>δ</em> = 0.2   <em>θ</em><sub><em>m</em></sub> = 15<sup>∘</sup></span></figcaption>
+<img src="abb/oo.png" id="easy" alt="\delta=0.2 \,\,\, \theta_m=15^{\circ}" /><figcaption aria-hidden="true">Figure 7: Grain boudary energy in dependency of misorientation and GB-inclination angle<span class="math inline"><em>δ</em> = 0.2   <em>θ</em><sub><em>m</em></sub> = 15<sup>∘</sup></span></figcaption>
 </figure>
 
-Butalov et al. [^15] proposed an algorithm enabling the calculation of grain boundary energy of 4 fcc metals (Cu, Ni, Al and Au) over the whole 5D space out of the orientation matrices of the grain assuming a grain boundary plane perpendicular to the [1 0 0] direction (Fig.\ref{Bula} ). 
+Butalov et al. [^15] proposed an algorithm enabling the calculation of grain boundary energy of 4 fcc metals (Cu, Ni, Al and Au) over the whole 5D space out of the orientation matrices of the grain assuming a grain boundary plane perpendicular to the [1 0 0] direction ([Figure 8](#Bula) ). 
 
 <figure>
-<img src="abb/Bula.png" id="Bula" alt="a" /><figcaption aria-hidden="true">a</figcaption>
+<img src="abb/Bula.png" id="Bula" alt="a" /><figcaption aria-hidden="true">Figure 8: Schematic view of the two particle system for Bulatov's grain boundary energy description</figcaption>
 </figure>
 
 This algorithm is based an the interpolation method given 43 material specific fittings parameters. 
@@ -495,10 +495,10 @@ w\_{hkl}=\\frac{w\_{hkl}^0}{sin(\\frac{ \\pi d\_3}{2d\_{hkl}^{max}})(1-\\frac{1}
   	\vec{n}=\frac{\nabla \eta_i -\nabla \eta_j}{\mid \nabla \eta_i -\nabla \eta_j \mid}
   \end{equation}
   Consequently Bulatov's algorithm has to be applied to each quadrature point in the domain. Since this calculation resulted in being computationally expensive, this step has not been applied and the simulations have been carried out assuming an grain boundary energy for a plane always normal to the [1 0 0].
-  This neglegt can be justified by the fact that in this work this method will only be applied for 2D simulations of tilt grain boundaries around the z-Axis an analysis of the energy function shows a low dependency on grain boundary inclination. This Behavior can figure see in fig. \ref{Ana}, where grain the dimensionless energy of Cu dependent on misorientation and grain boundary inclination is depicted.   
+  This neglegt can be justified by the fact that in this work this method will only be applied for 2D simulations of tilt grain boundaries around the z-Axis an analysis of the energy function shows a low dependency on grain boundary inclination. This Behavior can figure see in [Figure 9](#Ana), where grain the dimensionless energy of Cu dependent on misorientation and grain boundary inclination is depicted.   
 
 <figure>
-<img src="abb/ENBULIN.png" id="Ana" alt="a" /><figcaption aria-hidden="true">a</figcaption>
+<img src="abb/ENBULIN.png" id="Ana" alt="a" /><figcaption aria-hidden="true">Figure 9: Grain boundary energy according to Bulatov et al. for tilt frain boundaries (rotation around z-axis), in dependency of misorientation angle and GB-Inclination</figcaption>
 </figure>
 
 A study on the impact of a grain boundary inclination dependency will be carried out with eq.
@@ -538,19 +538,19 @@ $$\\theta(\\vec{n}\\cdot \\vec{m\_i})=
 \\label{SL\_2}$$
 
 The absolute value of the scalar product $vec{n}\cdot \vec{m}$ is always less than 1 one for $\vec{n} \neq \vec{m_i}$ and is 1 for  $\vec{n} = \vec{m_i}$, so for the last case the highest contribution in the energy minimization is given. The value of $ \gamma_{sf}(\vec{n})$ continuously increases when the normal vector moves away from a favorable direction.
-The course of the function an the impact of the parameters $\alpha_i$ and $w_i$ is demonstrated in the exemplary plot \ref{s2d} for the 2D dimensional case. In 2D a direction can also be represented by a single angle $\Theta$ between the normal vector and the abscissa $\Theta = -\arctan(\frac{n_x}{n_y})$.  In figure \ref{s2d} the [1 1] directions and the [1 0] directions (and all their symmetries) are considered. These direction have different $\alpha$ values which leads to different deep minima. For the dotted and dashed line all minima have the same $w_i$ values but in in the second case $w_i$ is increased. Increasing $w_i$ decrease the width of the single minima, which are more defined and decoupled from each other.
+The course of the function an the impact of the parameters $\alpha_i$ and $w_i$ is demonstrated in the exemplary plot [Figure 10](s2d) for the 2D dimensional case. In 2D a direction can also be represented by a single angle $\Theta$ between the normal vector and the abscissa $\Theta = -\arctan(\frac{n_x}{n_y})$.  In figure \ref{s2d} the [1 1] directions and the [1 0] directions (and all their symmetries) are considered. These direction have different $\alpha$ values which leads to different deep minima. For the dotted and dashed line all minima have the same $w_i$ values but in in the second case $w_i$ is increased. Increasing $w_i$ decrease the width of the single minima, which are more defined and decoupled from each other.
 The solid line further demonstrates this behavior, for different $w_i$  for different directions.
 For sufficiently high $w_i$ values the maximal grain boundary energy $\gamma_0$ is reached. 
 
 <figure>
-<img src="abb/Salva/2D_4.png" id="s2d" alt="a" /><figcaption aria-hidden="true">a</figcaption>
+<img src="abb/Salva/2D_4.png" id="s2d" alt="a" /><figcaption aria-hidden="true">Figure 10: Description of the surface energy with the algortithm by Salvalaglio et al. for a 2D system with minima in (10) and (11) directions</figcaption>
 </figure>
 
-Fig \ref{s3d} is a 3D representation of the anisotropic surface energy over a sphere, for minima at the [1 0 0] and [1 1 1] directions (and all their symmetries) having different $\alpha$ values.
+Fig [Figure 11](s3d)is a 3D representation of the anisotropic surface energy over a sphere, for minima at the [1 0 0] and [1 1 1] directions (and all their symmetries) having different $\alpha$ values.
 
 
 <figure>
-<img src="abb/Salva/3D_1.png" id="s3d" alt="a" /><figcaption aria-hidden="true">a</figcaption>
+<img src="abb/Salva/3D_1.png" id="s3d" alt="a" /><figcaption aria-hidden="true">Figure 11: Description of the surface energy with the algortithm by Salvalaglio et al. for a 2D system with minima in (100) and (111) directions</figcaption>
 </figure>
 
 
