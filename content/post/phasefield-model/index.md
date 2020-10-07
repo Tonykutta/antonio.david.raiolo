@@ -633,7 +633,7 @@ where $m_{ij}$ is the $j$th component of $\vec{m}_i$ and $n_j$ id the $j$-th com
 It be noted that the kinetic equation of the non-conservative parameters is not modified  other than formally replacing the coefficients with the *-coefficients. 
 The advection term will not be considered in the case of surface anisotropy, die to computational costs. 
 
-The term $\frac{\beta}{2}(\Delta c)^2$ is a regularization term. If the energy surface of certain orientation is too high they might not appear in the final equilibrium shape. As a result of missing orientations the interface might not be smooth but have discontinuties \cite{Chen2013}. This might lead to a ill-posedness of the Cahn-Hiliard equation as proven in [Wise2007]. The here used laplacian regularization with the reg.- parameter $\beta$ is used to correct this problem.
+The term $\frac{\beta}{2}(\Delta c)^2$ is a regularization term. If the energy surface of certain orientation is too high they might not appear in the final equilibrium shape. As a result of missing orientations the interface might not be smooth but have discontinuties [^18]. This might lead to a ill-posedness of the Cahn-Hiliard equation as proven in [Wise2007]. The here used laplacian regularization with the reg.- parameter $\beta$ is used to correct this problem.
 
 
 
@@ -655,3 +655,4 @@ The term $\frac{\beta}{2}(\Delta c)^2$ is a regularization term. If the energy s
 [^15]:[Vasily V.Bulatov, Bryan W.Reed, Mukul Kumar, 2014](https://doi.org/10.1016/j.actamat.2013.10.057)
 [^16]:[D. Wolf](https://doi.org/10.1016/0036-9748(89)90348-7)
 [^17]:[Marco Salvalaglio, Rainer Backofen, Roberto Bergamaschini, Francesco Montalenti and Axel Voigt](https://doi.org/10.1021/acs.cgd.5b00165)
+[^18]:[Ying Chen, John Lowengrub, Jie Shen, Cheng Wang, and Steven Wise](https://doi.org/10.1016/j.jcp.2018.03.024)
