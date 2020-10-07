@@ -206,8 +206,8 @@ This derivation is based om the equilibrium solution and the grain boundary widt
 The energy excess corresponding to the grain boundary energy can be interpreted as the different of the energy in the domain to the bulk energy integrated over one coordinate:
 \begin{equation}
 \begin{alingned}
-\gamma_{gb}=\int_{-\infty}^{\infty}[f(c,\eta_i,\eta_j)+\frac{k_{\eta}}{2}\{ (\frac{d \eta_i}{dx})^2 \\
-+(\frac{d \eta_j}{dx})^2  \}-f(c,\eta_i,\eta_j)_{Bulk}-\frac{k_{\eta}}{2}\{ (\frac{d \eta_i}{dx})^2 \\
+\gamma_{gb}=\int_{-\infty}^{\infty}[f(c,\eta_i,\eta_j)+\frac{k_{\eta}}{2}\{ (\frac{d \eta_i}{dx})^2 \\\\
++(\frac{d \eta_j}{dx})^2  \}-f(c,\eta_i,\eta_j)_{Bulk}-\frac{k_{\eta}}{2}\{ (\frac{d \eta_i}{dx})^2 \\\\
 +(\frac{d \eta_j}{dx})^2  \}_{Bulk}]\, dx
 \end{aligned}
 \end{equation}
