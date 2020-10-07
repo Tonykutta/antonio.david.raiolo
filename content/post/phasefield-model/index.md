@@ -638,4 +638,4 @@ The term $\frac{\beta}{2}(\Delta c)^2$ is a regularization term. If the energy s
 
 
 
-[^1]:https://doi.org/10.1146/annurev.matsci.32.112001.132041 
+[^1]:[chen2002](https://doi.org/10.1146/annurev.matsci.32.112001.132041) 
