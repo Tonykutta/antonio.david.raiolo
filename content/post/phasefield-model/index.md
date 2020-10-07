@@ -186,6 +186,7 @@ Appication of the Euler-Lagrange-law to  the above equation (see \ref{EULL} with
 
 Identification of model parameters 
 -----------------------------------
+
 \begin{equation}
 \begin{aligned}
 f_0(c,\eta_i)= \omega c^2(1-c)^2+\xi[c^2+6(1-c)\sum_{1}^{N}\eta_1\\\\
