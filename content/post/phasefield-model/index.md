@@ -18,12 +18,12 @@ Phase field problems are described by a set of conserved and non-conserved varia
 In [Figure 1](#figure-var) the variables for a sintering problem are exemplary depicted. The variables in this model will be normalized and dimensionless assuming values between 0 and 1. 
 
 <figure>
-<img src="abb/geosin.png" id="var" alt="a" /><figcaption aria-hidden="true">Figure 1: Schematic view of the veriable in a sintered system</figcaption>
+<img src="abb/geosin.png" id="var" alt="a" /><figcaption aria-hidden="true">Figure 1: Schematic view of the variables in a sintered system</figcaption>
 </figure>
 
-In the following article the mathematical description of the phase field model for sintering will be presented. First in section \ref{free energy functional} the derivation of the free energy functional according to [^5] for phase field problems is illustrated. Following that the governing equations, which will describe the variable arrangement in time and space, will be proposed (section \ref{Kinetics}).
-From the general phase field approach the we will look into the application on sintering problems. Therefore following the analysis of Ahmed et al.[^6] it will be demonstrated how the energy functional parameters can be uniquely correlated to the material parameters: surface energy and grain boundary energy (section \ref{inden}).
-Further the calculation of the diffusional and advectional flux in this model is presented (section \ref{DIFF}). Finally the implementation of surface and grain boundary energy anisotropy for this model is introduced (sections \ref{GEA} and \ref{SEA}). 
+In the following article the mathematical description of the phase field model for sintering will be presented. First  the derivation of the free energy functional according to Cahn & Hilliard[^5] for phase field problems is illustrated. Following that the governing equations, which will describe the variable arrangement in time and space, will be proposed.
+From the general phase field approach the we will look into the application on sintering problems. Therefore following the analysis of Ahmed et al. [^6] it will be demonstrated how the energy functional parameters can be uniquely correlated to the material parameters: surface energy and grain boundary energy.
+Further the calculation of the diffusional and advectional flux in this model is presented. Finally the implementation of surface and grain boundary energy anisotropy for this model is introduced. 
 
 
 Free energy functional \label{free energy functional}
