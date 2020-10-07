@@ -15,7 +15,7 @@ Decades after which Cahn \& Hilliard postulated the same concept. The basic idea
 
 Phase field problems are described by a set of conserved and non-conserved variables. Conserved variables have to satisfy the continuity equation and might represent e.g., a concentration. Non-conserved variables can be use to differentiate  structures in the domain e.g., representing the orientation of different grains. 
 
-In [Figure 1](#figure-var) the variables for a sintering problem are exemplary depicted. The variables in this model will be normalized and dimensionless assuming values between 0 and 1. 
+In [Figure 1](#var) the variables for a sintering problem are exemplary depicted. The variables in this model will be normalized and dimensionless assuming values between 0 and 1. 
 
 <figure>
 <img src="abb/geosin.png" id="var" alt="a" /><figcaption aria-hidden="true">Figure 1: Schematic view of the variables in a sintered system</figcaption>
@@ -26,7 +26,7 @@ From the general phase field approach the we will look into the application on s
 Further the calculation of the diffusional and advectional flux in this model is presented. Finally the implementation of surface and grain boundary energy anisotropy for this model is introduced. 
 
 
-Free energy functional \label{free energy functional}
+Free energy functional 
 ----------------------
 
 According to the analysis of Cahn and Hilliard [^5], the free energy function of a binary solution depends on both the local composition $c$ and the adjacent composition. Consequently, the free energy can be expressed by the local contribution and the derivative of these contributions. This can be achieved by a Taylor expansion over the free energy of the solution with uniform composition $f_0(c)$. In the following derivation the subscriptions $i$ and $j$ express the replacement of the coordinates $x$, $y$ and $z$. Values for a solution with uniform composition are indicated by the subscript $0$.
@@ -112,7 +112,7 @@ F=\int_V f_0(c,\eta_i)+\frac{k_{c}}{2} (\nabla c)^2 + \sum_i \frac{k_{\eta,i}}{2
 \label{FE}
 \end{equation}
 
-Governing squations \label{Kinetics}
+Governing squations 
 -------------------
 
 The formulation of the kinetic equations are derived according to Wang et. al.[^7]
@@ -184,7 +184,7 @@ Appication of the Euler-Lagrange-law to  the above equation (see \ref{EULL} with
 \frac{d \eta_i}{d t}=-L_i(\frac{\partial f_0}{\partial \eta_i}-  k_{\eta} (\nabla \eta_i)^2)  -\nabla\cdot \eta_i \vec{v}_{adv,i}
 \end{equation}
 
-{Identification of model parameters \label{inden}
+{Identification of model parameters 
 -----------------------------------
 \begin{equation}
 f_0(c,\eta_i)= \omega c^2(1-c)^2+\xi[c^2+6(1-c)\sum_{1}^{N}\eta_1-4(2-c)\sum_{1}^{N}\eta_{i}^3+3(\sum_{1}^{N}\eta_{i}^2)^2 ]
@@ -333,7 +333,7 @@ k\_{\\eta}=\\frac{3}{4}\\delta(\\gamma\_{gb}).
 \\label{zd}\\end{gathered}$$
 
 
-Transport mechanism models  \label{DIFF}
+Transport mechanism models 
 --------------------------
 ### Diffusion
 The mobility coefficient chosen for the  many simulations of sintering process in this thesis is of functional tensorial form as widely used by many publications like [^6] [^9] [^10].
@@ -416,7 +416,7 @@ v_{adv,i}= v_{r,adv,i}+v_{t,adv,i}
 \label{AD_8}
 \end{equation}
 
-Grain boundary energy anisotropy \label{GEA}
+Grain boundary energy anisotropy
 --------------------------------
  Based on a dislocation model Read and Schockley [^11] approximated the grain boundary energy of low angle tilt angles ($\theta \leq 15^{\circ} $ [^12]) as:
  \begin{equation}
@@ -518,7 +518,7 @@ with $\gamma_{gb,ij}$ being the grain boundary energy between the grain pair $i$
 
 
 
-Surface energy anisotropy  \label{SEA}
+Surface energy anisotropy 
 -------------------------
 Simulation of faceting of crystals requires a description of the surface energy in dependency of the orientation of the crystals surface. The crystals facets will then be formed according to those orientations that are energetically favorable, so the direction with in which the energy has a minimum. 
 
