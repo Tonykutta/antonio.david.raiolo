@@ -21,15 +21,15 @@ In \ref{var} the variables for a sintering problem are exemplary depicted. The v
 <img src="abb/geosin.png" id="var" alt="a" /><figcaption aria-hidden="true">a</figcaption>
 </figure>
 
-In the following article the mathematical description of the phase field model for sintering will be presented. First in section \ref{free energy functional} the derivation of the free energy functional according to \cite{Cahn1959} for phase field problems is illustrated. Following that the governing equations, which will describe the variable arrangement in time and space, will be proposed (section \ref{Kinetics}).
-From the general phase field approach the we will look into the application on sintering problems. Therefore following the analysis of Ahmed et al. \cite{Ahmed2013} it will be demonstrated how the energy functional parameters can be uniquely correlated to the material parameters: surface energy and grain boundary energy (section \ref{inden}).
+In the following article the mathematical description of the phase field model for sintering will be presented. First in section \ref{free energy functional} the derivation of the free energy functional according to [^5] for phase field problems is illustrated. Following that the governing equations, which will describe the variable arrangement in time and space, will be proposed (section \ref{Kinetics}).
+From the general phase field approach the we will look into the application on sintering problems. Therefore following the analysis of Ahmed et al.[^6] it will be demonstrated how the energy functional parameters can be uniquely correlated to the material parameters: surface energy and grain boundary energy (section \ref{inden}).
 Further the calculation of the diffusional and advectional flux in this model is presented (section \ref{DIFF}). Finally the implementation of surface and grain boundary energy anisotropy for this model is introduced (sections \ref{GEA} and \ref{SEA}). 
 
 
 Free energy functional \label{free energy functional}
 ----------------------
 
-According to the analysis of Cahn and Hilliard \cite{Cahn1959}, the free energy function of a binary solution depends on both the local composition $c$ and the adjacent composition. Consequently, the free energy can be expressed by the local contribution and the derivative of these contributions. This can be achieved by a Taylor expansion over the free energy of the solution with uniform composition $f_0(c)$. In the following derivation the subscriptions $i$ and $j$ express the replacement of the coordinates $x$, $y$ and $z$. Values for a solution with uniform composition are indicated by the subscript $0$.
+According to the analysis of Cahn and Hilliard [^5], the free energy function of a binary solution depends on both the local composition $c$ and the adjacent composition. Consequently, the free energy can be expressed by the local contribution and the derivative of these contributions. This can be achieved by a Taylor expansion over the free energy of the solution with uniform composition $f_0(c)$. In the following derivation the subscriptions $i$ and $j$ express the replacement of the coordinates $x$, $y$ and $z$. Values for a solution with uniform composition are indicated by the subscript $0$.
 
 The Taylor series  (here of the second order) is:
 \begin{equation}
@@ -115,7 +115,7 @@ F=\int_V f_0(c,\eta_i)+\frac{k_{c}}{2} (\nabla c)^2 + \sum_i \frac{k_{\eta,i}}{2
 Governing squations \label{Kinetics}
 -------------------
 
-The formulation of the kinetic equations are derived according to Wang et. al. \cite{Wang2006}
+The formulation of the kinetic equations are derived according to Wang et. al.[^7]
 The conservation law for the mass field $c$ requires:
 \begin{equation}
 \frac{\partial c}{\partial t}= - \nabla \cdot (c \vec{v})
@@ -201,7 +201,7 @@ f_0(c,\eta_i)= \omega c^2(1-c)^2+\xi[c^2+6(1-c)\sum_{1}^{N}\eta_1-4(2-c)\sum_{1}
 </figure>
 
 The parameters $\omega$, $\xi$, $ k_{\eta}$ and $k_c$ can be uniquely estimated from the grain boundary energy $\gamma_{gb}$, the surface energy $\gamma_{sf}$ and the grain boundary width $\delta$.
-In the following the derivation of this relationship will be presented according to Ahmed \cite{Ahmed2013} and Chacleingam \cite{Chockalingam2016}.
+In the following the derivation of this relationship will be presented according to Ahmed [^6] and Chacleingam [^8].
 This derivation is based om the equilibrium solution and the grain boundary width is assumed to be equal to the diffuse interface width.  
 The energy excess corresponding to the grain boundary energy can be interpreted as the different of the energy in the domain to the bulk energy integrated over one coordinate:
 \begin{equation}
@@ -336,7 +336,7 @@ k\_{\\eta}=\\frac{3}{4}\\delta(\\gamma\_{gb}).
 Transport mechanism models  \label{DIFF}
 --------------------------
 ### Diffusion
-The mobility coefficient chosen for the  many simulations of sintering process in this thesis is of functional tensorial form as widely used by many publications like \cite{Ahmed2013}, \cite{Biswas2016}, \cite{Biswas2018}.
+The mobility coefficient chosen for the  many simulations of sintering process in this thesis is of functional tensorial form as widely used by many publications like [^6] [^9] [^10].
 \begin{equation}
 \begin{aligned}
 \mathbf{D}= D_{surf} c^2(1-c)^2\mathbf{T_{surf}}+D_{gb}\sum_i \sum_j \eta_i \eta_j \mathbf{T_{gb}} \\\\
@@ -418,7 +418,7 @@ v_{adv,i}= v_{r,adv,i}+v_{t,adv,i}
 
 Grain boundary energy anisotropy \label{GEA}
 --------------------------------
- Based on a dislocation model Read and Schockley \cite{T.1950} approximated the grain boundary energy of low angle tilt angles ($\theta \leq 15^{\circ} $ \cite{Kazaryan2001}) as:
+ Based on a dislocation model Read and Schockley [^11] approximated the grain boundary energy of low angle tilt angles ($\theta \leq 15^{\circ} $ [^12]) as:
  \begin{equation}
  	 \gamma_{gb}=\gamma_{gb0}(\mid \cos(\phi) \mid + \mid \sin(\phi)\mid)\Theta(1-ln(\frac{\Theta}{\Theta_m}))
  \end{equation}
@@ -428,12 +428,12 @@ Grain boundary energy anisotropy \label{GEA}
 <img src="abb/incli.png" id="incli" alt="a" /><figcaption aria-hidden="true">a</figcaption>
 </figure>
 
- In order to implement a differentiable function of the grain boundary energy with respect to inclination the form used is \cite{Kazaryan2001} \cite{Kazaryan2000} :
+ In order to implement a differentiable function of the grain boundary energy with respect to inclination the form used is [^12] [^13] :
 \begin{equation}
 \gamma_{gb}=\gamma_{gb0}(1-\delta_{\gamma}\cos(4\phi))\Theta(1-ln(\frac{\Theta}{\Theta_m}))
 \label{GBS}
 \end{equation}
-The grain boundary inclination is calculated from the grain boundary normal (in teh way proposed by \cite{Moelans2008a}) considering the symmetric boundary:
+The grain boundary inclination is calculated from the grain boundary normal (in teh way proposed by [^14]) considering the symmetric boundary:
 \begin{equation}
 \phi=\arctan(\frac{\nabla_x\eta_i-\nabla_x \eta_j}{\nabla_y \eta_i-\nabla_y \eta_j})-\frac{\Theta}{2}
 \end{equation}
@@ -443,7 +443,7 @@ Fig. \ref{easy} show the grain boundary energy according to eq. \ref{GBS}. Where
 <img src="abb/oo.png" id="easy" alt="\delta=0.2 \,\,\, \theta_m=15^{\circ}" /><figcaption aria-hidden="true"><span class="math inline"><em>δ</em> = 0.2   <em>θ</em><sub><em>m</em></sub> = 15<sup>∘</sup></span></figcaption>
 </figure>
 
-Butalov et al. \cite{Bulatov2014} proposed an algorithm enabling the calculation of grain boundary energy of 4 fcc metals (Cu, Ni, Al and Au) over the whole 5D space out of the orientation matrices of the grain assuming a grain boundary plane perpendicular to the [1 0 0] direction (Fig.\ref{Bula} ). 
+Butalov et al. [^15] proposed an algorithm enabling the calculation of grain boundary energy of 4 fcc metals (Cu, Ni, Al and Au) over the whole 5D space out of the orientation matrices of the grain assuming a grain boundary plane perpendicular to the [1 0 0] direction (Fig.\ref{Bula} ). 
 
 <figure>
 <img src="abb/Bula.png" id="Bula" alt="a" /><figcaption aria-hidden="true">a</figcaption>
@@ -457,7 +457,7 @@ Each 3D set can be subdivided in 2 and 1 dimensional subspaces.
 Pure twist boundaries and symmetric tilt boundary determine 1D subspaces since only one angle is needed to define them.
 Asymmetric tilt boundaries build a 2D subspace since two angle are needed, one defining the misorientation and one the asymmetry. 
 A hierarchical interpolation approach is applied to calculate the grain boundary energy.
-First the energy of a pure twist or a symmetric tilt grain boundary with angle $\Theta$ can be calculated with the Read-Shockley-Wolf  \cite{Wolf1989} equation, which in Bulatov's paper is defined as:  
+First the energy of a pure twist or a symmetric tilt grain boundary with angle $\Theta$ can be calculated with the Read-Shockley-Wolf  [^16] equation, which in Bulatov's paper is defined as:  
 \begin{equation}
 	\gamma_{RSW}=\sin(\frac{\pi}{2} \frac{\Theta-\Theta_{min}}{\Theta_{max}-\Theta_{min}})(1-a\ln\sin(\frac{\Theta-\Theta_{min}}{\Theta_{max}-\Theta_{min}}))
 \end{equation}
@@ -489,8 +489,8 @@ w\_{hkl}=\\frac{w\_{hkl}^0}{sin(\\frac{ \\pi d\_3}{2d\_{hkl}^{max}})(1-\\frac{1}
   The algorithm has been provided as a MATLAB code. In this work this code has been translated to C++ to be implemented in the simulations.
   The simulations in this work will use the dimensionless grain boundary energy of copper.
   An Euler Angle has to be assigned and a rotation matrices to be assigned to the matrices have to be computed.
-  Due to the fact that this method presuppose an grain boundary plane normal to the [1 0 0] the grain rotation matrices have to be multiplied with the rotation matrix of the rotation of the actual grain boundary normal vector to the [1 0 0] direction \cite{Tolliver2016}. 
-  While the normal vector of the grain boundary is calculated as \cite{Moelans2008a}:
+  Due to the fact that this method presuppose an grain boundary plane normal to the [1 0 0] the grain rotation matrices have to be multiplied with the rotation matrix of the rotation of the actual grain boundary normal vector to the [1 0 0] direction. 
+  While the normal vector of the grain boundary is calculated as [^14]:
   \begin{equation}
   	\vec{n}=\frac{\nabla \eta_i -\nabla \eta_j}{\mid \nabla \eta_i -\nabla \eta_j \mid}
   \end{equation}
@@ -504,7 +504,7 @@ w\_{hkl}=\\frac{w\_{hkl}^0}{sin(\\frac{ \\pi d\_3}{2d\_{hkl}^{max}})(1-\\frac{1}
 A study on the impact of a grain boundary inclination dependency will be carried out with eq.
 In the phase field model the grain boundary energy will be implemented by replacing $\gamma_{gb}$ in  \ref{za},\ref{zb}, \ref{zc} and \ref{zd}.
 In case of simulation of sintering of more than two particles an continuous function of the grain boundary over the domain has to be applied.
-In this work the function proposed by \cite{Moelans2008a} and integrated by \cite{Biswas2018a} for simulation of anisotropic sintering is used:
+In this work the function proposed by [^14] and integrated by [^10] for simulation of anisotropic sintering is used:
 \begin{equation}
 \gamma_{gb}=\frac{\sum_i \sum_j \gamma_{gb,ij}\eta^{2}_i \eta^{2}_j }{\sum_i \sum_j\eta^{2}_i \eta^{2}_j }
 \end{equation}
@@ -523,7 +523,7 @@ Surface energy anisotropy  \label{SEA}
 Simulation of faceting of crystals requires a description of the surface energy in dependency of the orientation of the crystals surface. The crystals facets will then be formed according to those orientations that are energetically favorable, so the direction with in which the energy has a minimum. 
 
 Representation of complex crystals having various facets directions of different surface energy require an adaptable model.
-A convenient formulation has been provided by Salvalaglio et al \cite{Salvalaglio2015}.
+A convenient formulation has been provided by Salvalaglio et al [^17].
 \begin{equation}
 \gamma_{sf}(\vec{n})=\gamma_0(1-\sum_{1}^{N}\alpha_i(\vec{n}\cdot \vec{m_i})^{w_i}\,\theta(\vec{n}\cdot \vec{m}))
 \label{SL_1}
@@ -633,7 +633,7 @@ where $m_{ij}$ is the $j$th component of $\vec{m}_i$ and $n_j$ id the $j$-th com
 It be noted that the kinetic equation of the non-conservative parameters is not modified  other than formally replacing the coefficients with the *-coefficients. 
 The advection term will not be considered in the case of surface anisotropy, die to computational costs. 
 
-The term $\frac{\beta}{2}(\Delta c)^2$ is a regularization term. If the energy surface of certain orientation is too high they might not appear in the final equilibrium shape. As a result of missing orientations the interface might not be smooth but have discontinuties \cite{Chen2013}. This might lead to a ill-posedness of the Cahn-Hiliard equation as proven in \cite{Wise2007}. The here used laplacian regularization with the reg.- parameter $\beta$ is used to correct this problem.
+The term $\frac{\beta}{2}(\Delta c)^2$ is a regularization term. If the energy surface of certain orientation is too high they might not appear in the final equilibrium shape. As a result of missing orientations the interface might not be smooth but have discontinuties \cite{Chen2013}. This might lead to a ill-posedness of the Cahn-Hiliard equation as proven in [Wise2007]. The here used laplacian regularization with the reg.- parameter $\beta$ is used to correct this problem.
 
 
 
@@ -641,4 +641,17 @@ The term $\frac{\beta}{2}(\Delta c)^2$ is a regularization term. If the energy s
 [^1]:[Long Quin Chen, 2002](https://doi.org/10.1146/annurev.matsci.32.112001.132041) 
 [^2]:[Nikolas Provatas & Ken Elder, 2010 ](https://doi.org/10.1002/9783527631520)
 [^3]:[J. D. Van der Waals, 1979](https://doi.org/10.1007/BF01011514)
-[^4]:[J. W. Cahn & J. E. Hilliard](https://doi.org/10.1063/1.1730447)
+[^4]:[J. W. Cahn & J. E. Hilliard, 1958](https://doi.org/10.1063/1.1730447)
+[^5]:[J. W. Cahn, 1959](https://doi.org/10.1063/1.1730145)
+[^6]:[K. Ahmed, C. A. Yablinsky, A. Schulte, T. Allen and A. El-Azab, 2013](https://doi.org/10.1088/0965-0393/21/6/065005)
+[^7]:[Yu U. Wang, 2006](https://doi.org/10.1016/j.actamat.2005.10.032)
+[^8]:[K.Chockalingam, V.G.Kouznetsova, O.van der Sluis, M.G.D.Geersa](https://doi.org/10.1016/j.cma.2016.07.002)
+[^9]:[Sudipta Biswas ,Daniel Schwen, Jogender Singh, Vikas Tomar, 2016](https://doi.org/10.1016/j.eml.2016.02.017)
+[^10]:[Sudipta Biswas ,Daniel Schwen,Hao Wanga, Maria Okuniewski, Vikas Tomar, 2018](https://doi.org/10.1016/j.commatsci.2018.02.057)
+[^11]:[W. T. Read and Shockley W., 1950](https://doi.org/10.1103/PhysRev.78.275)
+[^12]:[A. Karzayan, Y. Wang, S. A. Dregia and Bruce R. Patton, 2001](https://doi.org/10.1103/PhysRevB.63.184102)
+[^13]:[A. Karzayan, Y. Wang, S. A. Dregia and Bruce R. Patton, 2000](https://doi.org/10.1103/PhysRevB.61.14275)
+[^14]:[N. Moelans, B. Blanpain, and P. Wollants, 2008](https://doi.org/10.1103/PhysRevLett.101.025502)
+[^15]:[Vasily V.Bulatov, Bryan W.Reed, Mukul Kumar, 2014](https://doi.org/10.1016/j.actamat.2013.10.057)
+[^16]:[D. Wolf](https://doi.org/10.1016/0036-9748(89)90348-7)
+[^17]:[Marco Salvalaglio, Rainer Backofen, Roberto Bergamaschini, Francesco Montalenti and Axel Voigt](https://doi.org/10.1021/acs.cgd.5b00165)
