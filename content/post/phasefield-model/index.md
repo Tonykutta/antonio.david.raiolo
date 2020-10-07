@@ -6,7 +6,7 @@ math: true
 diagram: true
 ---
 
-Phase field methods have emerged as a powerful tool to simulate the microstructure evolution on the mesoscale \cite{Chen2002}. 
+Phase field methods have emerged as a powerful tool to simulate the microstructure evolution on the mesoscale  [^1]\cite{Chen2002}. 
 One of the most important features of this model is the introduction of a diffuse interface which, in contrast to the classical models, transitions smoothly. In classical models that strictly divide structural or compositional domains using sharp interfaces, explicit tracking of the interface is required to apply physics and boundary conditions. Additionally, numerical issues may occur when interfaces merge or pinch off occurs \cite{Chen2002}. 
 
 On the contrary, diffuse interfaces assume constant values in the bulk while values along the thin interface are continuously interpolated, to describe the transition between phases \cite{Provatas2010}.
@@ -635,3 +635,7 @@ The advection term will not be considered in the case of surface anisotropy, die
 
 The term $\frac{\beta}{2}(\Delta c)^2$ is a regularization term. If the energy surface of certain orientation is too high they might not appear in the final equilibrium shape. As a result of missing orientations the interface might not be smooth but have discontinuties \cite{Chen2013}. This might lead to a ill-posedness of the Cahn-Hiliard equation as proven in \cite{Wise2007}. The here used laplacian regularization with the reg.- parameter $\beta$ is used to correct this problem.
 
+
+
+
+[^1]:https://doi.org/10.1146/annurev.matsci.32.112001.132041 
