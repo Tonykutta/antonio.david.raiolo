@@ -149,7 +149,7 @@ Inserting  \ref{PP2} into \ref{chem} and inserting the result with \ref{PP4} int
 \frac{dc}{dt}=\nabla \cdot (\mathbf{D} \nabla\frac{\delta F}{\delta c})- \nabla \cdot c\vec{v}_{adv,i} 
 \label{res}
 \end{equation}
-The results is a nonlinear advection-diffusion equation. Neglecting the advection term would lead to the classical Cahn Hilliard equation (Quellen...)
+The results is a nonlinear advection-diffusion equation. Neglecting the advection term would lead to the classical Cahn Hilliard equation. 
 
 With a free energy function according given by equation \ref{FE}  
 \begin{equation}
@@ -174,11 +174,11 @@ Inserting  \ref{PP1} into \ref{res}
 \begin{equation}
 \frac{dc}{dt}=\nabla\cdot [ \mathbf{D}\nabla (\frac{\partial f_0(c,\eta_i)}{\partial c}-k_c (\nabla c)^2)] - \nabla \cdot c\vec{v}_{adv} 
 \end{equation}
-The kinetic equation of the non-conserved variable  $\eta_i$ is represented by convectional Allen-Cahn-Equation, where the change of the order parameter is considered directly proportional to the variational derivative of the free energy ($\frac{d \eta_i}{d t}=-L_i\frac{\delta F}{\delta \eta_i}$), (Quelle) modified by the contribution of an advection term. 
+The kinetic equation of the non-conserved variable  $\eta_i$ is represented by convectional Allen-Cahn-Equation, where the change of the order parameter is considered directly proportional to the variational derivative of the free energy ($\frac{d \eta_i}{d t}=-L_i\frac{\delta F}{\delta \eta_i}$), modified by the contribution of an advection term. 
 \begin{equation}
 \frac{d \eta_i}{d t}=-L_i\frac{\delta F}{\delta \eta_i}-\nabla \cdot \eta_i \vec{v}_{adv,i}
 \end{equation}
-With $L_i$ being a constant describing the mobility of grain boundary migration (Quelle Wang angeben!!!!).
+With $L_i$ being a constant describing the mobility of grain boundary migration [^7].
 Appication of the Euler-Lagrange-law to  the above equation (see \ref{EULL} with $E=F$ and $s=\eta_i$ )
 \begin{equation}
 \frac{d \eta_i}{d t}=-L_i(\frac{\partial f_0}{\partial \eta_i}-  k_{\eta} (\nabla \eta_i)^2)  -\nabla\cdot \eta_i \vec{v}_{adv,i}
@@ -206,9 +206,9 @@ This derivation is based om the equilibrium solution and the grain boundary widt
 The energy excess corresponding to the grain boundary energy can be interpreted as the different of the energy in the domain to the bulk energy integrated over one coordinate:
 \begin{equation}
 \begin{alingned}
-\gamma_{gb}=\int_{-\infty}^{\infty}[f(c,\eta_i,\eta_j)+\frac{k_{\eta}}{2}\{ (\frac{d \eta_i}{dx})^2 \\\\
-+(\frac{d \eta_j}{dx})^2  \}-f(c,\eta_i,\eta_j)_{Bulk}-\frac{k_{\eta}}{2}\{ (\frac{d \eta_i}{dx})^2 \\\\
-+(\frac{d \eta_j}{dx})^2  \}_{Bulk}]\, dx
+\gamma_{gb}=\int_{-\infty}^{\infty}[f(c,\eta_i,\eta_j)+\frac{k_{\eta}}{2}{(\frac{d \eta_i}{dx})^2 \\\\
++(\frac{d \eta_j}{dx})^2  }-f(c,\eta_i,\eta_j)_{Bulk}-\frac{k_{\eta}}{2}{(\frac{d \eta_i}{dx})^2 \\\\
++(\frac{d \eta_j}{dx})^2  }_{Bulk}]\, dx
 \end{aligned}
 \end{equation}
 A schematic representation of the shape of the non-conserved variables of the grain boundary is represented in picture \ref{GB_INT}
