@@ -184,11 +184,14 @@ Appication of the Euler-Lagrange-law to  the above equation (see \ref{EULL} with
 \frac{d \eta_i}{d t}=-L_i(\frac{\partial f_0}{\partial \eta_i}-  k_{\eta} (\nabla \eta_i)^2)  -\nabla\cdot \eta_i \vec{v}_{adv,i}
 \end{equation}
 
-{Identification of model parameters 
+Identification of model parameters 
 -----------------------------------
 \begin{equation}
-f_0(c,\eta_i)= \omega c^2(1-c)^2+\xi[c^2+6(1-c)\sum_{1}^{N}\eta_1-4(2-c)\sum_{1}^{N}\eta_{i}^3+3(\sum_{1}^{N}\eta_{i}^2)^2 ]
+\begin{aligned}
+f_0(c,\eta_i)= \omega c^2(1-c)^2+\xi[c^2+6(1-c)\sum_{1}^{N}\eta_1\\\\
+-4(2-c)\sum_{1}^{N}\eta_{i}^3+3(\sum_{1}^{N}\eta_{i}^2)^2 ]
 \tag{landau}
+\begin{aligned}
 \end{equation}
 
 
