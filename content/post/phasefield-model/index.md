@@ -6,12 +6,12 @@ math: true
 diagram: true
 ---
 
-Phase field methods have emerged as a powerful tool to simulate the microstructure evolution on the mesoscale  [^1]\cite{Chen2002}. 
-One of the most important features of this model is the introduction of a diffuse interface which, in contrast to the classical models, transitions smoothly. In classical models that strictly divide structural or compositional domains using sharp interfaces, explicit tracking of the interface is required to apply physics and boundary conditions. Additionally, numerical issues may occur when interfaces merge or pinch off occurs \cite{Chen2002}. 
+Phase field methods have emerged as a powerful tool to simulate the microstructure evolution on the mesoscale  [^1]. 
+One of the most important features of this model is the introduction of a diffuse interface which, in contrast to the classical models, transitions smoothly. In classical models that strictly divide structural or compositional domains using sharp interfaces, explicit tracking of the interface is required to apply physics and boundary conditions. Additionally, numerical issues may occur when interfaces merge or pinch off occurs [^1]. 
 
-On the contrary, diffuse interfaces assume constant values in the bulk while values along the thin interface are continuously interpolated, to describe the transition between phases \cite{Provatas2010}.
-The concept of diffuse interface was first introduced by Van der Waals in the end of the 19th century, analyzing the density variation between a liquid and vapor \cite{VanderWaals1979}. 
-Decades after which Cahn \& Hilliard postulated the same concept. The basic idea is that the local free energy density is not only dependent on the field variable but also on its gradients \cite{Cahn1958}.
+On the contrary, diffuse interfaces assume constant values in the bulk while values along the thin interface are continuously interpolated, to describe the transition between phases [^2].
+The concept of diffuse interface was first introduced by Van der Waals in the end of the 19th century, analyzing the density variation between a liquid and vapor [^3]. 
+Decades after which Cahn \& Hilliard postulated the same concept. The basic idea is that the local free energy density is not only dependent on the field variable but also on its gradients [^4].
 
 Phase field problems are described by a set of conserved and non-conserved variables. Conserved variables have to satisfy the continuity equation and might represent e.g., a concentration. Non-conserved variables can be use to differentiate  structures in the domain e.g., representing the orientation of different grains. 
 
@@ -638,4 +638,7 @@ The term $\frac{\beta}{2}(\Delta c)^2$ is a regularization term. If the energy s
 
 
 
-[^1]:[chen2002](https://doi.org/10.1146/annurev.matsci.32.112001.132041) 
+[^1]:[Long Quin Chen, 2002](https://doi.org/10.1146/annurev.matsci.32.112001.132041) 
+[^2]:[Nikolas Provatas & Ken Elder, 2010 ](https://doi.org/10.1002/9783527631520)
+[^3]:[J. D. Van der Waals, 1979](https://doi.org/10.1007/BF01011514)
+[^4]:[J. W. Cahn & J. E. Hilliard](https://doi.org/10.1063/1.1730447)
