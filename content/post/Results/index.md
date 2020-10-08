@@ -7,34 +7,8 @@ math: true
 diagram: true
 ---
 
-In the following sections for the simulation of spherical particles a tensorial diffusion coefficient acc. to eq. \ref{MOB} has been implemented. In the case of surface energy anisotropy the diffusion mechanism has been simplified to a scalar diffusion coefficient $D=1$.
-If not stated differently the standard parameters chosen in following chapters are:
-
-% Please add the following required packages to your document preamble:
-% \usepackage{graphicx}
-\begin{table}[H]
-	\centering
-	\caption{}
-	\label{tab:mle}
-		\begin{tabular}{|l|l|}
-			\hline
-			Parameter     & Value \\ \hline
-			$D_{surf}$    & 1.0   \\ \hline
-			$D_{gb}$      & 0.1   \\ \hline
-			$D_{vol}$     & 0.01  \\ \hline
-			$D_{vap}$   & 0.001 \\ \hline
-			$L_{i}$    & 1.0 \\ \hline
-			$m_r$         & 1.0   \\ \hline
-			$m_t$         & 500   \\ \hline
-			$k$           & 100   \\ \hline
-			$c_{gb}$        & 0.15  \\ \hline
-			$\gamma_{sf}$ & 1.5   \\ \hline
-			$\gamma_{gb}$ & 0.93  \\ \hline
-		\end{tabular}%
-\end{table}
-
-
-\section{Transport mechanisms} \label{transport}
+Transport mechanisms
+--------------------
 
 Figure \ref{adNoad} demonstrates the evolution of two particles at different time, once for the case limited to diffusion flux and on the other hand taking the advection flux in consideration as well.
 
@@ -44,128 +18,45 @@ Figure \ref{adNoad} demonstrates the evolution of two particles at different tim
 
 In order to decrease the curvature a neck between the particles is formed. The neck formation is drastically accelerated, in the case rigid body motion is considered. 
 
-In order to visualize the different diffusion paths as implemented in the phase field method, a set of simulation by only considering certain diffusion mechanisms has been performed. Fig. \ref{Fluxd} shows the diffusion Fluxes ($-\mathbf{D} \nabla \mu$) for the different conditions at the same time-step. Advection has not been considered. 
-\begin{figure}[H]
-	\begin{subfigure}[b]{0.5\linewidth}
-		\includegraphics[width=0.25\linewidth]{abb/DIFF/1a.png}
-		\hspace{0.00 mm}
-		\includegraphics[width=0.7\linewidth]{abb/DIFF/1.png}
-		\caption{Lattice and vapor diffusion}
-		\label{LV}
-		\vspace{0.5 cm}
-	\end{subfigure}
-	\begin{subfigure}[b]{0.5\linewidth}
-		\includegraphics[width=0.25\linewidth]{abb/DIFF/2a.png}
-		\hspace{0.00 mm}
-		\includegraphics[width=0.7\linewidth]{abb/DIFF/2.png}
-		\caption{Lattice, vapor and grain boundary diffusion}
-		\label{LVG}
-			\vspace{0.5 cm}
-	\end{subfigure}\\
-	\begin{subfigure}[t]{0.5\linewidth}
-		\includegraphics[width=0.25\linewidth]{abb/DIFF/3a.png}
-		\hspace{0.00 mm}
-		\includegraphics[width=0.7\linewidth]{abb/DIFF/3.png}
-	\caption{Lattice, vapor and surface diffusion}
-	\label{LVS}
-		\vspace{0.5 cm}
-	\end{subfigure}
-	\begin{subfigure}[t]{0.5\linewidth}
-		\includegraphics[width=0.25\linewidth]{abb/DIFF/4a.png}
-		\hspace{0.00 mm}
-		\includegraphics[width=0.7\linewidth]{abb/DIFF/4.png}
-		\caption{Lattice, vapor, grain boundary and surface diffusion}
-		\label{LVGS}
-		\vspace{0.5 cm}
-	\end{subfigure}
-	\caption{Diffusion path of different diffusion mechanisms at $t=250$. The iso-lines represent the concentration field at $c=0.25, \, c=0.50 \,\, \text{and} \,\, c=0.75$}
-	\label{Fluxd}
-\end{figure}
+In order to visualize the different diffusion paths as implemented in the phase field method, a set of simulation by only considering certain diffusion mechanisms has been performed. [Figure 2](#Fluxd) shows the diffusion Fluxes ($-\mathbf{D} \nabla \mu$) for the different conditions at the same time-step. Advection has not been considered. 
+
+<figure>
+<img src="dad/2.png" id="Fluxd" alt="S" /><figcaption aria-hidden="true">Figure 2: Diffusion path of different diffusion mechanisms at $t=250$. The iso-lines represent the concentration field at $c=0.25, \, c=0.50 \,\, \text{and} \,\, c=0.75$.</figcaption>
+</figure>	
+
 
 It should be noticed that the arrows are colored and scaled by the magnitude of the flux and the scales are different for the different cases. 
 It is notable that in the case of consideration of surface diffusion (\ref{LVS} and \ref{LVGS}) the neck is further evolved then in the other cases, since it is a predominant diffusion mechanism. Picture \ref{LV} shows the flux across the lattice end the vapor diffusion in the gas region. In fig. (\ref{LVG} adding considering the grain boundary diffusion, shows that the grain boundary diffusion only takes place in grain boundary region with a flux across the boundary. Due to the different weighing of the contribution the visibility of the mechanisms in the picture changes. The surface diffusion in \ref{LVS} leads to a flux across the surface, volume and surface diffusion are less visible, due the high values of surface diffusion flux. Fig \ref{LVGS} depict the flux considering all diffusion mechanisms. The observation reflect those made by .\cite{Hotzer2019}.
 
 As mentioned in section the evolution of the initial stage of sintering can be analytically described by a function of the type $X\sim t^{1/m}$ where $X$ is the radius of the neck $m$ an exponent. Fig. \ref{fit} shows the well fitting of the simulated neck, calculated as $\int_{A} \eta_1 \eta_2 \,dA$ with the squared function, for the case of only diffusion fluxes. The interpolation result with an exponent of $m=5.37$.
-\begin{figure}[H]
-	\centering
-	\begin{subfigure}[t]{0.5\linewidth}
-		\centering
-		\includegraphics[width=\linewidth]{abb/expo.png}
-	\end{subfigure}
-	\caption{Neck evolution of two same sized particles (fig. \ref{adno}) and fit with a squared function. $X=0.7527(t-8.4178)^{\frac{1}{5.3765}}$}
-	\label{fit}
-\end{figure}
 
-Fig. \ref{aa} depicts the advectional flux $c v_{adv}$ considering advection as well as lattice, vapor, grain boundary and surface diffusion. 
+<figure>
+<img src="abb/expo.png" id="ss" alt="S" /><figcaption aria-hidden="true">Figure 3: Neck evolution of two same sized particles [Figure 1](#ss)  and fit with a squared function. $X=0.7527(t-8.4178)^{\frac{1}{5.3765}}$.</figcaption>
+</figure>	
+
+
+[Figure 4](#aa) depicts the advectional flux $c v_{adv}$ considering advection as well as lattice, vapor, grain boundary and surface diffusion. 
 As visible, in case of simulating two same sized particles in an along the x-axis the flux assumes constant value inside the whole particles. The advectional flux drags the particles towards each other.
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=0.35\linewidth]{abb/DIFF/adv.png}
-	\hspace{0.00 mm}
-	\includegraphics[width=0.125\linewidth]{abb/DIFF/5a.png}
-	\caption{Advectional flux for sintering considering lattice, vapor, grain boundary and surface diffusion at $t=250$. The iso-lines represent the concentration field at $c=0.25, \, c=0.50 \,\, \text{and} \,\, c=0.75$}
-	\label{aa}
-\end{figure}
+
+
+
+<figure>
+<img src="abb/DIFF/adv.png" id="aa" alt="S" /><figcaption aria-hidden="true">Figure 4: Advectional flux for sintering considering lattice, vapor, grain boundary and surface diffusion at $t=250$. The iso-lines represent the concentration field at $c=0.25, \, c=0.50 \,\, \text{and} \,\, c=0.75$$.</figcaption>
+</figure>	
 
 The compensation of the concentration lack at the grain boundary trough rigid body motion leads to a notably annealing of the particles towards each other. The difference in densification is is visible in the representation in fig. \ref{disace} , where the the evolution of the normalized distance between the grain centers is plotted. 
 
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=0.5\linewidth]{abb/adv.png}
-	\caption{Normalized distance between the grain over time (fig. \ref{adyes})}
-	\label{disace}
-\end{figure}
 
-In general rigid body motion leads to a translatorial and rotational movement of the particles. Fig  \ref{trans} represents the magnitude of the translatorial velocity in x and y direction and of the rotational velocity of a two particles system for the cases of same sized different sized particles. Note the different scaling of color bars for each figure. In the case of same sized particles only a opposite translation in x direction occurs. The velocity in y-direction and for rotation is in the range of numerical tolerance. 
+<figure>
+<img src="abb/adv.png" id="disace" alt="S" /><figcaption aria-hidden="true">Figure 5: Normalized distance between the grain over time.</figcaption>
+</figure>	
+
+In general rigid body motion leads to a translatorial and rotational movement of the particles. [Figure 6](#disace) represents the magnitude of the translatorial velocity in x and y direction and of the rotational velocity of a two particles system for the cases of same sized different sized particles. Note the different scaling of color bars for each figure. In the case of same sized particles only a opposite translation in x direction occurs. The velocity in y-direction and for rotation is in the range of numerical tolerance. 
 On the other hand for particles having different size the velocity has an x and y component and a rotation. Due to torque maintenance the particles move in opposite direction. The smaller particle moves faster due to it's lower inertia.
 
-
-
-\begin{figure}[H]
-	\begin{subfigure}[t]{0.5\linewidth}
-		\includegraphics[width=0.25\linewidth]{abb/vel/1a.png}
-		\hspace{0.00 mm}
-		\includegraphics[width=0.7\linewidth]{abb/vel/1.png}
-		\caption{$v_{trans,x}$}
-	\end{subfigure}
-	\begin{subfigure}[t]{0.5\linewidth}
-		\includegraphics[width=0.25\linewidth]{abb/vel/4a.png}
-		\hspace{0.00 mm}
-		\includegraphics[width=0.7\linewidth]{abb/vel/4.png}
-		\caption{$v_{trans,x}$}
-	\end{subfigure}\\
-	\begin{subfigure}[t]{0.5\linewidth}
-		\includegraphics[width=0.25\linewidth]{abb/vel/2a.png}
-		\hspace{0.00 mm}
-		\includegraphics[width=0.7\linewidth]{abb/vel/2.png}
-		\caption{$v_{trans,y}$}
-	\end{subfigure}
-	\begin{subfigure}[t]{0.5\linewidth}
-		\includegraphics[width=0.25\linewidth]{abb/vel/5a.png}
-		\hspace{0.00 mm}
-		\includegraphics[width=0.7\linewidth]{abb/vel/5.png}
-		\caption{$v_{trans,y}$}
-	\end{subfigure}\\
-	\begin{subfigure}[t]{0.5\linewidth}
-		\includegraphics[width=0.25\linewidth]{abb/vel/3a.png}
-		\hspace{0.00 mm}
-		\includegraphics[width=0.7\linewidth]{abb/vel/3.png}
-		\caption{$v_{rot}$}
-	\end{subfigure}
-	\begin{subfigure}[t]{0.5\linewidth}
-		\includegraphics[width=0.25\linewidth]{abb/vel/6a.png}
-		\hspace{0.00 mm}
-		\includegraphics[width=0.7\linewidth]{abb/vel/6.png}
-		\caption{$v_{rot}$}
-	\end{subfigure}
-	\caption{Translation and rotation velocity magnitudes for same sized and different sized particles }
-	\label{trans}
-\end{figure}
-
-
-
-
-
+<figure>
+<img src="dad/3.png" id="disace" alt="S" /><figcaption aria-hidden="true">Figure 6: Translation and rotation velocity magnitudes for same sized and different sized particles.</figcaption>
+</figure>	
 
 
 
@@ -174,133 +65,30 @@ Grain boundary energy anisotropy
 --------------------------------
 In this chapter the impact of the grain boundary energy anisotropy on the sintering kinetic will be studied. In section \ref{IN} the impact of the inclination dependency is illustrated. In section \ref{AN} the misorientation dependency is studied neglecting the impact of the plane inclination. 
   
-\subsection{Inclination dependency} \label{IN}
-According to the Read-Schockley equation in the form according to equation \ref{GBS} the degree of anisotropy can be varied by changing the value of $\delta$ between 0 and 1. In figure \ref{RSS} simulations fro different $\delta$ values have been carried out. $\theta$ and $\theta_m$ are set to $15^{\circ}$.
-  
-\begin{figure}[H]
-	\centering
-		\begin{subfigure}[t]{0.27\linewidth}
-		\centering
-		\includegraphics[trim=0 25 0 25,clip,width=\linewidth]{abb/anis/No.png}
-		$t_0$
-		\caption{Initial condition}
-		\vspace{0.5 cm}
-	\end{subfigure}\\
-	\begin{subfigure}[t]{0.6\linewidth}
-		\centering
-		\begin{subfigure}[t]{0.45\linewidth}
-			\centering
-		\includegraphics[trim=0 25 0 25,clip,width=\linewidth]{abb/anis/No_250.png}\\
-			$t_1$
-		\end{subfigure}
-		%\hspace{-2.00 cm}
-		\begin{subfigure}[t]{0.45\linewidth}
-			\centering
-			\includegraphics[trim=0 25 0 25,clip,width=\linewidth]{abb/anis/No_500.png}\\
-			$t_2$
-		\end{subfigure}
-		\caption{$\delta=0$}
-		\label{zero}
-	\end{subfigure}\\
-	\vspace{0.5 cm}
-	\begin{subfigure}[t]{0.6\linewidth}
-		\centering
-		\begin{subfigure}[t]{0.45\linewidth}
-			\centering
-			\includegraphics[trim=0 25 0 25,clip,width=\linewidth]{abb/anis/5_250.png}\\
-			$t_1$
-		\end{subfigure}
-		\begin{subfigure}[t]{0.45\linewidth}
-			\centering
-			\includegraphics[trim=0 25 0 25,clip,width=\linewidth]{abb/anis/5_500.png}\\
-			$t_2$
-		\end{subfigure}
-			\caption{$\delta=0.05$}
-			\label{five}
-	\end{subfigure}\\
-		\vspace{0.5 cm}
-	\begin{subfigure}[t]{0.6\linewidth}
-		\centering
-		\begin{subfigure}[t]{0.45\linewidth}
-			\centering
-			\includegraphics[trim=0 25 0 25,clip,width=\linewidth]{abb/anis/2_250.png}\\
-			$t_1$
-		\end{subfigure}
-		%\hspace{-2.00 cm}
-		\begin{subfigure}[t]{0.45\linewidth}
-			\centering
-			\includegraphics[trim=0 25 0 25,clip,width=\linewidth]{abb/anis/2_500.png}\\
-			$t_2$
-		\end{subfigure}
-		\caption{$\delta=0.2$}
-		\label{ten}
-	\end{subfigure}\\
-	\begin{subfigure}[t]{0.5\linewidth}
-		\vspace{1 cm}
-		\centering
-		\captionsetup{justification=centering}
-		\includegraphics[trim=0 25 0 25,clip,width=\linewidth]{abb/Many/4.png}
-	\end{subfigure}
-	\caption{Sintering of two same sized particle with grain boundary energy anisotropy according to Read-Schockley (eq. \ref{RSS}) for different degrees of anisotropy $\delta$ at time-steps: $t_1=250, \,\,  t_2=500$. The misorientation is of lattices is $\theta=15^{\circ}$}
-	\label{RSS}
-\end{figure}
+Inclination dependency
+----------------------
+According to the Read-Schockley equation the degree of anisotropy can be varied by changing the value of $\delta$ between 0 and 1. In [figure 7](#RSS) simulations fro different $\delta$ values have been carried out. $\theta$ and $\theta_m$ are set to $15^{\circ}$.
+
+
+<figure>
+<img src="dad/4.png" id="RSS" alt="S" /><figcaption aria-hidden="true">Figure 7: Sintering of two same sized particle with grain boundary energy anisotropy according to Read-Schockley for different degrees of anisotropy $\delta$ at time-steps: $t_1=250, \,\,  t_2=500$. The misorientation is of lattices is $\theta=15^{\circ}$</figcaption>
+</figure>	
+
 
 If inclination dependency is not considered $\delta=0$ a perpendicular neck is formed. On the other hand, with plane inclination dependency the neck plane reorients itself in such a way that the energy is minimized. The higher the anisotropy coefficient $\delta$ the higher the driving force for energy minimization resulting in a more accentuated inclination.   
 
-In order to  demonstrate the functionality of the implementation of Bulatovs algorithm regarding grain boundary inclination, figure \ref{bul} shows simulations of sintering of two same sized particle one being attributed an Euler Angle of $0^{\circ}$ and to the other one of $25^{\circ}$. In the first case \ref{noin} the inclination of the grain boundary plane is not considered in the algorithm,  so that the plane is assumed to be always perpendicular to the [1 0 0] axis. In the second case \ref{yesin} the orientation of the grain boundary is calculated out of the gradients and the particles rotation matrices are multiplied with rotation matrix of the boundary plane to the [1 0 0] direction. The consideration of the grain boundary plane requires an evaluation of the algorithm at each quadrature point, making the simulation computationally expensive.
+In order to  demonstrate the functionality of the implementation of Bulatovs algorithm regarding grain boundary inclination, [figure 8](#bul)  shows simulations of sintering of two same sized particle one being attributed an Euler Angle of $0^{\circ}$ and to the other one of $25^{\circ}$. In the first case \ref{noin} the inclination of the grain boundary plane is not considered in the algorithm,  so that the plane is assumed to be always perpendicular to the [1 0 0] axis. In the second case \ref{yesin} the orientation of the grain boundary is calculated out of the gradients and the particles rotation matrices are multiplied with rotation matrix of the boundary plane to the [1 0 0] direction. The consideration of the grain boundary plane requires an evaluation of the algorithm at each quadrature point, making the simulation computationally expensive.
 
 
 
-\begin{figure}[H]
-	\centering
-		\begin{subfigure}[t]{0.27\linewidth}
-		\centering
-		\includegraphics[width=\linewidth]{abb/Bula/No_0.png}
-		$t_0$
-		\caption{Initial condition}
-		\vspace{0.5 cm}
-	\end{subfigure}\\
-	\begin{subfigure}[t]{0.6\linewidth}
-		\centering
-		\begin{subfigure}[t]{0.45\linewidth}
-			\centering
-			\includegraphics[width=\linewidth]{abb/Bula/No_200.png}\\
-			$t_1$
-		\end{subfigure}
-		%\hspace{-2.00 cm}
-		\begin{subfigure}[t]{0.45\linewidth}
-			\centering
-			\includegraphics[width=\linewidth]{abb/Bula/No_1000.png}\\
-			$t_2$
-		\end{subfigure}
-		\caption{No inclination}
-		\label{noin}
-	\end{subfigure}\\
-	\vspace{0.5 cm}
-	\begin{subfigure}[t]{0.6\linewidth}
-		\centering
-		\begin{subfigure}[t]{0.45\linewidth}
-			\centering
-			\includegraphics[width=\linewidth]{abb/Bula/B_200.png}\\
-			$t_1$
-		\end{subfigure}
-		\begin{subfigure}[t]{0.45\linewidth}
-			\centering
-			\includegraphics[width=\linewidth]{abb/Bula/B_1000.png}\\
-			$t_2$
-		\end{subfigure}
-		\caption{With inclination}
-		\label{yesin}
-	\end{subfigure}\\
-	\begin{subfigure}[t]{0.5\linewidth}
-		\vspace{1 cm}
-		\centering
-		\captionsetup{justification=centering}
-		\includegraphics[width=\linewidth]{abb/Many/4.png}
-	\end{subfigure}
-	\caption{Sintering of two same sized particle at $t_1=200, \,\,  t_2=1000$. Impact of grain boundary inclination dependency with Bulatov's algorithm. Euler angles of the particles: $\theta_1=0^{\circ}, \,\, \theta_2=25^{\circ}$. }
-	\label{bul}
-\end{figure}
+
+
+
+<figure>
+<img src="dad/5.png" id="bul" alt="S" /><figcaption aria-hidden="true">Figure 8:Sintering of two same sized particle at $t_1=200, \,\,  t_2=1000$. Impact of grain boundary inclination dependency with Bulatov's algorithm. Euler angles of the particles: $\theta_1=0^{\circ}, \,\, \theta_2=25^{\circ}$.</figcaption>
+</figure>
+
+
 
 As visible in figure \ref{yesin} compared to \ref{noin} a slight inclination of the grain boundary plane is visible. 
 In further simulation the dependency will not be considered, due to the neglectable impact in the case of rotations around the z-axis.  
@@ -313,69 +101,24 @@ In further simulation the dependency will not be considered, due to the neglecta
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 Misorientation dependency
 -------------------------
 
-In this section the dependency of the sintering evolution is analyzed using Bulatov's method. The impact of the grain boundary energy variation is especially visible when analyzing different size particles. In fig. \ref{BulSMBG} the evolution of sintering of a big particle with an Euler angle of $0^{\circ}$ and a big small particle with euler angle of $5^{\circ}$ at different time steps is shown. 
+In this section the dependency of the sintering evolution is analyzed using Bulatov's method. The impact of the grain boundary energy variation is especially visible when analyzing different size particles. In [fig. 9] (#BulSMBG) the evolution of sintering of a big particle with an Euler angle of $0^{\circ}$ and a big small particle with euler angle of $5^{\circ}$ at different time steps is shown. 
 
-\begin{figure}[H]
-	\begin{subfigure}[t]{1.0\linewidth}
-		\begin{subfigure}[t]{0.24\linewidth}
-			\centering
-			\includegraphics[width=\linewidth]{abb/mini/1.png}\\
-			$t_1$
-		\end{subfigure}
-		%\hspace{-2.00 cm}
-		\begin{subfigure}[t]{0.24\linewidth}
-			\centering
-			\includegraphics[width=\linewidth]{abb/mini/2.png}\\
-			$t_2$
-		\end{subfigure}
-		\begin{subfigure}[t]{0.24\linewidth}
-			\centering
-			\includegraphics[width=\linewidth]{abb/mini/3.png}\\
-			$t_3$
-		\end{subfigure}
-		\begin{subfigure}[t]{0.24\linewidth}
-			\centering
-			\includegraphics[width=\linewidth]{abb/mini/4.png}\\
-			$t_4$
-		\end{subfigure}
-		%\caption{Isotropic}
-	\end{subfigure}
-	\begin{subfigure}[t]{0.5\linewidth}
-	\vspace{1 cm}
-	\centering
-	\captionsetup{justification=centering}
-	\includegraphics[width=\linewidth]{abb/Many/4.png}
-\end{subfigure}
-	\caption{$t_1=0, \,\,  t_2=80, \,\, t_3=3808, \,\, t_4=3840, \,\, \theta_1=0^{\circ}, \,\, \theta_2=5^{\circ}$ }
-	\label{BulSMBG}
-\end{figure}
+<figure>
+<img src="dad/6.png" id="BulSMBG" alt="S" /><figcaption aria-hidden="true">Figure 9: $t_1=0, \,\,  t_2=80, \,\, t_3=3808, \,\, t_4=3840, \,\, \theta_1=0^{\circ}, \,\, \theta_2=5^{\circ}$.</figcaption>
+</figure>
 
-Fig. \ref{GG} illustrate the variation in neck length and size of the smaller particle over time.
-\begin{figure}[H]
-	\centering
-	\begin{subfigure}[t]{0.5\linewidth}
-		\centering
-		\includegraphics[width=\linewidth]{abb/grainG.png}
-	\end{subfigure}
-	\caption{a}
-	\label{GG}
-\end{figure}
+
+
+[Fig. 10] (#GG) illustrate the variation in neck length and size of the smaller particle over time.
+
+
+<figure>
+<img src="abb/grainG.png" id="GG" alt="S" /><figcaption aria-hidden="true">Figure 10: $t_1=0, \,\,  t_2=80, \,\, t_3=3808, \,\, t_4=3840, \,\, \theta_1=0^{\circ}, \,\, \theta_2=5^{\circ}$.</figcaption>
+</figure>
+
 According to Ahmed \cite{Ahmed2013} the evolution process can be subdivided in the stages (I, II, III) as shown in the picture.
 In the first stage a rapid growth of the neck is visible. After that in a second stage the neck growth seems to be stagnated, while increasing of the second particle still occurs. Finally in a third stage grain growth still takes place and the neck decreases. The competition between neck growth and grain growth can be explained trough the driving forces. 
 
