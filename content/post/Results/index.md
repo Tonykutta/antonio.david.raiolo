@@ -191,7 +191,7 @@ In the figure is visible that for the three cases the sintering stages vary for 
 	
 
 <figure>
-<img src="add/8.png" id="io" alt="S" /><figcaption aria-hidden="true">Figure 13: Effect of advection and angle update on sintering of two different sized particle at time steps: $t_1=100, \,\,  t_2=150, \,\, t_3=200$. The initial Euler angles of the particles are set to: $ \theta_1=0^{\circ}, \,\, \theta_2=45^{\circ}$. Color-map represents $\sum_i \eta^2_i$.</figcaption>
+<img src="dad/8.png" id="io" alt="S" /><figcaption aria-hidden="true">Figure 13: Effect of advection and angle update on sintering of two different sized particle at time steps: $t_1=100, \,\,  t_2=150, \,\, t_3=200$. The initial Euler angles of the particles are set to: $ \theta_1=0^{\circ}, \,\, \theta_2=45^{\circ}$. Color-map represents $\sum_i \eta^2_i$.</figcaption>
 </figure>
 
 
@@ -200,7 +200,7 @@ In figure \ref{asa} the neck length evolution for the above described simulation
 
 
 <figure>
-<img src="add/9.png" id="io" alt="S" /><figcaption aria-hidden="true">Figure 14: Effect of advection and angle update on sintering of two different sized particles.</figcaption>
+<img src="dad/9.png" id="io" alt="S" /><figcaption aria-hidden="true">Figure 14: Effect of advection and angle update on sintering of two different sized particles.</figcaption>
 </figure>
 
 The effect of anisotropy of the grain boundary can be applied to multiple particle system trough an interpolation of the grain boundary energy for each pair of particle over the whole domain using order parameters. 
@@ -213,7 +213,7 @@ with $\gamma_{gb,ij}$ being the grain boundary energy between the grain pair $i$
 In [fig. 15] (#multi) sintering of multiple particle is simulated. Fig. \ref{multi0} shows the evolution of grain for the isotropic case, keeping the grain boundary energy constant. In \ref{multi1} and \ref{multi2} a set of orientation is given to the grains, varying for the two configurations.
 
 <figure>
-<img src="add/10.png" id="multi" alt="S" /><figcaption aria-hidden="true">Figure 15:Sintering of multiple particle for isotropic and two anisotropic configuration. For the isotropic case the grain boundary energy is constant at $\gamma_{gb}=0.93$. For the anisotropic configurations the angles assigned to each particles are listed under the figure description according to the numbering in the initial condition Time steps: $t_1=350, \,\,  t_2=750, \,\, t_3=1250,  \,\, t_3=1825$. Color-map represents $\sum_i \eta^2_i$.</figcaption>
+<img src="dad/10.png" id="multi" alt="S" /><figcaption aria-hidden="true">Figure 15:Sintering of multiple particle for isotropic and two anisotropic configuration. For the isotropic case the grain boundary energy is constant at $\gamma_{gb}=0.93$. For the anisotropic configurations the angles assigned to each particles are listed under the figure description according to the numbering in the initial condition Time steps: $t_1=350, \,\,  t_2=750, \,\, t_3=1250,  \,\, t_3=1825$. Color-map represents $\sum_i \eta^2_i$.</figcaption>
 </figure>
 
 The evolution of the particles shows the effect of grain boundary energy particularly visible in the different time steps at which grain growth occurs. Due to variation in gradient energy over the domain, the diffuse interface results to not be constant. 
