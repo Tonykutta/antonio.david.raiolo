@@ -12,7 +12,7 @@ diagram: true
 Transport mechanisms
 --------------------
 
-Figure \ref{adNoad} demonstrates the evolution of two particles at different time, once for the case limited to diffusion flux and on the other hand taking the advection flux in consideration as well.
+[Figure 1](#ss)  demonstrates the evolution of two particles at different time, once for the case limited to diffusion flux and on the other hand taking the advection flux in consideration as well.
 
 <figure>
 <img src="dad/1.png" id="ss" alt="S" /><figcaption aria-hidden="true">Figure 1: Evolution of sintering of two same sized particle at different time steps: $t_1=0, \,\,  t_2=100, \,\, t_3=500, \,\, t_4=3000$.</figcaption>
