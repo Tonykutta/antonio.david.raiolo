@@ -136,26 +136,18 @@ while grain growth is determined by the curvature difference between the particl
 \end{equation} 
 with $r_l$ and $r_s$ being the radii of the large and small particle respectively. 
 
-In the first stage of sintering the curvature radius $X$ is extremely small compared to the radii of the particle $r_l$ and $r_s$ so that according to eq. \ref{nek} the driving force fo  neck formation is prevalent. As neck formation goes forward the neck radius $X$ increases and grain growth as a further energy decrease mechanism takes relevance.  
+
+
+
+In the first stage of sintering the curvature radius $X$ is extremely small compared to the radii of the particle $r_l$ and $r_s$ so that according to eq. [Figure 11](#key) the driving force fo  neck formation is prevalent. As neck formation goes forward the neck radius $X$ increases and grain growth as a further energy decrease mechanism takes relevance.  
 
 The same simulation has been carried out assigning different angles to the second particle. The neck evolution over time for all analyzed cases is shown in fig. \ref{keya}, while in figure \ref{keyb} the time to complete coalescence and the grain boundary energy in dependency of the misorientation angle is plotted.
 
-\begin{figure}[H]
-	\begin{subfigure}[t]{0.5\linewidth}
-		\centering
-		\includegraphics[width=\linewidth]{abb/Necks.png}
-		\caption{a}
-		\label{keya}
-	\end{subfigure}
-	\begin{subfigure}[t]{0.5\linewidth}
-		\centering
-		\includegraphics[width=\linewidth]{abb/NecksTime.png}
-		\caption{b}
-		\label{keyb}
-	\end{subfigure}
-	\caption{hello}
-	\label{key}
-\end{figure}
+
+<figure>
+<img src="dad/7.png" id="key" alt="S" /><figcaption aria-hidden="true">Figure 11:</figcaption>
+</figure>
+
 
 The effect of grain boundary energy anisotropy is particularly visible in the second an third stage of sintering. An increase in grain boundary energy accelerates the time to coalescence, since the driving force for neck growth is increased.
 The effect of change in grain boundary migration velocity over time can be explained with the formula derived by Kumar et al.\footnote{A migration of grain boundary energy of an increment $\Delta x$ leads to a change in volume energy and grain boundary energy:
@@ -182,102 +174,26 @@ v=m[ \gamma_s(\frac{1}{r_s}-\frac{1}{r_l})-\gamma_{gb}\frac{2cot(\frac{\beta}{2}
 $v$ can be interpreted as the migration velocity, $m$ a the grain boundary mobility and $\beta$ is the inclusion angle of the neck location and the center of the smaller grain (fig. \ref{si}).
 
 
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=0.6\linewidth]{abb/odo.png}
-	\caption{Geometrical representation for the description of sintering of unequal particles acc. to \cite{Kumar2010}}
-	\label{si}
-\end{figure}
+
+<figure>
+<img src="abb/odo.png" id="si" alt="S" /><figcaption aria-hidden="true">Figure 12: Geometrical representation for the description of sintering of unequal particles acc. to \cite{Kumar2010}.</figcaption>
+</figure>
+
 The first term of \ref{Kumar} corresponds to a driving force. The atom will move fro a region of high chemical potential (small particle) to a region of lower chemical potential (big particle). On the other hand if the migration of the grain boundary is accompanied by an increase of grain boundary area, an increase in grain boundary energy will occur, acting as a drag force to grain boundary migration represented in the second term in the equation. 
 As with time the curvature at the grain boundary reduces the angle $\beta$ increases, accelerating the grain growth process. Once $\beta$ exceeds $\pi$ the cotangents will change its sign, so that the grain boundary migration velocity strongly increase, identifying the third stage in the sintering process. As the grain boundary energy increases the migration velocity also increase leading to faster grain growth. 
 
 The above simulations did not take into account rigid body motion. As observe in section \ref{transport} rigid body motion leads to a rotation of the particle and consequently the lattice of particles will change their orientation over time,affecting grain boundary energy. Similar to the publication of Biswas et al. \cite{Biswas2018} an update of the Euler angle has been implemented. The rotation velocity of the $i$-th particle, for a rotation around a z-axis, can be determined from the torque (eq. \ref{AD_3}) as $\omega_{z,i}=\frac{m_r}{V}T_{i,z}$. The angle $\theta_i$ of each particle has to be updated for each time step: $\theta_i=\omega_{i,z}\Delta t +\theta_{old,i} $, where $\Delta t$ is the duration between two time-steps and $\theta_{old,i}$ the Euler-angle of the previous time step. 
 For each time step the grain boundary energy can be recalculated using the updated angles.
 
-In figure \ref{io} the sintering evolution of two  different sized particle for three cases is demonstrated. In all case the particles have the same initial orientation $ \theta_1=0^{\circ}, \,\, \theta_2=45^{\circ}$. While in the first case \ref{io1} rigid body motion is not considered, in the other case rigid body motion is taken into account. In the second case \ref{io2} the orientation angle of the particle is kept constant over time, while in the third case \ref{io3} the angle is update for each time-step.
+In [figure 12] (#io) the sintering evolution of two  different sized particle for three cases is demonstrated. In all case the particles have the same initial orientation $ \theta_1=0^{\circ}, \,\, \theta_2=45^{\circ}$. While in the first case \ref{io1} rigid body motion is not considered, in the other case rigid body motion is taken into account. In the second case \ref{io2} the orientation angle of the particle is kept constant over time, while in the third case \ref{io3} the angle is update for each time-step.
 
 In the figure is visible that for the three cases the sintering stages vary for the three cases. Furthermore the a rotation of the particles sintered particles is visible. 
 	
-\begin{figure}[H]
-	\centering
-		\begin{subfigure}[t]{0.256\linewidth}
-		\centering
-		\includegraphics[width=\linewidth]{abb/initdifferent.png}
-		$t_0$
-		\caption{Initial condition}
-		\vspace{0.50 cm}
-	\end{subfigure}
-	\begin{subfigure}[t]{0.8\linewidth}
-		\begin{subfigure}[t]{0.32\linewidth}
-			\centering
-			\includegraphics[width=\linewidth]{abb/updata/1.png}\\
-			$t_1$
-		\end{subfigure}
-		%\hspace{-2.00 cm}
-		\begin{subfigure}[t]{0.32\linewidth}
-			\centering
-			\includegraphics[width=\linewidth]{abb/updata/2.png}\\
-			$t_2$
-		\end{subfigure}
-		\begin{subfigure}[t]{0.32\linewidth}
-			\centering
-			\includegraphics[width=\linewidth]{abb/updata/3.png}\\
-			$t_3$
-		\end{subfigure}
-		\caption{Without advection.}
-		\label{io1}
-	\end{subfigure}\\
-\vspace{0.50 cm}
-	\begin{subfigure}[t]{0.8\linewidth}
-		\begin{subfigure}[t]{0.32\linewidth}
-			\centering
-			\includegraphics[width=\linewidth]{abb/updata/4.png}\\
-			$t_1$
-		\end{subfigure}
-		%\hspace{-2.00 cm}
-		\begin{subfigure}[t]{0.32\linewidth}
-			\centering
-			\includegraphics[width=\linewidth]{abb/updata/5.png}\\
-			$t_2$
-		\end{subfigure}
-		\begin{subfigure}[t]{0.32\linewidth}
-			\centering
-			\includegraphics[width=\linewidth]{abb/updata/6.png}\\
-			$t_3$
-		\end{subfigure}
-			\caption{With advection.}
-			\label{io2}
-	\end{subfigure}\\
-	\vspace{0.50 cm}
-	\begin{subfigure}[t]{0.8\linewidth}
-		\begin{subfigure}[t]{0.32\linewidth}
-			\centering
-			\includegraphics[width=\linewidth]{abb/updata/7.png}\\
-			$t_1$
-		\end{subfigure}
-		%\hspace{-2.00 cm}
-		\begin{subfigure}[t]{0.32\linewidth}
-			\centering
-			\includegraphics[width=\linewidth]{abb/updata/8.png}\\
-			$t_2$
-		\end{subfigure}
-		\begin{subfigure}[t]{0.32\linewidth}
-			\centering
-			\includegraphics[width=\linewidth]{abb/updata/9.png}\\
-			$t_3$
-		\end{subfigure}
-		\caption{With advection and euler angle update}
-		\label{io3}
-	\end{subfigure}\\
-	\begin{subfigure}[t]{1.0\linewidth}
-		\vspace{1 cm}
-		\centering
-		\captionsetup{justification=centering}
-		\includegraphics[width=0.5\linewidth]{abb/Many/4.png} 
-	\end{subfigure}
-	\caption{Effect of advection and angle update on sintering of two different sized particle at time steps: $t_1=100, \,\,  t_2=150, \,\, t_3=200$. The initial Euler angles of the particles are set to: $ \theta_1=0^{\circ}, \,\, \theta_2=45^{\circ}$. Color-map represents $\sum_i \eta^2_i$.}
-	\label{io}
-\end{figure}
+
+<figure>
+<img src="add/8.png" id="io" alt="S" /><figcaption aria-hidden="true">Figure 13: Effect of advection and angle update on sintering of two different sized particle at time steps: $t_1=100, \,\,  t_2=150, \,\, t_3=200$. The initial Euler angles of the particles are set to: $ \theta_1=0^{\circ}, \,\, \theta_2=45^{\circ}$. Color-map represents $\sum_i \eta^2_i$.</figcaption>
+</figure>
+
 
 In figure \ref{asa} the neck length evolution for the above described simulation is plotted. Rigid body motion highly accelerates the formation of neck and grain growth, die to high densification. In case of an update of the Euler angle under this conditions grain growth takes longer than in the case where an update is neglected. The Euler angle of the particles and the corresponding grain boundary energy, for the Euler update case, are plottet in fig \ref{asa2}. The particles rotate in opposite direction, while the bigger particles rotates more slowly die to higher inertia (Note that if the Euler angle becomes negative, $360^{\circ}$ are added, causing the high angle increment for the bigger particle at the initial time steps). Due to rotation the lattices reach a configuration with low misorientation, diminishing the grain boundary energy and so that grain growth is  decelerated.
 
@@ -298,6 +214,11 @@ In figure \ref{asa} the neck length evolution for the above described simulation
 	\label{asa}
 \end{figure}
 
+
+<figure>
+<img src="add/9.png" id="io" alt="S" /><figcaption aria-hidden="true">Figure 14: Effect of advection and angle update on sintering of two different sized particles.</figcaption>
+</figure>
+
 The effect of anisotropy of the grain boundary can be applied to multiple particle system trough an interpolation of the grain boundary energy for each pair of particle over the whole domain using order parameters. 
 In this work the function proposed by \cite{Moelans2008a} and integrated by \cite{Biswas2018a} for simulation of anisotropic sintering is used:
 \begin{equation}
@@ -305,118 +226,22 @@ In this work the function proposed by \cite{Moelans2008a} and integrated by \cit
 \end{equation}
 with $\gamma_{gb,ij}$ being the grain boundary energy between the grain pair $i$ and $j$.
 
-In fig. \ref{multi} a sintering of multiple particle is simulated. Fig. \ref{multi0} shows the evolution of grain for the isotropic case, keeping the grain boundary energy constant. In \ref{multi1} and \ref{multi2} a set of orientation is given to the grains, varying for the two configurations.
+In [fig. 15] (#multi) sintering of multiple particle is simulated. Fig. \ref{multi0} shows the evolution of grain for the isotropic case, keeping the grain boundary energy constant. In \ref{multi1} and \ref{multi2} a set of orientation is given to the grains, varying for the two configurations.
 
-\begin{figure}[H]
-	\centering
-	\begin{subfigure}[t]{1.0\linewidth}
-		\centering
-		\includegraphics[width=0.2\linewidth]{abb/manyinit.png}\\
-		$t_0$
-	\caption{Initial condition}
-	\end{subfigure}\\
-\vspace{0.1 cm}
-	\begin{subfigure}[t]{1.0\linewidth}
-		\centering
-		\begin{subfigure}[t]{0.20\linewidth}
-			\centering
-		\includegraphics[width=\linewidth]{abb/Man/1.png}\\
-		$t_1$
-    	\end{subfigure}
-    %\hspace{-2.00 cm}
-	\begin{subfigure}[t]{0.20\linewidth}
-		\centering
-		\includegraphics[width=\linewidth]{abb/Man/2.png}\\
-		$t_2$
-	\end{subfigure}
-		\begin{subfigure}[t]{0.20\linewidth}
-			\centering
-			\includegraphics[width=\linewidth]{abb/Man/3.png}\\
-			$t_3$
-		\end{subfigure}
-		\begin{subfigure}[t]{0.20\linewidth}
-			\centering
-			\includegraphics[width=\linewidth]{abb/Man/4.png}\\
-			$t_4$
-		\end{subfigure}
-		\caption{Isotropic}
-			\label{multi0}
-	\end{subfigure}\\
-\vspace{0.1 cm}
-	\begin{subfigure}[t]{1.0\linewidth}
-			\centering
-		\begin{subfigure}[t]{0.20\linewidth}
-			\centering
-			\includegraphics[width=\linewidth]{abb/Man/5.png}\\
-			$t_1$
-		\end{subfigure}
-		%\hspace{-2.00 cm}
-		\begin{subfigure}[t]{0.20\linewidth}
-			\centering
-			\includegraphics[width=\linewidth]{abb/Man/6.png}\\
-			$t_2$
-		\end{subfigure}
-		\begin{subfigure}[t]{0.20\linewidth}
-			\centering
-			\includegraphics[width=\linewidth]{abb/Man/7.png}\\
-			$t_3$
-		\end{subfigure}
-		\begin{subfigure}[t]{0.20\linewidth}
-			\centering
-			\includegraphics[width=\linewidth]{abb/Man/8.png}\\
-			$t_4$
-		\end{subfigure}
-		\caption{Anisotropic 1, $ 1: 9^{\circ},\,\,2: 6^{\circ},\,\,3: 36^{\circ},\,\,4: 31^{\circ},\,\,5: 16^{\circ}$}
-			\label{multi1}
-	\end{subfigure}\\
-\vspace{0.1 cm}
-\begin{subfigure}[t]{1.0\linewidth}
-		\centering
-	\begin{subfigure}[t]{0.20\linewidth}
-		\centering		\includegraphics[width=\linewidth]{abb/Man/9.png}\\
-		$t_1$
-	\end{subfigure}
-	%\hspace{-2.00 cm}
-	\begin{subfigure}[t]{0.20\linewidth}
-		\centering
-		\includegraphics[width=\linewidth]{abb/Man/10.png}\\
-		$t_2$
-	\end{subfigure}
-	\begin{subfigure}[t]{0.20\linewidth}
-		\centering
-		\includegraphics[width=\linewidth]{abb/Man/11.png}\\
-		$t_3$
-	\end{subfigure}
-	\begin{subfigure}[t]{0.20\linewidth}
-		\centering
-		\includegraphics[width=\linewidth]{abb/Man/12.png}\\
-		$t_4$
-	\end{subfigure}
-		\caption{Anisotropic 2, $ 1: 35^{\circ},\,\,2: 7^{\circ},\,\,3: 10^{\circ},\,\,4: 31^{\circ},\,\,5: 16^{\circ}$}
-			\label{multi2}
-\end{subfigure}\\
-\begin{subfigure}[t]{0.5\linewidth}
-	\vspace{0.5 cm}
-	\centering
-	\captionsetup{justification=centering}
-	\includegraphics[width=\linewidth]{abb/Many/4.png}
-\end{subfigure}
-	\caption{Sintering of multiple particle for isotropic and two anisotropic configuration. For the isotropic case the grain boundary energy is constant at $\gamma_{gb}=0.93$. For the anisotropic configurations the angles assigned to each particles are listed under the figure description according to the numbering in the initial condition Time steps: $t_1=350, \,\,  t_2=750, \,\, t_3=1250,  \,\, t_3=1825$. Color-map represents $\sum_i \eta^2_i$. }
-	\label{multi}
-\end{figure}
+<figure>
+<img src="add/10.png" id="multi" alt="S" /><figcaption aria-hidden="true">Figure 15:Sintering of multiple particle for isotropic and two anisotropic configuration. For the isotropic case the grain boundary energy is constant at $\gamma_{gb}=0.93$. For the anisotropic configurations the angles assigned to each particles are listed under the figure description according to the numbering in the initial condition Time steps: $t_1=350, \,\,  t_2=750, \,\, t_3=1250,  \,\, t_3=1825$. Color-map represents $\sum_i \eta^2_i$.</figcaption>
+</figure>
 
 The evolution of the particles shows the effect of grain boundary energy particularly visible in the different time steps at which grain growth occurs. Due to variation in gradient energy over the domain, the diffuse interface results to not be constant. 
 
-The total free energy for the above mentioned cases is plotted in fig. \ref{tO}. Steps in the curve occur corresponding to the disappearance of a particle. 
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=0.6\linewidth]{abb/FreeE.png}
-	\caption{Total free energy for multiple particle sintering}
-	\label{tO}
-\end{figure}
+The total free energy for the above mentioned cases is plotted in [fig. 16](#tO). Steps in the curve occur corresponding to the disappearance of a particle. 
 
 
 
+
+<figure>
+<img src="abb/FreeE.png" id="tO" alt="S" /><figcaption aria-hidden="true">Figure 16:Total free energy for multiple particle sintering.</figcaption>
+</figure>
 
 
 
