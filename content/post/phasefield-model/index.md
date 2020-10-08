@@ -1,6 +1,6 @@
 
 ---
-title: Phase-Field Model
+title: Phase-Field Model <span style="color:blue"> *(Work in progress)* text</span>
 date: 2019-07-12
 math: true
 diagram: true
