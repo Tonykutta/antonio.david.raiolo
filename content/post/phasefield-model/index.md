@@ -5,7 +5,7 @@ date: 2019-07-12
 math: true
 diagram: true
 ---
-<span style="color:orange;font-size:larger;"> *(Work in progress)*</span>
+<span style="color:orange;font-size:larger;"> (Work in progress)</span>
 
 Phase field methods have emerged as a powerful tool to simulate the microstructure evolution on the mesoscale  [^1]. 
 One of the most important features of this model is the introduction of a diffuse interface which, in contrast to the classical models, transitions smoothly. In classical models that strictly divide structural or compositional domains using sharp interfaces, explicit tracking of the interface is required to apply physics and boundary conditions. Additionally, numerical issues may occur when interfaces merge or pinch off occurs [^1]. 
