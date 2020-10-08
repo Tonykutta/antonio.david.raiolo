@@ -1,53 +1,46 @@
 
+
 ---
-title: Some simulation results 
+title: Results
 date: 2019-07-12
 math: true
 diagram: true
 ---
-<span style="color:orange;font-size:larger;"> (Work in progress)</span>
 
-Transport mechanisms
---------------------
+In the following sections for the simulation of spherical particles a tensorial diffusion coefficient acc. to eq. \ref{MOB} has been implemented. In the case of surface energy anisotropy the diffusion mechanism has been simplified to a scalar diffusion coefficient $D=1$.
+If not stated differently the standard parameters chosen in following chapters are:
 
-Figure
-<a href="#adNoad" data-reference-type="ref" data-reference="adNoad">[adNoad]</a>
-demonstrates the evolution of two particles at different time, once for
-the case limited to diffusion flux
-<a href="#adno" data-reference-type="ref" data-reference="adno">1.4</a>
-and on the other hand taking the advection flux in consideration as well
-<a href="#adyes" data-reference-type="ref" data-reference="adyes">1.8</a>.
-
-<img src="abb/All_diff_pics/0.png" title="fig:" id="adno" alt="Without advection" />  
-*t*<sub>1</sub>
-
-<img src="abb/All_diff_pics/100.png" title="fig:" id="adno" alt="Without advection" />  
-*t*<sub>2</sub>
-
-<img src="abb/All_diff_pics/500.png" title="fig:" id="adno" alt="Without advection" />  
-*t*<sub>3</sub>
-
-<img src="abb/All_diff_pics/3000.png" title="fig:" id="adno" alt="Without advection" />  
-*t*<sub>4</sub>
-
-<span id="adno" label="adno">\[adno\]</span>
-
- 
-
-<img src="abb/All_diff_adv_pics/0.png" title="fig:" id="adyes" alt="With advection" />  
-*t*<sub>1</sub>
-
-<img src="abb/All_diff_adv_pics/100.png" title="fig:" id="adyes" alt="With advection" />  
-*t*<sub>2</sub>
-
-<img src="abb/All_diff_adv_pics/500.png" title="fig:" id="adyes" alt="With advection" />  
-*t*<sub>3</sub>
-
-<img src="abb/All_diff_adv_pics/3000.png" title="fig:" id="adyes" alt="With advection" />  
-*t*<sub>4</sub>
+% Please add the following required packages to your document preamble:
+% \usepackage{graphicx}
+\begin{table}[H]
+	\centering
+	\caption{}
+	\label{tab:mle}
+		\begin{tabular}{|l|l|}
+			\hline
+			Parameter     & Value \\ \hline
+			$D_{surf}$    & 1.0   \\ \hline
+			$D_{gb}$      & 0.1   \\ \hline
+			$D_{vol}$     & 0.01  \\ \hline
+			$D_{vap}$   & 0.001 \\ \hline
+			$L_{i}$    & 1.0 \\ \hline
+			$m_r$         & 1.0   \\ \hline
+			$m_t$         & 500   \\ \hline
+			$k$           & 100   \\ \hline
+			$c_{gb}$        & 0.15  \\ \hline
+			$\gamma_{sf}$ & 1.5   \\ \hline
+			$\gamma_{gb}$ & 0.93  \\ \hline
+		\end{tabular}%
+\end{table}
 
 
+\section{Transport mechanisms} \label{transport}
 
+Figure \ref{adNoad} demonstrates the evolution of two particles at different time, once for the case limited to diffusion flux \ref{adno} and on the other hand taking the advection flux in consideration as well \ref{adyes}.
+
+<figure>
+<img src="dad/1.png" id="ss" style="width:40.0%" alt="S" /><figcaption aria-hidden="true">Figure 1: Evolution of sintering of two same sized particle at different time steps: $t_1=0, \,\,  t_2=100, \,\, t_3=500, \,\, t_4=3000$.</figcaption>
+</figure>
 
 In order to decrease the curvature a neck between the particles is formed. The neck formation is drastically accelerated, in the case rigid body motion is considered. 
 
@@ -334,7 +327,7 @@ In further simulation the dependency will not be considered, due to the neglecta
 
 
 Misorientation dependency
-------------------------- 
+-------------------------
 
 In this section the dependency of the sintering evolution is analyzed using Bulatov's method. The impact of the grain boundary energy variation is especially visible when analyzing different size particles. In fig. \ref{BulSMBG} the evolution of sintering of a big particle with an Euler angle of $0^{\circ}$ and a big small particle with euler angle of $5^{\circ}$ at different time steps is shown. 
 
@@ -676,6 +669,12 @@ The total free energy for the above mentioned cases is plotted in fig. \ref{tO}.
 	\caption{Total free energy for multiple particle sintering}
 	\label{tO}
 \end{figure}
+
+
+
+
+
+
 
 
 
