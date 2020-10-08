@@ -197,22 +197,6 @@ In the figure is visible that for the three cases the sintering stages vary for 
 
 In figure \ref{asa} the neck length evolution for the above described simulation is plotted. Rigid body motion highly accelerates the formation of neck and grain growth, die to high densification. In case of an update of the Euler angle under this conditions grain growth takes longer than in the case where an update is neglected. The Euler angle of the particles and the corresponding grain boundary energy, for the Euler update case, are plottet in fig \ref{asa2}. The particles rotate in opposite direction, while the bigger particles rotates more slowly die to higher inertia (Note that if the Euler angle becomes negative, $360^{\circ}$ are added, causing the high angle increment for the bigger particle at the initial time steps). Due to rotation the lattices reach a configuration with low misorientation, diminishing the grain boundary energy and so that grain growth is  decelerated.
 
-\begin{figure}[H]
-	\begin{subfigure}[t]{0.5\linewidth}
-		\centering
-		\includegraphics[width=\linewidth]{abb/UpNeck.png}
-		\caption{Neck length}
-		\label{asa1}
-	\end{subfigure}
-	\begin{subfigure}[t]{0.5\linewidth}
-		\centering
-		\includegraphics[width=\linewidth]{abb/UpAn.png}
-		\caption{Euler angles of particles and grain boundary energy, for the case of Euler angle update.}
-		\label{asa2}
-	\end{subfigure}
-	\caption{Effect of advection and Euler angle update on sintering of two different sized particles.}
-	\label{asa}
-\end{figure}
 
 
 <figure>
