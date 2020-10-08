@@ -9,64 +9,45 @@ diagram: true
 
 Transport mechanisms
 --------------------
-Figure \ref{adNoad} demonstrates the evolution of two particles at different time, once for the case limited to diffusion flux \ref{adno} and on the other hand taking the advection flux in consideration as well \ref{adyes}.
 
-\begin{figure}[H]
-	\begin{subfigure}[t]{1.0\linewidth}
-		\begin{subfigure}[t]{0.24\linewidth}
-			\centering
-			\includegraphics[width=\linewidth]{abb/All_diff_pics/0.png}\\
-			$t_1$
-		\end{subfigure}
-		%\hspace{-2.00 cm}
-		\begin{subfigure}[t]{0.24\linewidth}
-			\centering
-			\includegraphics[width=\linewidth]{abb/All_diff_pics/100.png}\\
-			$t_2$
-		\end{subfigure}
-		\begin{subfigure}[t]{0.24\linewidth}
-			\centering
-			\includegraphics[width=\linewidth]{abb/All_diff_pics/500.png}\\
-			$t_3$
-		\end{subfigure}
-		\begin{subfigure}[t]{0.24\linewidth}
-			\centering
-			\includegraphics[width=\linewidth]{abb/All_diff_pics/3000.png}\\
-			$t_4$
-		\end{subfigure}
-		\caption{Without advection}
-		\vspace{0.5 cm}
-		\label{adno}
-	\end{subfigure}\\
-	\begin{subfigure}[t]{1.0\linewidth}
-		\begin{subfigure}[t]{0.24\linewidth}
-			\centering
-			\includegraphics[width=\linewidth]{abb/All_diff_adv_pics/0.png}\\
-			$t_1$
-		\end{subfigure}
-		%\hspace{-2.00 cm}
-		\begin{subfigure}[t]{0.24\linewidth}
-			\centering
-			\includegraphics[width=\linewidth]{abb/All_diff_adv_pics/100.png}\\
-			$t_2$
-		\end{subfigure}
-		\begin{subfigure}[t]{0.24\linewidth}
-			\centering
-			\includegraphics[width=\linewidth]{abb/All_diff_adv_pics/500.png}\\
-			$t_3$
-		\end{subfigure}
-		\begin{subfigure}[t]{0.24\linewidth}
-			\centering
-			\includegraphics[width=\linewidth]{abb/All_diff_adv_pics/3000.png}\\
-			$t_4$
-		\end{subfigure}
-		\caption{With advection}
-			\label{adyes}
-		\vspace{0.5 cm}
-	\end{subfigure}\\
-\caption{Evolution of sintering of two same sized particle at different time steps: $t_1=0, \,\,  t_2=100, \,\, t_3=500, \,\, t_4=3000$}
-\label{adNoad}
-\end{figure}
+Figure
+<a href="#adNoad" data-reference-type="ref" data-reference="adNoad">[adNoad]</a>
+demonstrates the evolution of two particles at different time, once for
+the case limited to diffusion flux
+<a href="#adno" data-reference-type="ref" data-reference="adno">1.4</a>
+and on the other hand taking the advection flux in consideration as well
+<a href="#adyes" data-reference-type="ref" data-reference="adyes">1.8</a>.
+
+<img src="abb/All_diff_pics/0.png" title="fig:" id="adno" alt="Without advection" />  
+*t*<sub>1</sub>
+
+<img src="abb/All_diff_pics/100.png" title="fig:" id="adno" alt="Without advection" />  
+*t*<sub>2</sub>
+
+<img src="abb/All_diff_pics/500.png" title="fig:" id="adno" alt="Without advection" />  
+*t*<sub>3</sub>
+
+<img src="abb/All_diff_pics/3000.png" title="fig:" id="adno" alt="Without advection" />  
+*t*<sub>4</sub>
+
+<span id="adno" label="adno">\[adno\]</span>
+
+ 
+
+<img src="abb/All_diff_adv_pics/0.png" title="fig:" id="adyes" alt="With advection" />  
+*t*<sub>1</sub>
+
+<img src="abb/All_diff_adv_pics/100.png" title="fig:" id="adyes" alt="With advection" />  
+*t*<sub>2</sub>
+
+<img src="abb/All_diff_adv_pics/500.png" title="fig:" id="adyes" alt="With advection" />  
+*t*<sub>3</sub>
+
+<img src="abb/All_diff_adv_pics/3000.png" title="fig:" id="adyes" alt="With advection" />  
+*t*<sub>4</sub>
+
+
+
 
 In order to decrease the curvature a neck between the particles is formed. The neck formation is drastically accelerated, in the case rigid body motion is considered. 
 
