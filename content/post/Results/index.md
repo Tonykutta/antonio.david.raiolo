@@ -36,10 +36,10 @@ If not stated differently the standard parameters chosen in following chapters a
 
 \section{Transport mechanisms} \label{transport}
 
-Figure \ref{adNoad} demonstrates the evolution of two particles at different time, once for the case limited to diffusion flux \ref{adno} and on the other hand taking the advection flux in consideration as well \ref{adyes}.
+Figure \ref{adNoad} demonstrates the evolution of two particles at different time, once for the case limited to diffusion flux and on the other hand taking the advection flux in consideration as well.
 
 <figure>
-<img src="dad/1.png" id="ss" style="width:40.0%" alt="S" /><figcaption aria-hidden="true">Figure 1: Evolution of sintering of two same sized particle at different time steps: $t_1=0, \,\,  t_2=100, \,\, t_3=500, \,\, t_4=3000$.</figcaption>
+<img src="dad/1.png" id="ss" alt="S" /><figcaption aria-hidden="true">Figure 1: Evolution of sintering of two same sized particle at different time steps: $t_1=0, \,\,  t_2=100, \,\, t_3=500, \,\, t_4=3000$.</figcaption>
 </figure>
 
 In order to decrease the curvature a neck between the particles is formed. The neck formation is drastically accelerated, in the case rigid body motion is considered. 
