@@ -1,7 +1,7 @@
 ---
 # Display name
 title: Antonio David Raiolo
-<meta name="google-site-verification" content="q5AhtlRmCf6vYGtMghkDxTGNx3yDOnZh7aecWrigKjA" />
+
 # Username (this should match the folder name)
 authors:
 - admin
