@@ -81,6 +81,7 @@ date_format = "Jan 2006"
 - Study the granularity of metal layers (gold, chromium) of a few nanometers thickness producedunder various vapor deposition conditions, by means of a Scanning Electron Microscope (ZeissMerlin).<br/>
 - Calibration of the deposition rate for different metal layers (Fa. Leybold, Univex).<br/>
 - Establishing standard processes for cleaning semiconductor samples of paint residues (For opticallithography and electron beam lithography) by means of a newly installed Plasma etching system(Fa. Servants, Pico).<br/>
+<meta name="google-site-verification" content="q5AhtlRmCf6vYGtMghkDxTGNx3yDOnZh7aecWrigKjA" />
 - Preparing test samples by optical lithography"""  
   
 +++
